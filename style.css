@@ -7,7 +7,7 @@
 /* HERO IMAGE TWEAKS */
 .hero-visual,
 .hero-card {               /* if you have a wrapper/panel */
-  background: transparent !important;
+  background: linear-gradient(135deg,#0e2232 0%,#142a3a 100%); !important;
   box-shadow: none !important;
 }
 
@@ -123,6 +123,7 @@ a:hover{color:var(--gold-deep)}
   margin: 6px 0 8px;
 }
 .feature p { margin: 0; }
+
 
 
 
