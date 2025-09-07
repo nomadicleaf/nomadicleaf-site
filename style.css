@@ -73,3 +73,5 @@ a:hover{color:var(--gold-deep)}
   .price-cards,.perk-grid,.panel-grid .feature-grid{grid-template-columns:1fr}
   .hero h1{font-size:38px}
 }
+.card:nth-child(3){ border-color: rgba(198,168,110,.45); box-shadow: 0 6px 20px rgba(0,0,0,.25); }
+
