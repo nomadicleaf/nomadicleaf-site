@@ -1,10 +1,22 @@
-:root{
-  --bg:#0f2230;           /* deep navy */
-  --ink:#e7e2d9;          /* soft ivory text */
-  --gold:#c6a86e;         /* brand gold */
-  --gold-deep:#a9894f;
-  --muted:#aab5bf;
-  --panel:#122938;
+:root {
+  --ink: #0f2433;   /* deep blue you’re using */
+  --gold: #c8a04d;  /* refined gold */
+}
+
+/* Ensure hero bg matches the logo background so no “box” edge shows */
+.hero {
+  background: linear-gradient(180deg, #0f2433 0%, #0f2433 100%);
+}
+
+/* Remove any borders/shadows around the image */
+.hero-logo {
+  max-width: 520px;
+  width: 100%;
+  border: 0 !important;
+  outline: none;
+  box-shadow: none !important;
+  background: transparent;
+  display: block;
 }
 
 *{box-sizing:border-box}
@@ -74,4 +86,5 @@ a:hover{color:var(--gold-deep)}
   .hero h1{font-size:38px}
 }
 .card:nth-child(3){ border-color: rgba(198,168,110,.45); box-shadow: 0 6px 20px rgba(0,0,0,.25); }
+
 
