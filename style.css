@@ -124,6 +124,87 @@ a:hover{color:var(--gold-deep)}
 }
 .feature p { margin: 0; }
 
+/* ---- Pricing ---- */
+.pricing { padding: 72px 0; }
+.section-title { font-size: clamp(28px, 3.6vw, 40px); letter-spacing: .5px; }
+
+.pricing-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:24px;
+}
+@media (max-width: 900px){
+  .pricing-grid{ grid-template-columns: 1fr; }
+}
+
+.price-card{
+  background: rgba(7,17,26,.72);
+  border: 1px solid rgba(205,160,82,.25); /* gold hairline */
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.25);
+  backdrop-filter: blur(2px);
+}
+.price-card.highlight{
+  border-color: rgba(205,160,82,.6);
+  box-shadow: 0 14px 36px rgba(0,0,0,.35);
+}
+
+.price-title{
+  margin: 0 0 10px;
+  font-size: clamp(18px,2.2vw,22px);
+  font-style: italic;
+  letter-spacing: .3px;
+  color: #e2c891; /* soft gold text */
+}
+
+.price-amount{
+  font-size: clamp(36px,4.2vw,48px);
+  margin: 0 0 14px;
+  color: #f0d59d;
+  font-weight: 700;
+}
+.price-amount .currency{ opacity:.9; font-size: .6em; margin-right: 2px; }
+
+.price-includes{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+}
+.price-includes li{
+  margin: 8px 0;
+  padding-left: 26px;
+  position: relative;
+  line-height: 1.35;
+}
+.price-includes li::before{
+  content:"◆";
+  position:absolute; left:0; top:0;
+  color:#cda052; /* gold marker */
+  font-size: 12px; transform: translateY(2px);
+}
+
+.cap-note{ font-size: .95rem; color:#d7be8a; margin: -2px 0 14px; }
+
+.pricing-notes{
+  margin-top: 18px;
+  color:#cbb280;
+  font-size: .98rem;
+}
+
+.private-inquiry{
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px dashed rgba(205,160,82,.35);
+}
+
+/* Buttons (respect your existing classes; these are safe fallbacks) */
+.btn{ display:inline-block; padding:10px 16px; border-radius:10px; text-decoration:none; font-weight:600; }
+.btn-gold{ background:#cda052; color:#0c1a24; }
+.btn-gold:hover{ filter:brightness(.95); }
+.btn-dark{ background:#122533; color:#e9d3a5; border:1px solid rgba(205,160,82,.45); }
+.btn-outline{ border:1px solid #cda052; color:#e9d3a5; }
+
 
 
 
