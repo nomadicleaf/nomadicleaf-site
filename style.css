@@ -4,19 +4,24 @@
 }
 
 /* Ensure hero bg matches the logo background so no “box” edge shows */
-.hero {
-  background: linear-gradient(180deg, #0f2433 0%, #0f2433 100%);
+/* HERO IMAGE TWEAKS */
+.hero-visual,
+.hero-card {               /* if you have a wrapper/panel */
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
-/* Remove any borders/shadows around the image */
-.hero-logo {
-  max-width: 520px;
-  width: 100%;
-  border: 0 !important;
-  outline: none;
-  box-shadow: none !important;
+.hero-logo {               /* the <img> element */
+  width: clamp(220px, 28vw, 380px);  /* responsive, tops out at ~380px */
+  height: auto;
+  border: 0;
+  box-shadow: none;
   background: transparent;
   display: block;
+}
+
+@media (max-width: 768px){
+  .hero-logo { width: clamp(200px, 60vw, 320px); margin: 8px auto 0; }
 }
 
 *{box-sizing:border-box}
@@ -118,5 +123,6 @@ a:hover{color:var(--gold-deep)}
   margin: 6px 0 8px;
 }
 .feature p { margin: 0; }
+
 
 
