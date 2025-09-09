@@ -7,12 +7,11 @@
 <meta name="description" content="Curated, luxury cannabis-friendly tours in Las Vegas (21+). Twin-host led, high-energy, and partner-powered — no retail sales by Nomadic Leaf.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Brand serif (like logo), clean UI, and readable hero script -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&family=Allura&family=Cormorant+Garamond:ital,wght@1,700&display=swap" rel="stylesheet">
+<!-- Elegant brand serif + clean UI + upgraded hero script -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&family=Alex+Brush&family=Cormorant+Garamond:ital,wght@1,700&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* deeper, logo-like gold (less yellow) */
-  --gold:#c4a25a;
+  --gold:#c4a25a;        /* deep logo-like gold */
   --gold-deep:#a8842a;
   --bg:#0d2230;
   --bg-2:#0e2a3a;
@@ -22,7 +21,7 @@
   --muted:#c5d0d8;
 }
 *{box-sizing:border-box}
-html,body{margin:0;background:radial-gradient(1100px 700px at 30% 12%, var(--bg-2) 0%, var(--bg) 55%, #091922 100%);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
+html,body{margin:0;background:radial-gradient(1100px 700px at 30% 12%, var(--bg-2) 0%, var(--bg) 55%, #091922 100%);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .container{max-width:1200px;margin:0 auto;padding:24px}
@@ -41,7 +40,18 @@ a{color:inherit;text-decoration:none}
 /* HERO */
 .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:58px 24px 28px}
 .eyebrow{color:var(--muted);letter-spacing:.25em;font-size:12px;margin-bottom:8px}
-.hero-title{font-family:"Allura",cursive;color:var(--gold);font-size:78px;line-height:1;letter-spacing:.5px;margin:0 0 14px 0;text-shadow:0 1px 0 #000, 0 10px 26px rgba(0,0,0,.35)}
+.hero-title{
+  font-family:"Alex Brush",cursive; /* upgraded script */
+  color:var(--gold);
+  font-size:76px;
+  line-height:1.02;
+  letter-spacing:.3px;
+  margin:0 0 14px 0;
+  text-shadow:
+    0 1px 0 #000,
+    0 10px 26px rgba(0,0,0,.35),
+    0 0 1px rgba(196,162,90,.45);  /* subtle metallic crispness */
+}
 .lead{max-width:720px;color:#dbe6ec}
 .cta-row{display:flex;gap:16px;margin:22px 0 14px}
 .btn{border-radius:14px;padding:12px 18px;font-weight:800}
@@ -80,6 +90,8 @@ a{color:inherit;text-decoration:none}
 
 /* CREATOR */
 .creator p{max-width:900px}
+.bullet{display:grid;gap:6px;margin:10px 0 0 18px}
+.bullet li{margin:4px 0}
 
 /* FOOTER */
 footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
@@ -92,7 +104,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   .brand img{width:28px;height:28px}
   .brand-name{font-size:22px}
   .hero{grid-template-columns:1fr;gap:22px;padding-top:36px}
-  .hero-title{font-size:56px}
+  .hero-title{font-size:58px}
   .section h2{font-size:36px}
   .grid-3,.pricing-grid{grid-template-columns:1fr}
 }
@@ -204,7 +216,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   </div>
 </section>
 
-<!-- VIP WAITLIST PERKS (restored) -->
+<!-- VIP WAITLIST PERKS -->
 <section class="section container" id="about">
   <h2>VIP Waitlist Perks</h2>
   <div class="grid-3">
@@ -220,21 +232,51 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   </div>
 </section>
 
-<!-- CREATOR ZONE -->
+<!-- CREATOR ZONE (expanded + signup path) -->
 <section class="section container creator" id="creators">
   <h2>Creators Program</h2>
-  <p>Content creators (photo/video) can access special pricing & perks on select dates. Help us capture the energy of Nomadic Leaf and grow together.</p>
-  <ul>
-    <li>Discounted seat or limited hosted slots on media nights.</li>
-    <li>Behind-the-scenes access windows when available.</li>
-    <li>Spotlight features across social and site.</li>
-  </ul>
+  <p><strong>Who it’s for:</strong> photo & video creators who love capturing luxury experiences, street-level Vegas energy, and lifestyle content.</p>
+
+  <div class="grid-3" style="margin-top:12px">
+    <div class="card">
+      <h3>Perks</h3>
+      <ul class="bullet">
+        <li>Discounted or comped seat on select media nights.</li>
+        <li>VIP treatment on board (priority seating, swag).</li>
+        <li>Behind-the-scenes access windows when available.</li>
+        <li>Feature reels & galleries on our socials and site (tagged & credited).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>What We Need</h3>
+      <ul class="bullet">
+        <li>Short-form clips (vertical) and a small photo set.</li>
+        <li>48–72h turnaround on selects for our launch content bank.</li>
+        <li>Tagging guidelines followed; co-posting when invited.</li>
+        <li>Usage rights: non-exclusive, credited brand use.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>How to Apply</h3>
+      <ul class="bullet">
+        <li>Tap <em>Apply as Creator</em> below and in the form’s first text field, write <strong>“CREATOR”</strong> + your IG/TikTok handle.</li>
+        <li>Or DM <strong>@nomadicleaftours</strong> on Instagram with “CREATOR” to get the media-night link.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cta-row" style="margin-top:20px">
+    <a class="btn btn-primary" href="https://forms.gle/U9bik7HfAPtaphPx8" target="_blank" rel="noopener">Apply as Creator</a>
+    <a class="btn btn-outline" href="https://www.instagram.com/nomadicleaftours?igsh=cW0zeGRheTVkNnhk&utm_source=qr" target="_blank" rel="noopener">DM on Instagram</a>
+  </div>
 </section>
 
 <footer>
   © <span id="y"></span> Nomadic Leaf. Curated luxury cannabis-friendly tours in Las Vegas (21+). No retail sales by Nomadic Leaf.
 </footer>
 
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
