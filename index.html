@@ -1,224 +1,257 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nomadic Leaf — Curated Luxury Cannabis Tours (Las Vegas 21+)</title>
-  <meta name="description" content="Curated, luxury cannabis-friendly tours in Las Vegas (21+). Elevated experiences with premium partners — cultivation viewing, glass artistry demo, VIP dispensary stop, and a chef-driven lounge restaurant.">
-  <link rel="icon" type="image/png" href="./<img src="mainlogosquare.png"
-     alt="Nomadic Leaf logo"
-     class="hero-logo"
-     style="width:340px;max-width:28vw;height:auto;border:0;background:transparent;box-shadow:none;" />
-  <meta property="og:title" content="Nomadic Leaf — Curated Luxury Cannabis Tours (Las Vegas 21+)" />
-  <meta property="og:description" content="Where the Leaf Takes You. Join our VIP waitlist." />
-  <meta property="og:image" content="https://nomadicleaf.com/MainLogoSquare.PNG" />
-  <meta property="og:type" content="website" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nomadic Leaf — Curated, Luxury Cannabis-Friendly Tours in Las Vegas (21+)</title>
+<meta name="description" content="Curated, luxury cannabis-friendly tours in Las Vegas (21+). Twin-host led, high-energy, partner-powered. No retail sales by Nomadic Leaf." />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --brand-blue:#0f2732;
+  --brand-blue-2:#122f3d;
+  --gold:#c8a45a;
+  --gold-600:#b89248;
+  --light:#f8f7f3;
+  --ink:#1c252b;
+  --radius:14px;
+  --shadow:0 10px 26px rgba(0,0,0,.24);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:"Crimson Text", Georgia, serif;
+  color:#f5f1e6;
+  background:linear-gradient(180deg,var(--brand-blue) 0%, var(--brand-blue-2) 100%);
+}
+
+/* Headings */
+h1,h2,h3{font-family:Cinzel, Georgia, serif; letter-spacing:.4px; margin:0 0 .6rem}
+h1{font-weight:900; font-size:clamp(2.1rem,3.6vw + .6rem,3.25rem); line-height:1.12}
+h2{font-weight:800; font-size:clamp(1.4rem,2.1vw + .4rem,2rem)}
+h3{font-weight:700; font-size:clamp(1.05rem,1.2vw + .6rem,1.35rem)}
+p{margin:.35rem 0 1rem; line-height:1.55}
+
+.container{max-width:1200px; margin:0 auto; padding:clamp(16px,2.5vw,32px)}
+
+/* NAV */
+.nav{position:sticky; top:0; z-index:20; background:var(--brand-blue); border-bottom:1px solid rgba(255,255,255,.06)}
+.nav__row{display:flex; align-items:center; gap:16px; justify-content:space-between}
+.brand{display:flex; align-items:center; gap:12px; color:#f5f1e6; text-decoration:none}
+.brand img{width:28px; height:28px; border-radius:50%; object-fit:cover; border:1px solid rgba(255,255,255,.12)}
+.brand__name{font-family:Cinzel,serif; font-weight:700; font-size:18px}
+.menu{display:flex; flex-wrap:wrap; gap:18px; align-items:center}
+.menu a{color:#f5f1e6; text-decoration:none; font-weight:700; opacity:.96}
+.cta{margin-left:auto}
+.btn{
+  display:inline-block; padding:.55rem .95rem; border-radius:999px;
+  border:2px solid var(--gold); color:#0b1f29; background:var(--gold);
+  font-weight:800; text-decoration:none; box-shadow:0 6px 14px rgba(0,0,0,.18);
+}
+.btn--ghost{background:transparent; color:#f5f1e6}
+.btn:hover{filter:brightness(1.05)}
+
+/* HERO */
+.hero{padding:clamp(32px,5vw,56px) 0}
+.grid{display:grid; gap:clamp(18px,2vw,28px); grid-template-columns: 1.1fr .9fr}
+@media (max-width:860px){ .grid{grid-template-columns:1fr} }
+.lead{opacity:.92; max-width:52ch}
+.btnrow{display:flex; gap:12px; flex-wrap:wrap; margin:.8rem 0 1.2rem}
+.social{display:flex; gap:14px}
+.icon{
+  width:36px; height:36px; border-radius:999px; border:2px solid var(--gold);
+  display:grid; place-items:center; color:var(--gold); text-decoration:none;
+}
+.hero__art{
+  align-self:center; justify-self:center; width:min(420px,88%); aspect-ratio:1/1; border-radius:20px;
+  background:var(--brand-blue); box-shadow:var(--shadow);
+  display:grid; place-items:center; padding:20px;
+}
+.hero__art img{width:100%; height:100%; object-fit:cover; border-radius:16px; border:0; background:transparent}
+
+/* LIGHT SECTIONS */
+.section{background:var(--light); color:var(--ink)}
+.section--alt{background:#ffffff}
+.section h2{color:#12232e}
+.tag{display:inline-block; padding:.25rem .55rem; border-radius:999px; background:#efe7d2; color:#5a4927; font-weight:700; font-size:.85rem; letter-spacing:.2px}
+.cols{display:grid; gap:20px; grid-template-columns:1fr 1fr}
+@media (max-width:900px){ .cols{grid-template-columns:1fr} }
+.card{
+  background:#fff; border:1px solid #ece7da; border-radius:var(--radius); padding:18px 18px 16px; box-shadow:0 6px 20px rgba(0,0,0,.06)
+}
+.li{display:flex; gap:10px; align-items:flex-start; margin:.45rem 0}
+.li svg{flex:0 0 20px}
+
+/* PRICING */
+.price{font-family:Cinzel,serif; font-weight:900; color:#0f2732; font-size:1.35rem}
+.badge{background:var(--gold); color:#0a1c25; padding:.18rem .5rem; font-weight:800; border-radius:6px; margin-left:.5rem}
+.small{font-size:.93rem; opacity:.84}
+
+/* FOOTER */
+.footer{padding:26px 0; background:#0c1f28; color:#c7cfd5; font-size:.95rem}
+.footer a{color:#c7cfd5; text-decoration:none}
+</style>
 </head>
-
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="#top" aria-label="Nomadic Leaf">
-        <img src="./Nomadic_Leaf_Logo_512x512.png" alt="Nomadic Leaf mark" class="brand-mark" />
-        <span class="brand-word">Nomadic Leaf</span>
-      </a>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#included">What’s Included</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#creators">Creators</a>
-        <a href="#waitlist" class="btn btn-sm">Join VIP</a>
-      </nav>
-    </div>
-  </header>
 
-  <main id="top">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <h1>Where the Leaf Takes You</h1>
-          <p class="sub">Curated, luxury cannabis-friendly tours in Las Vegas (21+). Host-led, high-energy, and partner powered.</p>
-          <div class="cta-row">
-            <a href="#waitlist" class="btn">Join VIP Waitlist</a>
-            <a href="#pricing" class="btn btn-ghost">View Pricing</a>
-          </div>
-          <div class="social">
-            <a href="https://www.instagram.com/nomadicleaftours" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">@</a>
-            <a href="https://www.facebook.com/nomadicleaf" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">f</a>
-            <a href="https://www.linkedin.com/company/nomadic-leaf" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">in</a>
-          </div>
-        </div>
-        <div class="hero-art">
-          <img src="./MainLogoSquare.PNG" alt="Nomadic Leaf wordmark" />
-        </div>
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav__row">
+    <a class="brand" href="#top">
+      <img src="Nomadic_Leaf_Logo_512x512.png" alt="Nomadic Leaf mark" />
+      <span class="brand__name">NOMADIC LEAF</span>
+    </a>
+    <nav class="menu">
+      <a href="#about">About</a>
+      <a href="#included">What’s Included</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#creators">Creators</a>
+    </nav>
+    <div class="cta"><a class="btn" href="https://forms.gle/U9bik7HfAPtaphPx8" target="_blank" rel="noopener">Join VIP</a></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container grid">
+    <div>
+      <h1><em>Where the Leaf Takes You</em></h1>
+      <p class="lead">Curated, <strong>luxury</strong> cannabis-friendly tours in Las Vegas (21+). <strong>Twin-host led</strong>, high-energy, and partner-powered — no retail sales by Nomadic Leaf.</p>
+      <div class="btnrow">
+        <a class="btn" href="https://forms.gle/U9bik7HfAPtaphPx8" target="_blank" rel="noopener">Join VIP Waitlist</a>
+        <a class="btn btn--ghost" href="#pricing">View Pricing</a>
       </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="panel">
-      <div class="wrap">
-        <h2>Curated Luxury, Local Flavor</h2>
-        <p>Nomadic Leaf designs elevated, cannabis-friendly itineraries with premium Vegas partners. Expect white-glove hosts, small experiential touches, and plenty of photo-worthy moments — all while staying compliance-first. We do not retail cannabis; purchases occur only with licensed partners.</p>
+      <div class="social">
+        <a class="icon" href="https://www.instagram.com/nomadicleaf" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a class="icon" href="https://facebook.com/nomadicleaf" target="_blank" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13.5 9H16V6h-2.5C11.6 6 10 7.6 10 9.5V11H8v3h2v7h3v-7h2.1l.9-3H13v-1.5c0-.3.2-.5.5-.5Z"/></svg>
+        </a>
+        <a class="icon" href="https://www.linkedin.com/company/nomadic-leaf" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.5 8h4V23h-4V8Zm7.5 0h3.8v2.05h.05c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.79 2.64 4.79 6.08V23h-4v-7.2c0-1.72-.03-3.93-2.4-3.93-2.4 0-2.77 1.87-2.77 3.81V23h-4V8Z"/></svg>
+        </a>
       </div>
-    </section>
-
-    <!-- What's Included -->
-<section id="included" class="included">
-  <h2 class="section-title">What’s Included</h2>
-
-  <div class="features">
-    <div class="feature">
-      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 2l3 6 6 .9-4.4 4.3 1 6-5.6-3-5.6 3 1-6L3 8.9 9 8z" fill="none" stroke="currentColor" stroke-width="1.8"/>
-      </svg>
-      <h3>Host-Led Concierge</h3>
-      <p>White-glove hosts keep the energy high and the experience effortless from start to finish.</p>
     </div>
 
-    <div class="feature">
-      <svg class="icon" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
-        <path d="M12 8v4l3 2" fill="none" stroke="currentColor" stroke-width="1.8"/>
-      </svg>
-      <h3>Curated Itinerary</h3>
-      <p>Premium stops (glass artistry demo, exclusive dispensary visit, restaurant/lounge) with optional time for after-show sales.</p>
-    </div>
+    <figure class="hero__art" aria-label="Nomadic Leaf logo">
+      <!-- Use the square logo art that matches the background navy (no white border/shadow) -->
+      <img src="mainlogosquare.png" alt="Nomadic Leaf logo — gold mark on deep navy" />
+    </figure>
+  </div>
+</section>
 
-    <div class="feature">
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M4 7h16v10H4zM7 7V5h10v2" fill="none" stroke="currentColor" stroke-width="1.8"/>
-      </svg>
-      <h3>Giveaways & Prizes</h3>
-      <p>Fun in-tour contests for exclusive Nomadic Leaf gear and partner perks.</p>
+<!-- CREATORS (elevated) -->
+<section class="section section--alt" id="creators">
+  <div class="container cols">
+    <div>
+      <span class="tag">Creators Program</span>
+      <h2>Content Creators: Partner with Us</h2>
+      <p>Are you a Vegas-based creator or visiting with an audience? Join our <strong>Creators Program</strong> for special pricing, behind-the-scenes access, and collab perks. We’re building a creator-first tour with premium moments made for reels.</p>
     </div>
-
-    <div class="feature">
-      <svg class="icon" viewBox="0 0 24 24">
-        <circle cx="8" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
-        <path d="M4 19c0-3 3-5 6-5s6 2 6 5" fill="none" stroke="currentColor" stroke-width="1.8"/>
-      </svg>
-      <h3>Photo-Ready Moments</h3>
-      <p>Premium lighting/composition spots so your content pops on socials.</p>
+    <div class="card">
+      <h3>Highlights</h3>
+      <div class="li"><svg viewBox="0 0 24 24"><path fill="#c8a45a" d="M10.6 17.6 5 12l1.4-1.4 4.2 4.2L17.6 7 19 8.4z"/></svg><p>Creator rate & limited comp spots per tour</p></div>
+      <div class="li"><svg viewBox="0 0 24 24"><path fill="#c8a45a" d="M10.6 17.6 5 12l1.4-1.4 4.2 4.2L17.6 7 19 8.4z"/></svg><p>Priority shot list access + signature photo setups</p></div>
+      <div class="li"><svg viewBox="0 0 24 24"><path fill="#c8a45a" d="M10.6 17.6 5 12l1.4-1.4 4.2 4.2L17.6 7 19 8.4z"/></svg><p>Partner features & co-branded giveaways</p></div>
+      <p class="small">Request access via the VIP form — choose <em>“Creator”</em>.</p>
     </div>
   </div>
 </section>
 
-<section id="pricing" class="section pricing">
+<!-- WHAT'S INCLUDED -->
+<section class="section" id="included">
   <div class="container">
-    <h2 class="section-title">Pricing</h2>
-
-    <div class="pricing-grid">
-      <!-- Visitors -->
-      <article class="price-card">
-        <h3 class="price-title">Visitor Ticket</h3>
-        <p class="price-amount"><span class="currency">$</span>219</p>
-        <ul class="price-includes">
-          <li>Curated, host-led luxury tour (21+)</li>
-          <li>Priority partner access & experiences</li>
-          <li>Photo-worthy moments throughout</li>
-        </ul>
-        <a href="#vip" class="btn btn-gold">Join VIP Waitlist</a>
-      </article>
-
-      <!-- Locals -->
-      <article class="price-card">
-        <h3 class="price-title">Local (NV Resident)</h3>
-        <p class="price-amount"><span class="currency">$</span>189</p>
-        <ul class="price-includes">
-          <li>All Visitor benefits</li>
-          <li>Exclusive local rate</li>
-          <li>NV ID required at check-in</li>
-        </ul>
-        <a href="#vip" class="btn btn-gold">Join VIP Waitlist</a>
-      </article>
-
-      <!-- Premium add-on -->
-      <article class="price-card highlight">
-        <h3 class="price-title">Premium Seating Add-On</h3>
-        <p class="price-amount"><span class="currency">+$</span>40</p>
-        <ul class="price-includes">
-          <li>Best seats reserved (limited availability)</li>
-          <li>Early boarding & swift exit at partner stops</li>
-          <li>Hosted photo moment</li>
-        </ul>
-        <p class="cap-note">Limited to 10 seats per tour.</p>
-        <a href="#vip" class="btn btn-dark">Add to Booking</a>
-      </article>
-    </div>
-
-    <div class="pricing-notes">
-      <p><strong>Good to know:</strong> Capacity is limited; some peak dates may include a small surcharge.
-        Final pricing shown at checkout. Locals rate requires valid NV ID. Premium seating is an add-on to any ticket.</p>
-    </div>
-
-    <div class="private-inquiry">
-      <h4>Private Charters</h4>
-      <p>Planning a private or corporate experience? Contact us for availability and a tailored quote.</p>
-      <a href="mailto:info@nomadicleaf.com" class="btn btn-outline">Contact Us</a>
+    <h2>What’s Included</h2>
+    <div class="cols">
+      <div class="card">
+        <h3>Twin-Host Energy</h3>
+        <p>High-energy, identical-twin hosts keep the vibe elevated and the schedule sharp — games, giveaways, and on-time hop-offs.</p>
+      </div>
+      <div class="card">
+        <h3>Curated Itinerary</h3>
+        <p>Premium partner stops (e.g., dispensary experiences, glass artistry demo, cultivation viewing) plus two photo-worthy hop-offs.</p>
+      </div>
+      <div class="card">
+        <h3>Photo-Ready Moments</h3>
+        <p>Designed scenes and vantage points to capture share-worthy content throughout the tour.</p>
+      </div>
+      <div class="card">
+        <h3>Compliance-First</h3>
+        <p>No retail sales by Nomadic Leaf. Purchases, if any, occur only with licensed partners and within their rules.</p>
+      </div>
     </div>
   </div>
 </section>
 
-
-    <!-- Creators Program -->
-    <section id="creators" class="panel panel-alt">
-      <div class="wrap">
-        <h2>Content Creators Program</h2>
-        <p>Calling Vegas and travel creators: join select tours, capture the vibe, and co-post with Nomadic Leaf and our partners.</p>
-        <div class="perk-grid">
-          <div class="perk"><strong>Creator Rate</strong><br/>Special tiered pricing for approved creators</div>
-          <div class="perk"><strong>Co-Branded Posts</strong><br/>Amplified reach via our hosts & partner network</div>
-          <div class="perk"><strong>Perks</strong><br/>Priority invites, merch, and partner spotlights</div>
-        </div>
-        <div class="cta-row">
-          <a href="https://forms.gle/" class="btn">Apply to Create</a>
-          <a href="#waitlist" class="btn btn-ghost">Join VIP Waitlist</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Waitlist -->
-    <section id="waitlist" class="panel">
-      <div class="wrap">
-        <h2>Be First to Ride</h2>
-        <p>We’ll email drop dates, partner reveals, and early-bird seats.</p>
-        <form class="waitlist" action="https://docs.google.com/forms/d/e/1FAIpQLSf_waitlist" method="get">
-          <input type="email" name="email" placeholder="Email address" required />
-          <button class="btn" type="submit">Join VIP</button>
-        </form>
-        <p class="fine">21+ only. Valid ID required. Stops and timing may vary by date and partner availability.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap foot-grid">
-      <div>
-        <strong>Nomadic Leaf</strong><br/>
-        Las Vegas, Nevada<br/>
-        <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a> · (702) 416-1171
-      </div>
-      <div class="foot-social">
-        <a href="https://www.instagram.com/nomadicleaftours" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-        <a href="https://www.facebook.com/nomadicleaf" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
-        <a href="https://www.linkedin.com/company/nomadic-leaf" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-      </div>
+<!-- VIP WAITLIST + VIP SEAT -->
+<section class="section section--alt" id="vip">
+  <div class="container cols">
+    <div>
+      <span class="tag">VIP Waitlist</span>
+      <h2>Perks for Joining the VIP Waitlist</h2>
+      <div class="li"><svg viewBox="0 0 24 24"><path fill="#c8a45a" d="M10.6 17.6 5 12l1.4-1.4 4.2 4.2L17.6 7 19 8.4z"/></svg><p><strong>Early access</strong> to ticket drops and limited <strong>VIP seats</strong></p></div>
+      <div class="li"><svg viewBox="0 0 24 24"><path fill="#c8a45a" d="M10.6 17.6 5 12l1.4-1.4 4.2 4.2L17.6 7 19 8.4z"/></svg><p>Occasional <strong>private discount codes</strong> for launch & partner events</p></div>
+      <div class="li"><svg viewBox="0 0 24 24"><path fill="#c8a45a" d="M10.6 17.6 5 12l1.4-1.4 4.2 4.2L17.6 7 19 8.4z"/></svg><p><strong>Insider updates</strong> + behind-the-scenes drops from our twin hosts</p></div>
+      <div class="li"><svg viewBox="0 0 24 24"><path fill="#c8a45a" d="M10.6 17.6 5 12l1.4-1.4 4.2 4.2L17.6 7 19 8.4z"/></svg><p>Priority support for date changes & special requests</p></div>
+      <div class="li"><svg viewBox="0 0 24 24"><path fill="#c8a45a" d="M10.6 17.6 5 12l1.4-1.4 4.2 4.2L17.6 7 19 8.4z"/></svg><p>Invites to <strong>VIP-only pop-ups</strong> and partner tastings</p></div>
+      <div class="btnrow"><a class="btn" href="https://forms.gle/U9bik7HfAPtaphPx8" target="_blank" rel="noopener">Join VIP Waitlist</a></div>
     </div>
-    <div class="wrap tiny">© <span id="y"></span> Nomadic Leaf. “Where the Leaf Takes You.” We do not sell cannabis; purchases occur only with licensed partners.</div>
-  </footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+    <div class="card">
+      <h3>VIP Premium Seat Add-On <span class="badge">+$40</span></h3>
+      <div class="li"><svg viewBox="0 0 24 24"><path fill="#c8a45a" d="M10.6 17.6 5 12l1.4-1.4 4.2 4.2L17.6 7 19 8.4z"/></svg><p><strong>Priority boarding</strong> + reserved front seating</p></div>
+      <div class="li"><svg viewBox="0 0 24 24"><path fill="#c8a45a" d="M10.6 17.6 5 12l1.4-1.4 4.2 4.2L17.6 7 19 8.4z"/></svg><p>Best vantage for photos & host shout-out</p></div>
+      <div class="li"><svg viewBox="0 0 24 24"><path fill="#c8a45a" d="M10.6 17.6 5 12l1.4-1.4 4.2 4.2L17.6 7 19 8.4z"/></svg><p><strong>VIP swag bag</strong> with goodies from partners & sponsors</p></div>
+      <div class="li"><svg viewBox="0 0 24 24"><path fill="#c8a45a" d="M10.6 17.6 5 12l1.4-1.4 4.2 4.2L17.6 7 19 8.4z"/></svg><p>Priority check-in or lounge line where partner permits</p></div>
+      <p class="small">Limited quantity per tour. Select during checkout.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="container cols">
+    <div class="card">
+      <h2>Pricing</h2>
+      <p><span class="price">Visitors $219</span></p>
+      <p><span class="price">Locals $189</span> <span class="small">(with valid NV ID)</span></p>
+      <p><span class="price">VIP Premium Seat +$40</span> <span class="small">(cap per tour)</span></p>
+      <p class="small">Taxes/fees at checkout. Availability varies by date.</p>
+    </div>
+    <div class="card">
+      <h2>Notes</h2>
+      <p class="small">Nomadic Leaf does not retail cannabis. All purchases happen only at licensed partners and under their rules. Some experiences depend on partner availability and may change.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section section--alt" id="about">
+  <div class="container cols">
+    <div>
+      <h2>About Nomadic Leaf</h2>
+      <p>Nomadic Leaf designs <strong>curated</strong>, <strong>luxury</strong> cannabis-friendly itineraries powered by premium Vegas partners. Expect twin-host energy, thoughtful touches, and plenty of photo-worthy moments — always compliance-first.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p class="small"><a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a> • <a href="https://nomadicleaf.com">nomadicleaf.com</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div>© Nomadic Leaf</div>
+    <div>Follow:
+      <a href="https://www.instagram.com/nomadicleaf" target="_blank">Instagram</a> ·
+      <a href="https://facebook.com/nomadicleaf" target="_blank">Facebook</a> ·
+      <a href="https://www.linkedin.com/company/nomadic-leaf" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
-
-
-
-
-
-
-
