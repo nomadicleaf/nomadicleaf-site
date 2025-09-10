@@ -204,6 +204,115 @@ a:hover{color:var(--gold-deep)}
 .btn-gold:hover{ filter:brightness(.95); }
 .btn-dark{ background:#122533; color:#e9d3a5; border:1px solid rgba(205,160,82,.45); }
 .btn-outline{ border:1px solid #cda052; color:#e9d3a5; }
+/* ===== Luxe Schedule ===== */
+:root{
+  --gold: #d6b35b;          /* match your logo gold */
+  --gold-deep:#b7892c;
+  --ink: #eae7df;           /* soft white text */
+  --ink-dim:#cfd7df;
+}
+
+.luxe-title{
+  font-family: "Playfair Display", serif;  /* already used on site */
+  font-weight: 700;
+  letter-spacing: .02em;
+  font-size: clamp(28px, 3.2vw, 44px);
+  line-height: 1.15;
+  background: linear-gradient(180deg,var(--gold),var(--gold-deep));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;            /* gold text effect */
+  text-shadow: 0 1px 0 rgba(0,0,0,.25);
+  margin-bottom: 10px;
+}
+.luxe-title span{
+  font-weight: 700;
+  color: var(--gold);
+  background: rgba(15,22,30,.45);
+  border: 1px solid rgba(214,179,91,.45);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: .55em;
+  vertical-align: middle;
+  margin-left: .5rem;
+}
+
+/* Vertical timeline */
+.timeline{
+  list-style: none;
+  margin: 18px 0 6px;
+  padding: 0 0 0 48px;
+  position: relative;
+}
+.timeline:before{
+  content:"";
+  position:absolute;
+  left:18px; top:0; bottom:0;
+  width:2px;
+  background: linear-gradient(180deg, rgba(214,179,91,.65), rgba(214,179,91,.15));
+  box-shadow: 0 0 12px rgba(214,179,91,.25);
+}
+
+.timeline-item{
+  position: relative;
+  padding: 0 0 20px 0;
+}
+.timeline-item:before{
+  content:"";
+  position:absolute;
+  left:-32px; top:.35rem;
+  width:18px; height:18px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 32% 30%, rgba(255,255,255,.55), transparent 42%),
+    linear-gradient(180deg, var(--gold), var(--gold-deep));
+  box-shadow:
+    0 0 0 4px rgba(214,179,91,.18),
+    0 8px 14px rgba(0,0,0,.35);
+}
+
+.ti-head{
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: var(--ink);
+  font-size: clamp(18px, 1.35vw, 22px);
+}
+.timeline-item p{
+  margin: .25rem 0 0;
+  color: var(--ink-dim);
+  opacity: .95;
+}
+
+/* Duration badge */
+.pill{
+  display:inline-block;
+  margin-left: .5rem;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: .8em;
+  color: var(--gold);
+  background: rgba(15,22,30,.6);
+  border: 1px solid rgba(214,179,91,.55);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+}
+
+/* Note callout */
+.schedule-note{
+  margin-top: 16px;
+  padding: 10px 14px;
+  border-left: 3px solid var(--gold);
+  background: linear-gradient(90deg, rgba(214,179,91,.16), rgba(214,179,91,0));
+  color: var(--ink);
+  border-radius: 6px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 680px){
+  .timeline{ padding-left: 42px; }
+  .timeline:before{ left:14px; }
+  .timeline-item:before{ left:-28px; }
+}
+
 
 
 
