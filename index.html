@@ -178,7 +178,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
 </section>
 
 <!-- BEGIN LUXE SCHEDULE -->
-<section id="schedule" class="luxe-schedule">
+<section id="schedule" class="luxe-schedule compact">
 
   <style>
     /* --- Luxe Schedule (self-contained) --- */
@@ -237,6 +237,48 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
       .luxe-schedule .timeline-item:before{left:-28px;}
     }
   </style>
+<style>
+  /* Luxe Schedule — compact layout + tighter spacing */
+  .luxe-schedule.compact{
+    max-width: 980px;          /* centers the block, stops it hugging the edge */
+    margin: 0 auto;
+    padding: 0 22px 8px;       /* adds breathing room left/right */
+  }
+  .luxe-schedule.compact .luxe-title{
+    margin: 0 0 8px 2px;       /* small nudge from the edge */
+  }
+  .luxe-schedule.compact .timeline{
+    padding-left: 58px;        /* keeps the line/badges off the edge */
+    margin-top: 8px;
+  }
+  .luxe-schedule.compact .timeline:before{ left: 28px; }
+  .luxe-schedule.compact .timeline-item{
+    padding-bottom: 10px;      /* was ~20px; halves the vertical gap */
+  }
+  .luxe-schedule.compact .timeline-item:before{
+    left: -26px; transform: scale(.9);  /* slightly smaller badges */
+  }
+  .luxe-schedule.compact .ti-head{
+    font-size: clamp(17px, 1.1vw, 21px); /* tight, readable headings */
+    margin-bottom: 2px;
+  }
+  .luxe-schedule.compact .timeline-item p{
+    margin: .15rem 0 0;        /* tighter subtext */
+    line-height: 1.35;
+    font-size: .95em;
+  }
+  .luxe-schedule.compact .pill{
+    padding: 1px 8px; font-size: .75em; /* smaller duration chips */
+  }
+
+  /* Mobile tweaks */
+  @media (max-width: 680px){
+    .luxe-schedule.compact{ padding: 0 14px 6px; }
+    .luxe-schedule.compact .timeline{ padding-left: 48px; }
+    .luxe-schedule.compact .timeline:before{ left: 18px; }
+    .luxe-schedule.compact .timeline-item:before{ left: -22px; }
+  }
+</style>
 
   <h3 class="luxe-title">Sample Schedule <span>~5h 30m</span></h3>
 
@@ -376,6 +418,7 @@ document.getElementById('y').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
+
 
 
 
