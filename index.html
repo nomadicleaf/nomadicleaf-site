@@ -177,56 +177,116 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   </div>
 </section>
 
-<!-- SCHEDULE -->
-<section class="section container schedule" id="schedule">
-<h3 class="section-subtitle luxe-title">Sample Schedule <span>~5h 30m</span></h3>
+<!-- BEGIN LUXE SCHEDULE -->
+<section id="schedule" class="luxe-schedule">
 
-<ol class="timeline">
-  <li class="timeline-item">
-    <div class="ti-head">Check-in & Welcome <span class="pill">Start</span></div>
-    <p>Board the bus, meet your twin hosts, quick ice-breaker.</p>
-  </li>
+  <style>
+    /* --- Luxe Schedule (self-contained) --- */
+    :root{
+      --gold:#d6b35b; --gold-deep:#b7892c;
+      --ink:#eae7df; --ink-dim:#cfd7df;
+    }
+    .luxe-schedule .luxe-title{
+      font-family:"Playfair Display", serif;
+      font-weight:700;
+      letter-spacing:.02em;
+      font-size:clamp(28px,3.2vw,44px);
+      line-height:1.15;
+      background:linear-gradient(180deg,var(--gold),var(--gold-deep));
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+      text-shadow:0 1px 0 rgba(0,0,0,.25); margin:0 0 10px 0;
+    }
+    .luxe-schedule .luxe-title span{
+      font-weight:700; color:var(--gold);
+      background:rgba(15,22,30,.45);
+      border:1px solid rgba(214,179,91,.45);
+      border-radius:999px; padding:4px 10px; font-size:.55em; margin-left:.5rem;
+    }
+    .luxe-schedule .timeline{list-style:none;margin:18px 0 6px;padding:0 0 0 48px;position:relative;}
+    .luxe-schedule .timeline:before{
+      content:"";position:absolute;left:18px;top:0;bottom:0;width:2px;
+      background:linear-gradient(180deg,rgba(214,179,91,.65),rgba(214,179,91,.15));
+      box-shadow:0 0 12px rgba(214,179,91,.25);
+    }
+    .luxe-schedule .timeline-item{position:relative;padding:0 0 20px 0;}
+    .luxe-schedule .timeline-item:before{
+      content:"";position:absolute;left:-32px;top:.35rem;width:18px;height:18px;border-radius:50%;
+      background:
+        radial-gradient(circle at 32% 30%,rgba(255,255,255,.55),transparent 42%),
+        linear-gradient(180deg,var(--gold),var(--gold-deep));
+      box-shadow:0 0 0 4px rgba(214,179,91,.18),0 8px 14px rgba(0,0,0,.35);
+    }
+    .luxe-schedule .ti-head{
+      font-family:"Playfair Display",serif;font-weight:700;color:var(--ink);
+      font-size:clamp(18px,1.35vw,22px);
+    }
+    .luxe-schedule .timeline-item p{margin:.25rem 0 0;color:var(--ink-dim);opacity:.95;}
+    .luxe-schedule .pill{
+      display:inline-block;margin-left:.5rem;padding:2px 10px;border-radius:999px;font-size:.8em;
+      color:var(--gold);background:rgba(15,22,30,.6);border:1px solid rgba(214,179,91,.55);
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
+    }
+    .luxe-schedule .schedule-note{
+      margin-top:16px;padding:10px 14px;border-left:3px solid var(--gold);
+      background:linear-gradient(90deg,rgba(214,179,91,.16),rgba(214,179,91,0));
+      color:var(--ink);border-radius:6px;
+    }
+    @media (max-width:680px){
+      .luxe-schedule .timeline{padding-left:42px;}
+      .luxe-schedule .timeline:before{left:14px;}
+      .luxe-schedule .timeline-item:before{left:-28px;}
+    }
+  </style>
 
-  <li class="timeline-item">
-    <div class="ti-head">Dispensary + behind-the-scenes + compliant lounge <span class="pill">60m</span></div>
-    <p>Guided shopping plus on-site, compliant consumption.</p>
-  </li>
+  <h3 class="luxe-title">Sample Schedule <span>~5h 30m</span></h3>
 
-  <li class="timeline-item">
-    <div class="ti-head">Hop-Off Photo Stop #1 <span class="pill">10m</span></div>
-    <p>Iconic Vegas backdrop + quick swag challenge.</p>
-  </li>
+  <ol class="timeline">
+    <li class="timeline-item">
+      <div class="ti-head">Check-in & Welcome <span class="pill">Start</span></div>
+      <p>Board the bus, meet your twin hosts, quick ice-breaker.</p>
+    </li>
 
-  <li class="timeline-item">
-    <div class="ti-head">Glass artistry pop-up <span class="pill">30m</span></div>
-    <p>Live demo and boutique browsing.</p>
-  </li>
+    <li class="timeline-item">
+      <div class="ti-head">Dispensary + behind-the-scenes + compliant lounge <span class="pill">60m</span></div>
+      <p>Guided shopping plus on-site, compliant consumption.</p>
+    </li>
 
-  <li class="timeline-item">
-    <div class="ti-head">Immersive art + dinner (e.g., AREA15: Wink World + BEAST) <span class="pill">110m</span></div>
-    <p>Color-soaked experience followed by a luxe, fun dinner.</p>
-  </li>
+    <li class="timeline-item">
+      <div class="ti-head">Hop-Off Photo Stop #1 <span class="pill">10m</span></div>
+      <p>Iconic Vegas backdrop + quick swag challenge.</p>
+    </li>
 
-  <li class="timeline-item">
-    <div class="ti-head">Hop-Off Photo Stop #2 <span class="pill">10m</span></div>
-    <p>Second landmark moment + timing game to keep things tight.</p>
-  </li>
+    <li class="timeline-item">
+      <div class="ti-head">Glass artistry pop-up <span class="pill">30m</span></div>
+      <p>Live demo and boutique browsing.</p>
+    </li>
 
-  <li class="timeline-item">
-    <div class="ti-head">Lounge Stop — premium session <span class="pill">90m</span></div>
-    <p>Unwind and enjoy the finale in a 90-minute lounge window.</p>
-  </li>
+    <li class="timeline-item">
+      <div class="ti-head">Immersive art + dinner (e.g., AREA15: Wink World + BEAST) <span class="pill">110m</span></div>
+      <p>Color-soaked experience followed by a luxe, fun dinner.</p>
+    </li>
 
-  <li class="timeline-item">
-    <div class="ti-head">Return & Farewell <span class="pill">15m</span></div>
-    <p>Prize call-outs, thank-yous, and next-tour plugs on the ride back.</p>
-  </li>
-</ol>
+    <li class="timeline-item">
+      <div class="ti-head">Hop-Off Photo Stop #2 <span class="pill">10m</span></div>
+      <p>Second landmark moment + timing game to keep things tight.</p>
+    </li>
 
-<p class="schedule-note">
-  <strong>Note:</strong> Schedule & stops are subject to change based on partner availability, traffic, and special events.
-</p>
+    <li class="timeline-item">
+      <div class="ti-head">Lounge Stop — premium session <span class="pill">90m</span></div>
+      <p>Unwind and enjoy the finale in a 90-minute lounge window.</p>
+    </li>
+
+    <li class="timeline-item">
+      <div class="ti-head">Return & Farewell <span class="pill">15m</span></div>
+      <p>Prize call-outs, thank-yous, and next-tour plugs on the ride back.</p>
+    </li>
+  </ol>
+
+  <p class="schedule-note">
+    <strong>Note:</strong> Schedule & stops are subject to change based on partner availability, traffic, and special events.
+  </p>
 </section>
+<!-- END LUXE SCHEDULE -->
 
 <!-- PRICING -->
 <section class="section container" id="pricing">
@@ -316,5 +376,6 @@ document.getElementById('y').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
+
 
 
