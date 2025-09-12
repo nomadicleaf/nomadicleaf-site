@@ -331,78 +331,66 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
 </section>
 <!-- END LUXE SCHEDULE -->
 
-<section id="hosts">
-  <!-- Fonts loaded only for this block -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Allura&display=swap" rel="stylesheet">
+<section id="hosts" style="padding:72px 0 64px;">
+  <div style="max-width:1120px;margin:0 auto;padding:0 20px;">
+    <!-- Section title -->
+    <h2 style="margin:0 0 18px;
+               font-family:'Cinzel','Times New Roman',serif;
+               font-weight:700;
+               font-size:clamp(26px,3vw,36px);
+               letter-spacing:.5px;
+               color:#d7b46a;">
+      Meet Your Twin Hosts
+    </h2>
 
-  <style>
-    /* Scoped to the existing #hosts only; uses a few !important flags to beat old rules */
-    #hosts { --gold:#d7b46a; --gold-deep:#b8923a; --ink:#e9eef1; --card:rgba(9,30,40,.55);
-      padding:48px 20px 56px; max-width:1100px; margin:0 auto; }
+    <!-- Framed content box -->
+    <div style="background:rgba(0,0,0,.45);
+                border:1px solid rgba(215,180,106,.45);
+                border-radius:16px;
+                padding:22px 22px 28px;
+                box-shadow:0 12px 26px rgba(0,0,0,.35);">
 
-    #hosts .section-title{ font-family:"Playfair Display",serif !important; font-weight:700 !important;
-      font-style:italic; color:var(--gold); font-size:clamp(26px,3.2vw,40px) !important;
-      line-height:1.1; letter-spacing:.3px; text-shadow:0 1px 0 rgba(0,0,0,.35); margin:0 0 18px !important; }
+      <!-- Photo -->
+      <img src="twins.jpg" alt="Nandi and Inky — Nomadic Leaf twin hosts"
+           style="display:block;margin:0 auto 16px;
+                  width:min(92vw,760px);height:auto;
+                  border:6px solid rgba(215,180,106,.55);
+                  border-radius:12px;
+                  box-shadow:0 8px 18px rgba(0,0,0,.35);" />
 
-    #hosts .title-rule{ width:86px; height:3px; border-radius:2px;
-      background:linear-gradient(90deg,var(--gold),var(--gold-deep)); margin:10px 0 24px; }
+      <!-- Names -->
+      <h3 style="margin:0 0 12px;text-align:center;
+                 font-family:'Great Vibes','Segoe Script','Brush Script MT',cursive;
+                 font-weight:400;
+                 font-size:clamp(28px,3.2vw,40px);
+                 color:#d7b46a;">
+        Nandi &amp; Inky
+      </h3>
 
-    #hosts .hero{ border:2px solid rgba(215,180,106,.35); border-radius:14px; overflow:hidden;
-      box-shadow:0 18px 40px rgba(0,0,0,.35); max-width:820px; margin:14px auto 28px; }
-    #hosts .hero img{ display:block; width:100%; height:auto; }
+      <!-- Bio body -->
+      <div style="max-width:820px;margin:0 auto;
+                  font-family:'Playfair Display',Georgia,serif;
+                  color:#f2f4f6;
+                  line-height:1.7;
+                  font-size:clamp(16px,1.15vw,18px);">
 
-    #hosts .intro{ color:var(--ink); font-size:clamp(15px,1.15vw,18px);
-      max-width:900px; margin:0 auto 22px; line-height:1.6; }
+        <p style="margin:0 0 14px;"><span style="font-size:1.05em;">🌿</span> <strong>Nomadic Leaf — Meet Your Twin Hosts</strong></p>
 
-    #hosts .cards{ display:grid; gap:18px; grid-template-columns:1fr; max-width:900px; margin:0 auto; }
-    @media (min-width:880px){ #hosts .cards{ grid-template-columns:1fr 1fr; } }
+        <p style="margin:0 0 14px;">Nandi and Inky are identical twins with a magnetic energy that instantly lights up any room — and now, any tour bus. Born in Long Beach, CA and raised between San Francisco and Arizona, they bring West Coast creativity and humor to everything they do.</p>
 
-    #hosts .card{ background:var(--card); border:1px solid rgba(215,180,106,.16); border-radius:18px;
-      padding:22px 22px 18px; box-shadow:inset 0 0 0 1px rgba(255,255,255,.02),0 10px 24px rgba(0,0,0,.25); }
+        <p style="margin:0 0 14px;">Together, they’ve spent years working as art and print models, often posing as a pair and building a natural chemistry that now translates into on-tour hosting. Known for their quick wit, love of movie quotes, and endless laughter, they’re natural entertainers who keep energy high while making every guest feel welcome.</p>
 
-    #hosts .name{ font-family:"Allura",cursive; color:var(--gold); text-shadow:0 1px 0 rgba(0,0,0,.35);
-      font-size:clamp(30px,3.2vw,42px); line-height:1; margin:0 0 8px; }
+        <p style="margin:0 0 10px;"><strong>Both are passionate artists:</strong></p>
+        <ul style="margin:0 0 14px 22px;padding:0;">
+          <li style="margin:0 0 10px;"><strong>Nandi</strong> is a self-taught cake artist and edible creator, founder of <em>The Cake Trap</em>. Her work has been featured in Las Vegas Weekly, High Times, and multiple online publications. She recently placed as runner-up in the West Coast Cannabis Chef category at the Women in Cannabis Expo. A mom of three, she balances family with a thriving creative career and a belief in the healing power of cannabis through beautifully crafted vegan edibles.</li>
+          <li style="margin:0 0 10px;"><strong>Inky</strong> is a professional art model with 10+ years of experience. She’s worked with the Bay Area Models Guild and now creates fine-art reference photography for figurative artists. She’s also an outdoor adventurer, road trip lover, and former competitive powerlifter with a love for heavy weights. Her favorite vibes are creative daytime smoke sessions and hybrid strains that balance energy with relaxation.</li>
+        </ul>
 
-    #hosts .role{ color:var(--ink); opacity:.9; margin:0 0 10px; font-size:16px; }
-    #hosts .card p{ color:var(--ink); font-size:16px; margin:0 0 10px; }
-    #hosts .card ul{ margin:8px 0 0 18px; color:var(--ink); }
-    #hosts .card li{ margin:6px 0; font-size:16px; }
-  </style>
+        <p style="margin:0 0 14px;">As a duo, they’re foodies with a sweet tooth, natural comedians, and lovers of art, travel, and unique experiences. Their favorite way to consume? Edibles. Their favorite way to connect? Laughter.</p>
 
-  <h2 class="section-title">Meet Your Twin Hosts</h2>
-  <div class="title-rule"></div>
-
-  <!-- Hero photo (auto-scales; replace src with your file path if different) -->
-  <figure class="hero">
-    <img src="twins.jpg" alt="Nandi and Inky — Twin hosts of Nomadic Leaf">
-  </figure>
-
-  <p class="intro">
-    Nandi and Inky are identical twins with a magnetic energy that instantly lights up any room — and now, any tour bus.
-    Born in Long Beach, CA and raised between San Francisco and Arizona, they bring West Coast creativity, humor, and
-    high-touch hosting to Nomadic Leaf.
-  </p>
-
-  <div class="cards">
-    <article class="card">
-      <h3 class="name">Nandi</h3>
-      <p class="role"><em>Self-taught cake artist & edible creator; founder of <strong>The Cake Trap</strong>.</em></p>
-      <p>Featured in Las Vegas Weekly, High Times, and more. Runner-up (West Coast Cannabis Chef category, Women in Cannabis Expo).</p>
-      <ul>
-        <li>Mom of three; balances family with a thriving creative practice.</li>
-        <li>Believes in the healing power of cannabis; crafts beautiful vegan edibles.</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <h3 class="name">Inky</h3>
-      <p class="role"><em>Professional art model (10+ yrs) creating fine-art reference photography for figurative artists.</em></p>
-      <p>Outdoor adventurer & road-trip lover — and <strong>former competitive powerlifter with a love for heavy weights</strong>.</p>
-      <ul>
-        <li>Favors creative daytime vibes and balanced hybrid strains.</li>
-        <li>Hiking, travel, and helping artists’ ideas come to life.</li>
-      </ul>
-    </article>
+        <p style="margin:0;">With degrees in fashion design and fine art, plus years of creative hustle, Nandi and Inky are the perfect ambassadors for Nomadic Leaf. They’re not just hosts — they’re guides, performers, and curators of the journey. Their role is to keep the vibe fun, high-energy, and classy while making sure every guest feels part of the Nomadic Leaf family.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -470,6 +458,7 @@ document.getElementById('y').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
+
 
 
 
