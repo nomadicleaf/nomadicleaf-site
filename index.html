@@ -331,76 +331,50 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
 </section>
 <!-- END LUXE SCHEDULE -->
 
-<!-- ===================== Twin Hosts (scoped styles; no global CSS edits) ===================== -->
 <section id="hosts">
-  <!-- (Optional) Load the two fonts just for this section; safe to keep here. -->
+  <!-- Fonts loaded only for this block -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Allura&display=swap" rel="stylesheet">
 
   <style>
-    /* Everything inside this block is scoped to #hosts only */
-    #hosts {
-      --gold: #d7b46a;
-      --gold-deep: #b8923a;
-      --ink: #e9eef1;              /* light type color you use elsewhere */
-      --card: rgba(9, 30, 40, .55); /* translucent navy card */
-      padding: 48px 20px 56px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    #hosts .section-title{
-      font-family:"Playfair Display",serif;
-      font-weight:700;
-      font-style:italic;
-      color:var(--gold);
-      font-size:clamp(26px,3.2vw,40px);
-      line-height:1.1;
-      letter-spacing:.3px;
-      text-shadow:0 1px 0 rgba(0,0,0,.35);
-      margin:0 0 18px;
-    }
-    #hosts .title-rule{
-      width:86px;height:3px;border-radius:2px;
-      background:linear-gradient(90deg,var(--gold),var(--gold-deep));
-      margin:10px 0 24px;
-    }
-    #hosts .hero{
-      border:2px solid rgba(215,180,106,.35);
-      border-radius:14px; overflow:hidden;
-      box-shadow:0 18px 40px rgba(0,0,0,.35);
-      max-width:980px; margin:14px auto 28px;
-    }
-    #hosts .hero img{display:block;width:100%;height:auto;}
-    #hosts .intro{
-      color:var(--ink); font-size:clamp(15px,1.15vw,18px);
-      max-width:980px;margin:0 auto 22px;line-height:1.6;
-    }
-    #hosts .cards{display:grid;gap:18px;grid-template-columns:1fr;max-width:980px;margin:0 auto;}
-    @media (min-width: 880px){#hosts .cards{grid-template-columns:1fr 1fr;}}
-    #hosts .card{
-      background:var(--card); border:1px solid rgba(215,180,106,.16);
-      border-radius:18px; padding:22px 22px 18px;
-      box-shadow:inset 0 0 0 1px rgba(255,255,255,.02),0 10px 24px rgba(0,0,0,.25);
-    }
-    #hosts .name{
-      font-family:"Allura",cursive; color:var(--gold);
-      font-size:clamp(32px,3.5vw,44px); line-height:1; margin:0 0 8px;
-      text-shadow:0 1px 0 rgba(0,0,0,.35);
-    }
-    #hosts .role{
-      color:var(--ink); opacity:.9; margin:0 0 10px; font-size:16px;
-    }
-    #hosts .card p{color:var(--ink);font-size:16px;margin:0 0 10px;}
-    #hosts .card ul{margin:8px 0 0 18px;color:var(--ink);}
-    #hosts .card li{margin:6px 0;font-size:16px;}
-    #hosts strong{color:var(--ink);}
+    /* Scoped to the existing #hosts only; uses a few !important flags to beat old rules */
+    #hosts { --gold:#d7b46a; --gold-deep:#b8923a; --ink:#e9eef1; --card:rgba(9,30,40,.55);
+      padding:48px 20px 56px; max-width:1100px; margin:0 auto; }
+
+    #hosts .section-title{ font-family:"Playfair Display",serif !important; font-weight:700 !important;
+      font-style:italic; color:var(--gold); font-size:clamp(26px,3.2vw,40px) !important;
+      line-height:1.1; letter-spacing:.3px; text-shadow:0 1px 0 rgba(0,0,0,.35); margin:0 0 18px !important; }
+
+    #hosts .title-rule{ width:86px; height:3px; border-radius:2px;
+      background:linear-gradient(90deg,var(--gold),var(--gold-deep)); margin:10px 0 24px; }
+
+    #hosts .hero{ border:2px solid rgba(215,180,106,.35); border-radius:14px; overflow:hidden;
+      box-shadow:0 18px 40px rgba(0,0,0,.35); max-width:820px; margin:14px auto 28px; }
+    #hosts .hero img{ display:block; width:100%; height:auto; }
+
+    #hosts .intro{ color:var(--ink); font-size:clamp(15px,1.15vw,18px);
+      max-width:900px; margin:0 auto 22px; line-height:1.6; }
+
+    #hosts .cards{ display:grid; gap:18px; grid-template-columns:1fr; max-width:900px; margin:0 auto; }
+    @media (min-width:880px){ #hosts .cards{ grid-template-columns:1fr 1fr; } }
+
+    #hosts .card{ background:var(--card); border:1px solid rgba(215,180,106,.16); border-radius:18px;
+      padding:22px 22px 18px; box-shadow:inset 0 0 0 1px rgba(255,255,255,.02),0 10px 24px rgba(0,0,0,.25); }
+
+    #hosts .name{ font-family:"Allura",cursive; color:var(--gold); text-shadow:0 1px 0 rgba(0,0,0,.35);
+      font-size:clamp(30px,3.2vw,42px); line-height:1; margin:0 0 8px; }
+
+    #hosts .role{ color:var(--ink); opacity:.9; margin:0 0 10px; font-size:16px; }
+    #hosts .card p{ color:var(--ink); font-size:16px; margin:0 0 10px; }
+    #hosts .card ul{ margin:8px 0 0 18px; color:var(--ink); }
+    #hosts .card li{ margin:6px 0; font-size:16px; }
   </style>
 
   <h2 class="section-title">Meet Your Twin Hosts</h2>
   <div class="title-rule"></div>
 
-  <!-- Hero photo (auto scales; replace src with your file) -->
+  <!-- Hero photo (auto-scales; replace src with your file path if different) -->
   <figure class="hero">
-    <img src="twins.jpg" alt="Nandi and Inky — Twin hosts of Nomadic Leaf">
+    <img src="twins-1080x1080.jpg" alt="Nandi and Inky — Twin hosts of Nomadic Leaf">
   </figure>
 
   <p class="intro">
@@ -410,7 +384,6 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   </p>
 
   <div class="cards">
-    <!-- Nandi -->
     <article class="card">
       <h3 class="name">Nandi</h3>
       <p class="role"><em>Self-taught cake artist & edible creator; founder of <strong>The Cake Trap</strong>.</em></p>
@@ -421,7 +394,6 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
       </ul>
     </article>
 
-    <!-- Inky -->
     <article class="card">
       <h3 class="name">Inky</h3>
       <p class="role"><em>Professional art model (10+ yrs) creating fine-art reference photography for figurative artists.</em></p>
@@ -431,31 +403,6 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
         <li>Hiking, travel, and helping artists’ ideas come to life.</li>
       </ul>
     </article>
-  </div>
-</section>
-<!-- =================== /Twin Hosts (scoped styles) =================== -->
-  
-<!-- PRICING -->
-<section class="section container" id="pricing">
-  <h2>Pricing</h2>
-  <div class="pricing-grid">
-    <div class="card price">
-      <h4>Visitors</h4>
-      <div class="figure">$219 per guest</div>
-    </div>
-    <div class="card price">
-      <h4>Locals</h4>
-      <div class="figure">$189 per guest</div>
-    </div>
-    <div class="card price">
-      <h4>VIP Premium Seating (Add-On)</h4>
-      <div class="figure">+ $40 per seat</div>
-      <ul>
-        <li>Priority boarding & premium seating zone.</li>
-        <li>Early shot at select games + bonus raffle entry.</li>
-        <li>VIP lanyard + VIP swag bag with partner goodies.</li>
-      </ul>
-    </div>
   </div>
 </section>
 
@@ -523,6 +470,7 @@ document.getElementById('y').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
+
 
 
 
