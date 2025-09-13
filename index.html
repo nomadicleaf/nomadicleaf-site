@@ -159,6 +159,123 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   </div>
 </header>
 
+<!-- ===== ABOUT (drop this where you want it to appear) ===== -->
+<section id="about" class="nl-about">
+  <div class="nl-about__wrap">
+    <h2 class="nl-about__kicker">Where the Leaf Takes You</h2>
+    <h3 class="nl-about__title">About Nomadic Leaf</h3>
+
+    <p class="nl-about__lede">
+      We’re a nomad-hearted experience born in Las Vegas—designed to
+      <strong>bring people together from everywhere</strong>. Travelers and locals meet as one crew for a
+      <strong>curated, immersive cannabis-friendly journey</strong>: premium dispensary access, compliant lounge moments, and
+      culture-soaked stops you’ll actually want in your camera roll. We handle the details; you make the memories.
+    </p>
+
+    <div class="nl-about__grid">
+      <div class="nl-about__card">
+        <h4>What We Do</h4>
+        <ul>
+          <li>Curated itineraries: behind-the-scenes dispensary access, compliant lounge sessions, glass artistry pop-ups, immersive art (e.g., AREA15).</li>
+          <li>High-touch hosting: friendly on-mic hosts keep timing tight, energy high, and photos rolling.</li>
+          <li>VIP options: priority boarding, premium seating, and a VIP swag experience with partner goodies.</li>
+          <li>Content-ready moments: iconic backdrops, quick challenges, and creators’ nights.</li>
+        </ul>
+      </div>
+
+      <div class="nl-about__card">
+        <h4>Why Nomadic Leaf</h4>
+        <ul>
+          <li>Luxury feel, local savvy—boutique routes and a trusted partner network.</li>
+          <li>Community first—connecting visitors and locals through inclusive shared experiences.</li>
+          <li>Compliance &amp; safety—licensed venues, trained staff, clear guest guidance.</li>
+          <li>Value for partners—qualified traffic and repeatable, on-brand moments.</li>
+        </ul>
+      </div>
+
+      <div class="nl-about__card">
+        <h4>Compliance &amp; Safety</h4>
+        <ul>
+          <li>Age 21+ with valid government ID.</li>
+          <li><strong>No public or on-bus consumption.</strong> Consumption only at licensed venues when permitted.</li>
+          <li>Guests purchase directly from partner dispensaries; <em>Nomadic Leaf does not sell cannabis.</em></li>
+          <li>Respect venue rules and Nevada law; our team will guide every step.</li>
+        </ul>
+      </div>
+
+      <div class="nl-about__card">
+        <h4>Who It’s For</h4>
+        <ul>
+          <li>Vegas visitors and locals seeking a premium, hassle-free night out.</li>
+          <li>Couples, friend groups, birthdays, and team outings.</li>
+          <li>Curious first-timers and seasoned enthusiasts who value style <em>and</em> compliance.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="nl-about__values">Class • Community • Compliance • Creativity</p>
+
+    <div class="nl-about__cta">
+      <a class="nl-about__btn" href="#vip">Join the VIP Waitlist</a>
+      <p class="nl-about__contact">
+        Partnerships &amp; media: <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== Scoped styles for ABOUT only ===== */
+  .nl-about { padding: 72px 20px; background: transparent; color: var(--text, #e8eef2); }
+  .nl-about__wrap { max-width: 1100px; margin: 0 auto; }
+  .nl-about__kicker { font: 600 18px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--gold, #d4b26f); letter-spacing: .08em; text-transform: uppercase; margin: 0 0 8px; }
+  .nl-about__title { font-family: "Playfair Display", serif; font-weight: 700; font-size: clamp(28px, 4vw, 40px); margin: 0 0 14px; color: var(--text, #e8eef2); }
+  .nl-about__lede { font-size: clamp(16px, 2vw, 18px); line-height: 1.7; margin: 0 0 28px; opacity: .95; }
+  .nl-about__grid { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (max-width: 880px){ .nl-about__grid { grid-template-columns: 1fr; } }
+  .nl-about__card {
+    background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    border: 1px solid rgba(212,178,111,.25);
+    border-radius: 16px;
+    padding: 18px 18px 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25) inset, 0 2px 10px rgba(0,0,0,.16);
+    backdrop-filter: blur(2px);
+  }
+  .nl-about__card h4 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0 0 8px;
+    color: var(--gold, #d4b26f);
+  }
+  .nl-about__card ul { margin: 0; padding-left: 18px; }
+  .nl-about__card li { margin: 6px 0; line-height: 1.6; }
+  .nl-about__values {
+    margin: 26px 0 16px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    color: var(--gold, #d4b26f);
+    letter-spacing: .02em;
+  }
+  .nl-about__cta { text-align: center; }
+  .nl-about__btn {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid var(--gold, #d4b26f);
+    background: linear-gradient(180deg, rgba(212,178,111,.22), rgba(212,178,111,.06));
+    color: var(--text, #e8eef2);
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,.25);
+  }
+  .nl-about__btn:hover { transform: translateY(-1px); }
+  .nl-about__contact { margin: 10px 0 0; font-size: 14px; opacity: .85; }
+  .nl-about__contact a { color: var(--gold, #d4b26f); text-decoration: underline; }
+</style>
+<!-- ===== /ABOUT ===== -->
+  
 <!-- WHAT'S INCLUDED -->
 <section class="section container" id="included">
   <h2>What’s Included</h2>
@@ -517,6 +634,7 @@ document.getElementById('y').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
+
 
 
 
