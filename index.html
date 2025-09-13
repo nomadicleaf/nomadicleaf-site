@@ -394,6 +394,65 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   </div>
 </section>
 
+<!-- ================= PRICING ================= -->
+<section id="pricing" class="nl-pricing" aria-labelledby="pricing-title">
+  <style>
+    .nl-pricing{--bg:transparent;--ink:#e7eef2;--muted:#cdd7de;--gold:#d9b362;--gold-deep:#b0852b;--card:#113341;--ring:rgba(0,0,0,.18);--shadow:0 18px 38px rgba(0,0,0,.35),0 3px 10px rgba(0,0,0,.2);padding:56px 0}
+    .nl-pricing *{box-sizing:border-box}
+    .nl-pricing .nl-container{max-width:1100px;margin:0 auto;padding:0 22px}
+    .nl-pricing .nl-gold-title{font-family:"Playfair Display",serif;font-weight:800;letter-spacing:.4px;margin:0 0 22px;line-height:1.1;
+      font-size:38px;background:linear-gradient(180deg,var(--gold),var(--gold-deep));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .nl-pricing .nl-sub{color:var(--muted);margin:0 0 26px}
+    .nl-pricing .nl-grid{display:grid;gap:22px}
+    @media (min-width:640px){.nl-pricing .nl-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (min-width:980px){.nl-pricing .nl-grid{grid-template-columns:repeat(3,1fr)}}
+    .nl-pricing .nl-card{background:linear-gradient(180deg,#143c4b,#0e2f3a);border-radius:18px;padding:24px 22px;border:1px solid rgba(217,179,98,.25);box-shadow:var(--shadow)}
+    .nl-pricing .nl-card-title{font-family:"Playfair Display",serif;color:var(--gold);font-weight:800;margin:0 0 6px}
+    .nl-pricing .nl-big{font-size:28px;font-weight:800;color:var(--ink);margin:0 0 10px}
+    .nl-pricing .nl-big span{font-size:14px;font-weight:600;color:var(--muted)}
+    .nl-pricing .nl-list{margin:12px 0 0 18px;color:var(--ink);line-height:1.55}
+    .nl-pricing .nl-list li{margin:6px 0}
+    .nl-pricing .nl-cta{display:flex;justify-content:center;margin:26px 0 6px}
+    .nl-pricing .nl-button{display:inline-block;padding:12px 22px;border-radius:12px;border:1px solid rgba(217,179,98,.55);
+      background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#1a2730;font-weight:800;text-decoration:none}
+    .nl-pricing .nl-button:hover{filter:saturate(1.08) brightness(1.03)}
+    .nl-pricing .nl-note{color:var(--muted);text-align:center;margin:12px 0 0;font-size:13px}
+  </style>
+
+  <div class="nl-container">
+    <h2 id="pricing-title" class="nl-gold-title">Pricing</h2>
+    <p class="nl-sub">Transparent rates. Upgrade to VIP for premium perks.</p>
+
+    <div class="nl-grid">
+      <article class="nl-card" aria-label="Visitors pricing">
+        <h3 class="nl-card-title">Visitors</h3>
+        <p class="nl-big">$219 <span>per guest</span></p>
+      </article>
+
+      <article class="nl-card" aria-label="Locals pricing">
+        <h3 class="nl-card-title">Locals</h3>
+        <p class="nl-big">$189 <span>per guest</span></p>
+      </article>
+
+      <article class="nl-card" aria-label="VIP Premium Seating">
+        <h3 class="nl-card-title">VIP Premium Seating (Add-On)</h3>
+        <p class="nl-big">+$40 <span>per seat</span></p>
+        <ul class="nl-list">
+          <li>Priority boarding & premium seating zone.</li>
+          <li>Early shot at select games + bonus raffle entry.</li>
+          <li>VIP lanyard + VIP swag bag with partner goodies.</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="nl-cta">
+      <a class="nl-button" href="#vip">Join VIP Waitlist</a>
+    </div>
+    <p class="nl-note">Taxes/fees may apply. Schedule & stops subject to change. Age 21+.</p>
+  </div>
+</section>
+<!-- =============== /PRICING =============== -->
+  
 <!-- VIP WAITLIST PERKS -->
 <section class="section container" id="about">
   <h2>VIP Waitlist Perks</h2>
@@ -458,6 +517,7 @@ document.getElementById('y').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
+
 
 
 
