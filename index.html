@@ -1,122 +1,141 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Nomadic Leaf — Curated Luxury Cannabis-Friendly Tours (Las Vegas 21+)</title>
-<meta name="description" content="Curated, luxury cannabis-friendly tours in Las Vegas (21+). Twin-host led, high-energy, and partner-powered — no retail sales by Nomadic Leaf.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Elegant brand serif + clean UI + upgraded hero script -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&family=Alex+Brush&family=Cormorant+Garamond:ital,wght@1,700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --gold:#c4a25a;        /* deep logo-like gold */
-  --gold-deep:#a8842a;
-  --bg:#0d2230;
-  --bg-2:#0e2a3a;
-  --panel:#102a3a;
-  --panel-2:#0f3548;
-  --ink:#e8edf1;
-  --muted:#c5d0d8;
-}
-*{box-sizing:border-box}
-html,body{margin:0;background:radial-gradient(1100px 700px at 30% 12%, var(--bg-2) 0%, var(--bg) 55%, #091922 100%);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-.container{max-width:1200px;margin:0 auto;padding:24px}
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Nomadic Leaf — Curated Luxury Cannabis-Friendly Tours (Las Vegas 21+)</title>
+  <meta name="description" content="Curated, luxury cannabis-friendly tours in Las Vegas (21+). Twin-host led, high-energy, and partner-powered — no retail sales by Nomadic Leaf.">
 
-/* NAV */
-.nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.35);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
-.nav-inner{display:flex;align-items:center;gap:16px;padding:14px 24px}
-.brand{display:flex;align-items:center;gap:10px}
-.brand img{width:30px;height:30px;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
-.brand-name{font-family:"Cinzel",serif;font-weight:700;letter-spacing:.4px;color:var(--gold);font-size:26px;line-height:1;white-space:nowrap}
-.nav-links{display:flex;align-items:center;gap:26px;margin-left:auto}
-.nav-links a{font-weight:600;opacity:.95}
-.join-vip{margin-left:8px;background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#0b141b;border:0;border-radius:12px;padding:10px 16px;font-weight:800;box-shadow:0 4px 16px rgba(0,0,0,.35)}
-.menu-toggle{display:none;margin-left:auto;background:transparent;border:0;color:var(--ink);font-size:26px;line-height:1;cursor:pointer}
+  <!-- Fonts (brand) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-/* HERO */
-.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:58px 24px 28px}
-.eyebrow{color:var(--muted);letter-spacing:.25em;font-size:12px;margin-bottom:8px}
-.hero-title{
-  font-family:"Alex Brush",cursive; /* upgraded script */
-  color:var(--gold);
-  font-size:76px;
-  line-height:1.02;
-  letter-spacing:.3px;
-  margin:0 0 14px 0;
-  text-shadow:
-    0 1px 0 #000,
-    0 10px 26px rgba(0,0,0,.35),
-    0 0 1px rgba(196,162,90,.45);  /* subtle metallic crispness */
-}
-.lead{max-width:720px;color:#dbe6ec}
-.cta-row{display:flex;gap:16px;margin:22px 0 14px}
-.btn{border-radius:14px;padding:12px 18px;font-weight:800}
-.btn-primary{background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#0a141b;border:0;box-shadow:0 6px 22px rgba(0,0,0,.45)}
-.btn-outline{border:2px solid rgba(196,162,90,.6);color:var(--gold);background:transparent}
-.socials{display:flex;gap:14px;margin-top:10px}
-.socials a{width:40px;height:40px;border:2px solid rgba(196,162,90,.55);border-radius:50%;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.35)}
-.socials svg{width:20px;height:20px;fill:var(--gold)}
-.hero-card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border-radius:20px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.04)}
-.hero-card img{width:100%;height:auto;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+  <!-- Brand styles (inline so one file controls everything) -->
+  <style>
+    :root{
+      /* Unified palette */
+      --gold:#C6A85E;           /* brand gold */
+      --gold-deep:#B79851;      /* hover/active */
+      --bg:#0B1B2B;             /* brand navy */
+      --bg-2:#11283B;           /* navy tint */
+      --panel:#11283B;
+      --panel-2:#0B1B2B;
+      --ink:#E9EDF2;
+      --muted:#BAC6D1;
+      --outline:#253A4B;
 
-/* SECTION TITLES */
-.section{padding:30px 24px}
-.section h2{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:700;color:var(--gold);font-size:44px;line-height:1.15;margin:8px 0 18px 0;text-shadow:0 1px 0 #000, 0 8px 22px rgba(0,0,0,.28)}
+      /* Rounding/shadows */
+      --r-xl:24px; --r-lg:16px; --r-md:12px;
+      --sh-1:0 10px 26px rgba(0,0,0,.35);
+      --sh-2:0 2px 0 rgba(198,168,94,.18) inset, 0 16px 40px rgba(0,0,0,.35);
 
-/* CARDS */
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border-radius:20px;padding:22px;box-shadow:0 18px 42px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.04)}
-.card h3{color:var(--gold);font-size:20px;margin:0 0 6px 0;font-weight:800}
-.card p{margin:0;color:#d7e3ea}
+      /* Type scale */
+      --h1:clamp(2.2rem, 2.6vw + 1rem, 3.25rem);
+      --h2:clamp(1.8rem, 2vw + .8rem, 2.4rem);
+      --h3:clamp(1.35rem, 1.2vw + .8rem, 1.8rem);
+      --lead:1.125rem;
+    }
 
-/* SCHEDULE */
-.schedule .bullets{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.schedule .bullets li{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);padding:14px 16px;border-radius:14px}
-.schedule small{display:block;margin-top:10px;color:#bfcbd4}
-.kicker{font-weight:700;color:var(--gold)}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    html,body{
+      margin:0;
+      background: radial-gradient(1200px 700px at 30% 12%, var(--bg-2) 0%, var(--bg) 55%, #07131F 100%) fixed;
+      color:var(--ink);
+      font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:24px}
 
-/* PRICING */
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.price{position:relative;padding:22px 22px 18px}
-.price:before{content:"";position:absolute;inset:0;border-radius:20px;box-shadow:inset 0 0 0 1px rgba(196,162,90,.22)}
-.price h4{margin:0 0 6px 0;color:var(--gold);font-size:19px}
-.price .figure{font-size:18px;color:#e7edf1}
-.price ul{margin:10px 0 0 18px;padding:0}
-.price li{margin:8px 0}
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(7,19,31,.55);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid rgba(198,168,94,.15)}
+    .nav-inner{display:flex;align-items:center;gap:16px;padding:14px 24px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand img{width:30px;height:30px;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+    .brand-name{font-family:"Cinzel",serif;font-weight:900;letter-spacing:.06em;color:var(--gold);font-size:26px;line-height:1;white-space:nowrap}
+    .nav-links{display:flex;align-items:center;gap:26px;margin-left:auto}
+    .nav-links a{font-weight:600;opacity:.95}
+    .join-vip{margin-left:8px;background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#0b141b;border:0;border-radius:12px;padding:10px 16px;font-weight:800;box-shadow:var(--sh-2)}
+    .menu-toggle{display:none;margin-left:auto;background:transparent;border:0;color:var(--ink);font-size:26px;line-height:1;cursor:pointer}
 
-/* CREATOR */
-.creator p{max-width:900px}
-.bullet{display:grid;gap:6px;margin:10px 0 0 18px}
-.bullet li{margin:4px 0}
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:58px 24px 28px}
+    .eyebrow{color:var(--muted);letter-spacing:.25em;font-size:12px;margin-bottom:8px}
+    .hero-title{
+      /* Use brand font family */
+      font-family:"Cinzel Decorative",serif;
+      color:var(--gold);
+      font-size:72px;
+      line-height:1.05;
+      letter-spacing:.02em;
+      margin:0 0 14px 0;
+      text-shadow:0 1px 0 #000, 0 10px 26px rgba(0,0,0,.35), 0 0 1px rgba(198,168,94,.35);
+    }
+    .lead{max-width:720px;color:#dbe6ec;font-size:var(--lead)}
+    .cta-row{display:flex;gap:16px;margin:22px 0 14px}
+    .btn{border-radius:14px;padding:12px 18px;font-weight:800}
+    .btn-primary{background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#0a141b;border:0;box-shadow:0 6px 22px rgba(0,0,0,.45)}
+    .btn-outline{border:2px solid rgba(198,168,94,.6);color:var(--gold);background:transparent}
+    .socials{display:flex;gap:14px;margin-top:10px}
+    .socials a{width:40px;height:40px;border:2px solid rgba(198,168,94,.55);border-radius:50%;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+    .socials svg{width:20px;height:20px;fill:var(--gold)}
+    .hero-card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border-radius:20px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.04)}
+    .hero-card img{width:100%;height:auto;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
 
-/* FOOTER */
-footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
+    /* SECTION TITLES (Cinzel) */
+    .section{padding:30px 24px}
+    .section h2{font-family:"Cinzel",serif;font-weight:900;color:var(--gold);font-size:44px;line-height:1.15;margin:8px 0 18px 0;text-shadow:0 1px 0 #000, 0 8px 22px rgba(0,0,0,.28)}
 
-/* MOBILE */
-@media (max-width:980px){
-  .nav-links{display:none}
-  .menu-toggle{display:block}
-  .nav.open .nav-links{display:flex;flex-direction:column;gap:14px;position:absolute;left:0;right:0;top:64px;padding:16px 24px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px)}
-  .brand img{width:28px;height:28px}
-  .brand-name{font-size:22px}
-  .hero{grid-template-columns:1fr;gap:22px;padding-top:36px}
-  .hero-title{font-size:58px}
-  .section h2{font-size:36px}
-  .grid-3,.pricing-grid{grid-template-columns:1fr}
-}
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PYBGYKN64N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PYBGYKN64N');
-</script>
-</style>
+    /* CARDS */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border-radius:20px;padding:22px;box-shadow:0 18px 42px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.04);border:1px solid rgba(198,168,94,.14)}
+    .card h3{color:var(--gold);font-size:20px;margin:0 0 6px 0;font-weight:800;font-family:"Cinzel",serif}
+    .card p{margin:0;color:#d7e3ea}
+
+    /* Shared pill token */
+    .pill{display:inline-block;margin-left:.5rem;padding:2px 10px;border-radius:999px;font-size:.8em;color:var(--gold);background:rgba(15,22,30,.6);border:1px solid rgba(198,168,94,.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+
+    /* PRICING */
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .price{position:relative;padding:22px 22px 18px;background:linear-gradient(180deg,var(--panel),var(--panel-2));border-radius:20px;border:1px solid rgba(198,168,94,.2)}
+    .price h4{margin:0 0 6px 0;color:var(--gold);font-size:19px;font-family:"Cinzel",serif}
+    .price .figure{font-size:28px;color:#fff;font-family:"Cinzel",serif;font-weight:900}
+    .price ul{margin:10px 0 0 18px;padding:0}
+    .price li{margin:8px 0}
+
+    /* CREATOR */
+    .creator p{max-width:900px}
+    .bullet{display:grid;gap:6px;margin:10px 0 0 18px}
+    .bullet li{margin:4px 0}
+
+    /* FOOTER */
+    footer{padding:30px 24px 60px;color:#aebdc7;text-align:center;border-top:1px solid rgba(198,168,94,.14)}
+
+    /* MOBILE */
+    @media (max-width:980px){
+      .nav-links{display:none}
+      .menu-toggle{display:block}
+      .nav.open .nav-links{display:flex;flex-direction:column;gap:14px;position:absolute;left:0;right:0;top:64px;padding:16px 24px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px)}
+      .brand img{width:28px;height:28px}
+      .brand-name{font-size:22px}
+      .hero{grid-template-columns:1fr;gap:22px;padding-top:36px}
+      .hero-title{font-size:58px}
+      .section h2{font-size:36px}
+      .grid-3,.pricing-grid{grid-template-columns:1fr}
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) — outside of <style> -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYBGYKN64N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PYBGYKN64N');
+  </script>
 </head>
 <body>
 
@@ -167,7 +186,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   </div>
 </header>
 
-<!-- ===== ABOUT (drop this where you want it to appear) ===== -->
+<!-- ===== ABOUT ===== -->
 <section id="about" class="nl-about">
   <div class="nl-about__wrap">
     <h2 class="nl-about__title">About Nomadic Leaf</h2>
@@ -223,7 +242,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
     <p class="nl-about__values">Class • Community • Compliance • Creativity</p>
 
     <div class="nl-about__cta">
-      <a class="nl-about__btn" href="#vip">Join the VIP Waitlist</a>
+      <a class="nl-about__btn" href="https://forms.gle/U9bik7HfAPtaphPx8" target="_blank" rel="noopener">Join the VIP Waitlist</a>
       <p class="nl-about__contact">
         Partnerships &amp; media: <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a>
       </p>
@@ -233,56 +252,36 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
 
 <style>
   /* ===== Scoped styles for ABOUT only ===== */
-  .nl-about { padding: 72px 20px; background: transparent; color: var(--text, #e8eef2); }
-  .nl-about__wrap { max-width: 1100px; margin: 0 auto; }
-  .nl-about__kicker { font: 600 18px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--gold, #d4b26f); letter-spacing: .08em; text-transform: uppercase; margin: 0 0 8px; }
-  .nl-about__title { font-family: "Playfair Display", serif; font-weight: 700; font-size: clamp(28px, 4vw, 40px); margin: 0 0 14px; color: var(--text, #e8eef2); }
-  .nl-about__lede { font-size: clamp(16px, 2vw, 18px); line-height: 1.7; margin: 0 0 28px; opacity: .95; }
-  .nl-about__grid { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  @media (max-width: 880px){ .nl-about__grid { grid-template-columns: 1fr; } }
+  .nl-about { padding:72px 20px; background:transparent; color:var(--ink); }
+  .nl-about__wrap { max-width:1100px; margin:0 auto; }
+  .nl-about__title { font-family:"Cinzel",serif; font-weight:900; font-size:clamp(28px,4vw,40px); margin:0 0 14px; color:var(--ink); }
+  .nl-about__lede { font-size:clamp(16px,2vw,18px); line-height:1.7; margin:0 0 28px; opacity:.95; }
+  .nl-about__grid { display:grid; gap:18px; grid-template-columns:repeat(2,minmax(0,1fr)); }
+  @media (max-width:880px){ .nl-about__grid { grid-template-columns:1fr; } }
   .nl-about__card {
-    background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-    border: 1px solid rgba(212,178,111,.25);
-    border-radius: 16px;
-    padding: 18px 18px 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.25) inset, 0 2px 10px rgba(0,0,0,.16);
-    backdrop-filter: blur(2px);
+    background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    border:1px solid rgba(198,168,94,.25);
+    border-radius:16px; padding:18px 18px 16px;
+    box-shadow:inset 0 10px 30px rgba(0,0,0,.25), 0 2px 10px rgba(0,0,0,.16);
+    backdrop-filter:blur(2px);
   }
-  .nl-about__card h4 {
-    font-family: "Playfair Display", serif;
-    font-weight: 700;
-    font-size: 22px;
-    margin: 0 0 8px;
-    color: var(--gold, #d4b26f);
-  }
-  .nl-about__card ul { margin: 0; padding-left: 18px; }
-  .nl-about__card li { margin: 6px 0; line-height: 1.6; }
-  .nl-about__values {
-    margin: 26px 0 16px;
-    text-align: center;
-    font-family: "Playfair Display", serif;
-    font-weight: 600;
-    color: var(--gold, #d4b26f);
-    letter-spacing: .02em;
-  }
-  .nl-about__cta { text-align: center; }
+  .nl-about__card h4 { font-family:"Cinzel",serif; font-weight:800; font-size:22px; margin:0 0 8px; color:var(--gold); }
+  .nl-about__card ul { margin:0; padding-left:18px; }
+  .nl-about__card li { margin:6px 0; line-height:1.6; }
+  .nl-about__values { margin:26px 0 16px; text-align:center; font-family:"Cinzel",serif; font-weight:700; color:var(--gold); letter-spacing:.02em; }
+  .nl-about__cta { text-align:center; }
   .nl-about__btn {
-    display: inline-block;
-    padding: 12px 18px;
-    border-radius: 12px;
-    border: 1px solid var(--gold, #d4b26f);
-    background: linear-gradient(180deg, rgba(212,178,111,.22), rgba(212,178,111,.06));
-    color: var(--text, #e8eef2);
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 6px 18px rgba(0,0,0,.25);
+    display:inline-block; padding:12px 18px; border-radius:12px;
+    border:1px solid var(--gold);
+    background:linear-gradient(180deg, rgba(198,168,94,.22), rgba(198,168,94,.06));
+    color:var(--ink); font-weight:700; text-decoration:none; box-shadow:0 6px 18px rgba(0,0,0,.25);
   }
-  .nl-about__btn:hover { transform: translateY(-1px); }
-  .nl-about__contact { margin: 10px 0 0; font-size: 14px; opacity: .85; }
-  .nl-about__contact a { color: var(--gold, #d4b26f); text-decoration: underline; }
+  .nl-about__btn:hover{ transform:translateY(-1px); }
+  .nl-about__contact{ margin:10px 0 0; font-size:14px; opacity:.85; }
+  .nl-about__contact a{ color:var(--gold); text-decoration:underline; }
 </style>
 <!-- ===== /ABOUT ===== -->
-  
+
 <!-- WHAT'S INCLUDED -->
 <section class="section container" id="included">
   <h2>What’s Included</h2>
@@ -302,308 +301,149 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   </div>
 </section>
 
-<!-- BEGIN LUXE SCHEDULE -->
-<section id="schedule" class="luxe-schedule compact">
-
+<!-- SAMPLE SCHEDULE -->
+<section id="schedule" class="luxe-schedule">
   <style>
-    /* --- Luxe Schedule (self-contained) --- */
-    :root{
-      --gold:#d6b35b; --gold-deep:#b7892c;
-      --ink:#eae7df; --ink-dim:#cfd7df;
-    }
+    .luxe-schedule{ max-width:980px; margin:0 auto; padding:0 22px 8px; }
     .luxe-schedule .luxe-title{
-      font-family:"Playfair Display", serif;
-      font-weight:700;
-      letter-spacing:.02em;
-      font-size:clamp(28px,3.2vw,44px);
-      line-height:1.15;
+      font-family:"Cinzel",serif; font-weight:900;
+      font-size:clamp(28px,3.2vw,44px); line-height:1.15; margin:0 0 8px 2px;
       background:linear-gradient(180deg,var(--gold),var(--gold-deep));
-      -webkit-background-clip:text;background-clip:text;color:transparent;
-      text-shadow:0 1px 0 rgba(0,0,0,.25); margin:0 0 10px 0;
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      text-shadow:0 1px 0 rgba(0,0,0,.25);
     }
     .luxe-schedule .luxe-title span{
       font-weight:700; color:var(--gold);
       background:rgba(15,22,30,.45);
-      border:1px solid rgba(214,179,91,.45);
+      border:1px solid rgba(198,168,94,.45);
       border-radius:999px; padding:4px 10px; font-size:.55em; margin-left:.5rem;
     }
-    .luxe-schedule .timeline{list-style:none;margin:18px 0 6px;padding:0 0 0 48px;position:relative;}
+    .luxe-schedule .timeline{list-style:none; margin:8px 0 6px; padding:0 0 0 58px; position:relative;}
     .luxe-schedule .timeline:before{
-      content:"";position:absolute;left:18px;top:0;bottom:0;width:2px;
-      background:linear-gradient(180deg,rgba(214,179,91,.65),rgba(214,179,91,.15));
-      box-shadow:0 0 12px rgba(214,179,91,.25);
+      content:""; position:absolute; left:28px; top:0; bottom:0; width:2px;
+      background:linear-gradient(180deg, rgba(198,168,94,.65), rgba(198,168,94,.15));
+      box-shadow:0 0 12px rgba(198,168,94,.25);
     }
-    .luxe-schedule .timeline-item{position:relative;padding:0 0 20px 0;}
+    .luxe-schedule .timeline-item{position:relative; padding:0 0 10px 0;}
     .luxe-schedule .timeline-item:before{
-      content:"";position:absolute;left:-32px;top:.35rem;width:18px;height:18px;border-radius:50%;
-      background:
-        radial-gradient(circle at 32% 30%,rgba(255,255,255,.55),transparent 42%),
-        linear-gradient(180deg,var(--gold),var(--gold-deep));
-      box-shadow:0 0 0 4px rgba(214,179,91,.18),0 8px 14px rgba(0,0,0,.35);
+      content:""; position:absolute; left:-26px; top:.35rem; width:16px; height:16px; border-radius:50%;
+      background:linear-gradient(180deg,var(--gold),var(--gold-deep));
+      box-shadow:0 0 0 4px rgba(198,168,94,.18), 0 8px 14px rgba(0,0,0,.35);
     }
-    .luxe-schedule .ti-head{
-      font-family:"Playfair Display",serif;font-weight:700;color:var(--ink);
-      font-size:clamp(18px,1.35vw,22px);
-    }
-    .luxe-schedule .timeline-item p{margin:.25rem 0 0;color:var(--ink-dim);opacity:.95;}
-    .luxe-schedule .pill{
-      display:inline-block;margin-left:.5rem;padding:2px 10px;border-radius:999px;font-size:.8em;
-      color:var(--gold);background:rgba(15,22,30,.6);border:1px solid rgba(214,179,91,.55);
-      box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
-    }
-    .luxe-schedule .schedule-note{
-      margin-top:16px;padding:10px 14px;border-left:3px solid var(--gold);
-      background:linear-gradient(90deg,rgba(214,179,91,.16),rgba(214,179,91,0));
-      color:var(--ink);border-radius:6px;
-    }
+    .luxe-schedule .ti-head{ font-family:"Cinzel",serif; font-weight:800; color:var(--ink); font-size:clamp(17px,1.1vw,21px); margin-bottom:2px; }
+    .luxe-schedule .timeline-item p{ margin:.15rem 0 0; line-height:1.35; font-size:.95em; color:#CFD7DF; }
     @media (max-width:680px){
-      .luxe-schedule .timeline{padding-left:42px;}
-      .luxe-schedule .timeline:before{left:14px;}
-      .luxe-schedule .timeline-item:before{left:-28px;}
+      .luxe-schedule{ padding:0 14px 6px; }
+      .luxe-schedule .timeline{ padding-left:48px; }
+      .luxe-schedule .timeline:before{ left:18px; }
+      .luxe-schedule .timeline-item:before{ left:-22px; }
     }
   </style>
-<style>
-  /* Luxe Schedule — compact layout + tighter spacing */
-  .luxe-schedule.compact{
-    max-width: 980px;          /* centers the block, stops it hugging the edge */
-    margin: 0 auto;
-    padding: 0 22px 8px;       /* adds breathing room left/right */
-  }
-  .luxe-schedule.compact .luxe-title{
-    margin: 0 0 8px 2px;       /* small nudge from the edge */
-  }
-  .luxe-schedule.compact .timeline{
-    padding-left: 58px;        /* keeps the line/badges off the edge */
-    margin-top: 8px;
-  }
-  .luxe-schedule.compact .timeline:before{ left: 28px; }
-  .luxe-schedule.compact .timeline-item{
-    padding-bottom: 10px;      /* was ~20px; halves the vertical gap */
-  }
-  .luxe-schedule.compact .timeline-item:before{
-    left: -26px; transform: scale(.9);  /* slightly smaller badges */
-  }
-  .luxe-schedule.compact .ti-head{
-    font-size: clamp(17px, 1.1vw, 21px); /* tight, readable headings */
-    margin-bottom: 2px;
-  }
-  .luxe-schedule.compact .timeline-item p{
-    margin: .15rem 0 0;        /* tighter subtext */
-    line-height: 1.35;
-    font-size: .95em;
-  }
-  .luxe-schedule.compact .pill{
-    padding: 1px 8px; font-size: .75em; /* smaller duration chips */
-  }
-
-  /* Mobile tweaks */
-  @media (max-width: 680px){
-    .luxe-schedule.compact{ padding: 0 14px 6px; }
-    .luxe-schedule.compact .timeline{ padding-left: 48px; }
-    .luxe-schedule.compact .timeline:before{ left: 18px; }
-    .luxe-schedule.compact .timeline-item:before{ left: -22px; }
-  }
-</style>
 
   <h3 class="luxe-title">Sample Schedule <span>~5h 30m</span></h3>
 
   <ol class="timeline">
     <li class="timeline-item">
-      <div class="ti-head">Check-in & Welcome <span class="pill">Start</span></div>
+      <div class="ti-head">Check-in &amp; Welcome <span class="pill">Start</span></div>
       <p>Board the bus, meet your twin hosts, quick ice-breaker.</p>
     </li>
-
     <li class="timeline-item">
       <div class="ti-head">Dispensary + behind-the-scenes + compliant lounge <span class="pill">60m</span></div>
       <p>Guided shopping plus on-site, compliant consumption.</p>
     </li>
-
     <li class="timeline-item">
       <div class="ti-head">Hop-Off Photo Stop #1 <span class="pill">10m</span></div>
       <p>Iconic Vegas backdrop + quick swag challenge.</p>
     </li>
-
     <li class="timeline-item">
       <div class="ti-head">Glass artistry pop-up <span class="pill">30m</span></div>
       <p>Live demo and boutique browsing.</p>
     </li>
-
     <li class="timeline-item">
       <div class="ti-head">Immersive art + dinner (e.g., AREA15: Wink World + BEAST) <span class="pill">110m</span></div>
       <p>Color-soaked experience followed by a luxe, fun dinner.</p>
     </li>
-
     <li class="timeline-item">
       <div class="ti-head">Hop-Off Photo Stop #2 <span class="pill">10m</span></div>
       <p>Second landmark moment + timing game to keep things tight.</p>
     </li>
-
     <li class="timeline-item">
       <div class="ti-head">Lounge Stop — premium session <span class="pill">90m</span></div>
       <p>Unwind and enjoy the finale in a 90-minute lounge window.</p>
     </li>
-
     <li class="timeline-item">
-      <div class="ti-head">Return & Farewell <span class="pill">15m</span></div>
+      <div class="ti-head">Return &amp; Farewell <span class="pill">15m</span></div>
       <p>Prize call-outs, thank-yous, and next-tour plugs on the ride back.</p>
     </li>
   </ol>
 
-  <p class="schedule-note">
-    <strong>Note:</strong> Schedule & stops are subject to change based on partner availability, traffic, and special events.
+  <p class="schedule-note" style="max-width:980px;margin:10px auto 0;padding:10px 14px;border-left:3px solid var(--gold);background:linear-gradient(90deg,rgba(198,168,94,.16),rgba(198,168,94,0));border-radius:6px;">
+    <strong>Note:</strong> Schedule &amp; stops are subject to change based on partner availability, traffic, and special events.
   </p>
 </section>
-<!-- END LUXE SCHEDULE -->
 
-<section id="hosts" style="padding:72px 0 64px;">
-  <div style="max-width:1120px;margin:0 auto;padding:0 20px;">
-    <!-- Section title -->
-    <h2 style="margin:0 0 18px;
-               font-family:'Cinzel','Times New Roman',serif;
-               font-weight:700;
-               font-size:clamp(26px,3vw,36px);
-               letter-spacing:.5px;
-               color:#d7b46a;">
-      Meet Your Twin Hosts
-    </h2>
-
-    <!-- Framed content box -->
-    <div style="background:rgba(0,0,0,.45);
-                border:1px solid rgba(215,180,106,.45);
-                border-radius:16px;
-                padding:22px 22px 28px;
-                box-shadow:0 12px 26px rgba(0,0,0,.35);">
-
-      <!-- Photo -->
-      <img src="twins.jpg" alt="Nandi and Inky — Nomadic Leaf twin hosts"
-           style="display:block;margin:0 auto 16px;
-                  width:min(92vw,760px);height:auto;
-                  border:6px solid rgba(215,180,106,.55);
-                  border-radius:12px;
-                  box-shadow:0 8px 18px rgba(0,0,0,.35);" />
-
-      <!-- Names -->
-      <h3 style="margin:0 0 12px;text-align:center;
-                 font-family:'Great Vibes','Segoe Script','Brush Script MT',cursive;
-                 font-weight:400;
-                 font-size:clamp(28px,3.2vw,40px);
-                 color:#d7b46a;">
-        Nandi &amp; Inky
-      </h3>
-
-      <!-- Bio body -->
-      <div style="max-width:820px;margin:0 auto;
-                  font-family:'Playfair Display',Georgia,serif;
-                  color:#f2f4f6;
-                  line-height:1.7;
-                  font-size:clamp(16px,1.15vw,18px);">
-
-        <p style="margin:0 0 14px;">Nandi and Inky are identical twins with a magnetic energy that instantly lights up any room — and now, any tour bus. Born in Long Beach, CA and raised between San Francisco and Arizona, they bring West Coast creativity and humor to everything they do.</p>
-
-        <p style="margin:0 0 14px;">Together, they’ve spent years working as art and print models, often posing as a pair and building a natural chemistry that now translates into on-tour hosting. Known for their quick wit, love of movie quotes, and endless laughter, they’re natural entertainers who keep energy high while making every guest feel welcome.</p>
-
-        <p style="margin:0 0 10px;"><strong>Both are passionate artists:</strong></p>
-        <ul style="margin:0 0 14px 22px;padding:0;">
-          <li style="margin:0 0 10px;"><strong>Nandi</strong> is a self-taught cake artist and edible creator, founder of <em>The Cake Trap</em>. Her work has been featured in Las Vegas Weekly, High Times, and multiple online publications. She recently placed as runner-up in the West Coast Cannabis Chef category at the Women in Cannabis Expo. A mom of three, she balances family with a thriving creative career and a belief in the healing power of cannabis through beautifully crafted vegan edibles.</li>
-          <li style="margin:0 0 10px;"><strong>Inky</strong> is a professional art model with 10+ years of experience. She’s worked with the Bay Area Models Guild in San Francisco, and now creates fine-art reference photography for figurative artists. She’s also an outdoor adventurer, road trip lover, and former competitive powerlifter with a love for heavy weights. Her favorite vibes are creative daytime smoke sessions and hybrid strains that balance energy with relaxation.</li>
-        </ul>
-
-        <p style="margin:0 0 14px;">As a duo, they’re foodies with a sweet tooth, natural comedians, and lovers of art, travel, and unique experiences. Their favorite way to consume? Edibles. Their favorite way to connect? Laughter.</p>
-
-        <p style="margin:0;">With degrees in fashion design and fine art, plus years of creative hustle, Nandi and Inky are the perfect ambassadors for Nomadic Leaf. They’re not just hosts — they’re guides, performers, and curators of the journey. Their role is to keep the vibe fun, high-energy, and classy while making sure every guest feels part of the Nomadic Leaf family.</p>
-      </div>
+<!-- HOSTS (kept simple; replace image as needed) -->
+<section id="hosts" class="section container">
+  <h2>Meet Your Twin Hosts</h2>
+  <div class="card" style="display:grid;grid-template-columns:1fr 1.2fr;gap:22px;align-items:center;">
+    <img src="./mainlogosquare.PNG" alt="Nomadic Leaf Hosts" style="border-radius:16px;">
+    <div>
+      <p>Nandi and Inky are identical twins with a magnetic energy that lights up any room. As a duo, they’re foodies, natural comedians, and lovers of art, travel, and unique experiences.</p>
+      <p>With degrees in fashion design and fine art plus years of creative hustle, they’re the perfect ambassadors for Nomadic Leaf—guides, performers, and curators of the journey. Their role is to keep the vibe fun, high-energy, and classy while making sure every guest feels part of the Nomadic Leaf family.</p>
     </div>
   </div>
 </section>
 
-<!-- ================= PRICING ================= -->
-<section id="pricing" class="nl-pricing" aria-labelledby="pricing-title">
-  <style>
-    .nl-pricing{--bg:transparent;--ink:#e7eef2;--muted:#cdd7de;--gold:#d9b362;--gold-deep:#b0852b;--card:#113341;--ring:rgba(0,0,0,.18);--shadow:0 18px 38px rgba(0,0,0,.35),0 3px 10px rgba(0,0,0,.2);padding:56px 0}
-    .nl-pricing *{box-sizing:border-box}
-    .nl-pricing .nl-container{max-width:1100px;margin:0 auto;padding:0 22px}
-    .nl-pricing .nl-gold-title{font-family:"Playfair Display",serif;font-weight:800;letter-spacing:.4px;margin:0 0 22px;line-height:1.1;
-      font-size:38px;background:linear-gradient(180deg,var(--gold),var(--gold-deep));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .nl-pricing .nl-sub{color:var(--muted);margin:0 0 26px}
-    .nl-pricing .nl-grid{display:grid;gap:22px}
-    @media (min-width:640px){.nl-pricing .nl-grid{grid-template-columns:repeat(2,1fr)}}
-    @media (min-width:980px){.nl-pricing .nl-grid{grid-template-columns:repeat(3,1fr)}}
-    .nl-pricing .nl-card{background:linear-gradient(180deg,#143c4b,#0e2f3a);border-radius:18px;padding:24px 22px;border:1px solid rgba(217,179,98,.25);box-shadow:var(--shadow)}
-    .nl-pricing .nl-card-title{font-family:"Playfair Display",serif;color:var(--gold);font-weight:800;margin:0 0 6px}
-    .nl-pricing .nl-big{font-size:28px;font-weight:800;color:var(--ink);margin:0 0 10px}
-    .nl-pricing .nl-big span{font-size:14px;font-weight:600;color:var(--muted)}
-    .nl-pricing .nl-list{margin:12px 0 0 18px;color:var(--ink);line-height:1.55}
-    .nl-pricing .nl-list li{margin:6px 0}
-    .nl-pricing .nl-cta{display:flex;justify-content:center;margin:26px 0 6px}
-    .nl-pricing .nl-button{display:inline-block;padding:12px 22px;border-radius:12px;border:1px solid rgba(217,179,98,.55);
-      background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#1a2730;font-weight:800;text-decoration:none}
-    .nl-pricing .nl-button:hover{filter:saturate(1.08) brightness(1.03)}
-    .nl-pricing .nl-note{color:var(--muted);text-align:center;margin:12px 0 0;font-size:13px}
-  </style>
-
-  <div class="nl-container">
-    <h2 id="pricing-title" class="nl-gold-title">Pricing</h2>
-    <p class="nl-sub">Transparent rates. Upgrade to VIP for premium perks.</p>
-
-    <div class="nl-grid">
-      <article class="nl-card" aria-label="Visitors pricing">
-        <h3 class="nl-card-title">Visitors</h3>
-        <p class="nl-big">$219 <span>per guest</span></p>
-      </article>
-
-      <article class="nl-card" aria-label="Locals pricing">
-        <h3 class="nl-card-title">Locals</h3>
-        <p class="nl-big">$189 <span>per guest</span></p>
-      </article>
-
-      <article class="nl-card" aria-label="VIP Premium Seating">
-        <h3 class="nl-card-title">VIP Premium Seating (Add-On)</h3>
-        <p class="nl-big">+$40 <span>per seat</span></p>
-        <ul class="nl-list">
-          <li>Priority boarding & premium seating zone.</li>
-          <li>Early shot at select games + bonus raffle entry.</li>
-          <li>VIP lanyard + VIP swag bag with partner goodies.</li>
-        </ul>
-      </article>
+<!-- PRICING -->
+<section id="pricing" class="section container">
+  <h2>Pricing</h2>
+  <div class="pricing-grid">
+    <div class="price">
+      <h4>Visitors</h4>
+      <div class="figure">$219 <small>per guest</small></div>
+      <ul>
+        <li>Curated route + hosts</li>
+        <li>Partner stops & perks</li>
+        <li>Age 21+ • ID required</li>
+      </ul>
     </div>
-
-    <div class="nl-cta">
-      <a class="nl-button" href="#vip">Join VIP Waitlist</a>
+    <div class="price">
+      <h4>Locals</h4>
+      <div class="figure">$189 <small>per guest</small></div>
+      <ul>
+        <li>Same itinerary & perks</li>
+        <li>Local proof may be requested</li>
+        <li>21+ only • ID required</li>
+      </ul>
     </div>
-    <p class="nl-note">Taxes/fees may apply. Schedule & stops subject to change. Age 21+.</p>
+    <div class="price">
+      <h4>VIP Premium Seating (Add-On)</h4>
+      <div class="figure">+ $40 <small>per seat</small></div>
+      <ul>
+        <li>Priority boarding & premium seating zone</li>
+        <li>Early shot at select games + bonus raffle entry</li>
+        <li>VIP lanyard + VIP swag bag with partner goodies</li>
+      </ul>
+    </div>
   </div>
-</section>
-<!-- =============== /PRICING =============== -->
-  
-<!-- VIP WAITLIST PERKS -->
-<section class="section container" id="about">
-  <h2>VIP Waitlist Perks</h2>
-  <div class="grid-3">
-    <div class="card"><h3>First to Book</h3><p>Early access windows for new dates and special events.</p></div>
-    <div class="card"><h3>Early-Bird Offers</h3><p>Exclusive promo drops for waitlist only.</p></div>
-    <div class="card"><h3>Seat Upgrade Priority</h3><p>First pick on VIP Premium Seating when space is limited.</p></div>
-    <div class="card"><h3>Pilot / Media Nights</h3><p>Occasional invites when we test routes & capture content.</p></div>
-    <div class="card"><h3>Partner Pop-Ups</h3><p>Access to select partner experiences and surprise add-ons.</p></div>
-    <div class="card"><h3>Behind-the-Scenes</h3><p>Sneak peeks, route teasers, and twin-host updates.</p></div>
-  </div>
-  <div class="cta-row" style="margin-top:20px">
+  <div style="margin-top:18px;">
     <a class="btn btn-primary" href="https://forms.gle/U9bik7HfAPtaphPx8" target="_blank" rel="noopener">Join VIP Waitlist</a>
   </div>
 </section>
 
-<!-- CREATOR ZONE (expanded + signup path) -->
-<section class="section container creator" id="creators">
+<!-- CREATORS PROGRAM -->
+<section id="creators" class="section container creator">
   <h2>Creators Program</h2>
-  <p><strong>Who it’s for:</strong> photo & video creators who love capturing luxury experiences, street-level Vegas energy, and lifestyle content.</p>
+  <p><strong>Who it’s for:</strong> photo &amp; video creators who love capturing luxury experiences, street-level Vegas energy, and lifestyle content.</p>
 
-  <div class="grid-3" style="margin-top:12px">
+  <div class="grid-3" style="grid-template-columns:1.2fr 1fr;">
     <div class="card">
       <h3>Perks</h3>
       <ul class="bullet">
         <li>Discounted or comped seat on select media nights.</li>
         <li>VIP treatment on board (priority seating, swag).</li>
         <li>Behind-the-scenes access windows when available.</li>
-        <li>Feature reels & galleries on our socials and site (tagged & credited).</li>
+        <li>Feature reels &amp; galleries on our socials and site (tagged &amp; credited).</li>
       </ul>
     </div>
     <div class="card">
@@ -612,48 +452,18 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
         <li>Short-form clips (vertical) and a small photo set.</li>
         <li>48–72h turnaround on selects for our launch content bank.</li>
         <li>Tagging guidelines followed; co-posting when invited.</li>
-        <li>Usage rights: non-exclusive, credited brand use.</li>
       </ul>
     </div>
-    <div class="card">
-      <h3>How to Apply</h3>
-      <ul class="bullet">
-        <li>Tap <em>Apply as Creator</em> below and in the form’s first text field, write <strong>“CREATOR”</strong> + your IG/TikTok handle.</li>
-        <li>Or DM <strong>@nomadicleaftours</strong> on Instagram with “CREATOR” to get the media-night link.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="cta-row" style="margin-top:20px">
-    <a class="btn btn-primary" href="https://forms.gle/U9bik7HfAPtaphPx8" target="_blank" rel="noopener">Apply as Creator</a>
-    <a class="btn btn-outline" href="https://www.instagram.com/nomadicleaftours?igsh=cW0zeGRheTVkNnhk&utm_source=qr" target="_blank" rel="noopener">DM on Instagram</a>
   </div>
 </section>
-  
+
 <footer>
-  © <span id="y"></span> Nomadic Leaf. Curated luxury cannabis-friendly tours in Las Vegas (21+). No retail sales by Nomadic Leaf.
+  © <span id="y"></span> Nomadic Leaf • Las Vegas • 21+ • <a href="mailto:info@nomadicleaf.com" style="color:var(--gold);text-decoration:underline">info@nomadicleaf.com</a>
 </footer>
 
 <script>
-document.getElementById('y').textContent=new Date().getFullYear();
+  // year stamp
+  document.getElementById('y').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
