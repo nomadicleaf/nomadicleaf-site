@@ -447,6 +447,87 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
 </section>
 <!-- END LUXE SCHEDULE -->
 
+<!-- ===================== FOUNDER (matches Twins card style) ===================== -->
+<section id="nl-founder" aria-labelledby="nl-founder-title">
+  <style>
+    /* Scoped to this section only; inherits your site's fonts */
+    #nl-founder{
+      --gold:#C6A85E;
+      --ink:#E9EDF2;
+      --muted:#BAC6D1;
+      padding:56px 20px;
+      color:var(--ink);
+      background:transparent;
+    }
+    #nl-founder .wrap{max-width:1100px;margin:0 auto}
+    /* Card like Twins section */
+    #nl-founder .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
+      border:1px solid rgba(198,168,94,.35);
+      border-radius:24px;
+      padding:22px 20px 24px;
+      box-shadow:inset 0 10px 30px rgba(0,0,0,.20), 0 18px 40px rgba(0,0,0,.30);
+    }
+    /* Framed photo */
+    #nl-founder .frame{
+      position:relative;border-radius:18px;overflow:hidden;
+      background:linear-gradient(180deg,rgba(11,27,43,.85),rgba(11,27,43,.92));
+      border:1px solid rgba(198,168,94,.22);
+      box-shadow:0 16px 36px rgba(0,0,0,.35);
+    }
+    #nl-founder .frame::before{
+      content:"";position:absolute;inset:12px;border-radius:12px;
+      border:1px solid rgba(198,168,94,.45);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
+      pointer-events:none;
+    }
+    #nl-founder .frame::after{
+      content:"";position:absolute;inset:0;
+      background:radial-gradient(120% 100% at 50% 0, rgba(0,0,0,0), rgba(0,0,0,.18));
+      pointer-events:none;
+    }
+    #nl-founder .frame img{
+      width:100%;display:block;aspect-ratio:4/5;object-fit:cover;transform:translateZ(0);
+    }
+    /* Gold name line (same vibe as Twins heading) */
+    #nl-founder .name{
+      margin:16px 10px 10px;
+      text-align:center;
+      color:var(--gold);
+      font-weight:700;
+      font-style:italic;
+      letter-spacing:.02em;
+      font-size:clamp(20px,3.4vw,28px);
+    }
+    /* Body copy */
+    #nl-founder p{margin:.75rem 0;line-height:1.75}
+    #nl-founder .hr{
+      height:1px;border:0;margin:14px 0 10px;
+      background:linear-gradient(90deg, rgba(198,168,94,.25), rgba(198,168,94,.05));
+    }
+  </style>
+
+  <div class="wrap">
+    <article class="card">
+      <div class="frame">
+        <!-- Replace with your photo path -->
+        <img src="D2823552-.jpg" alt="Jerome Butler">
+      </div>
+
+      <h2 id="nl-founder-title" class="name">Jerome Butler — Founder</h2>
+
+      <p>Jerome Butler founded Nomadic Leaf after years of living a truly nomadic life. Raised across multiple states and shaped by service in the U.S. Navy, he traveled widely—by air, sea, and underwater—developing a deep appreciation for culture, craft, and the logistics that make great experiences feel effortless. That perspective now informs a curated luxury experience designed to connect locals and visitors in the same moment, with the same sense of belonging—Where the Leaf Takes You.</p>
+
+      <p>Jerome is a long-time advocate for the cannabis industry, believing it’s one of the defining industries of now and the future when it’s approached with respect, hospitality standards, and community. Professionally, he built a broad, cross-functional foundation—business consulting, marketing, sales, partnerships, HR, and SEO—so he understands both the front-of-house warmth guests feel and the back-of-house systems that keep an experience on time and on brand. That combination of passion and discipline is the through line of his work.</p>
+
+      <p>Las Vegas is where the moving finally stopped and the vision focused. For Jerome, luxury isn’t loud; it’s thoughtful—curation over clutter, care over flash, and a sense that every guest was expected. He brings that lens to Nomadic Leaf’s host culture: high-energy, welcoming, and intentional about creating camera-worthy moments that still feel human.</p>
+
+      <p>When he isn’t refining guest touchpoints or deepening relationships with community partners, Jerome is likely scouting light for the next photo stop, swapping stories with locals, or planning a quick trip to his favorite place, Hawai‘i. His north star is simple: build experiences that turn strangers into crew—and let the journey do the rest.</p>
+    </article>
+  </div>
+</section>
+<!-- =================== /FOUNDER (drop-in, inherits site fonts) =================== -->
+  
 <section id="hosts" style="padding:72px 0 64px;">
   <div style="max-width:1120px;margin:0 auto;padding:0 20px;">
     <!-- Section title -->
@@ -631,6 +712,7 @@ document.getElementById('y').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
+
 
 
 
