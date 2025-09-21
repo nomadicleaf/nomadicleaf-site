@@ -24,6 +24,59 @@
   ]
 }
 </script>
+
+<!-- Favicons (Google uses these for the small icon in mobile SERPs) -->
+< link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="/icons/favicon-48.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png?v=2">
+
+<!-- Open Graph / Twitter (controls share cards + often snippet text) -->
+<meta property="og:site_name" content="Nomadic Leaf">
+<meta property="og:title" content="Nomadic Leaf — Curated, luxury cannabis-friendly tours (Las Vegas 21+)">
+<meta property="og:description" content="Visitors + locals, same crew. High-energy, twin-host tours with curated stops, camera-ready moments, and NV-compliant vibes. VIP touches built in.">
+<meta property="og:image" content="https://nomadicleaf.com/mainlogosquare.PNG">
+<meta property="og:url" content="https://nomadicleaf.com">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Organization (for logo) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Nomadic Leaf",
+  "url": "https://nomadicleaf.com",
+  "logo": "https://nomadicleaf.com/mainlogosquare.PNG",
+  "sameAs": [
+    "https://www.instagram.com/nomadicleaftours/",
+    "https://www.linkedin.com/company/nomadic-leaf/"
+  ]
+}
+</script>
+
+<!-- LocalBusiness as a Service-Area Business (no street address) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Nomadic Leaf",
+  "url": "https://nomadicleaf.com",
+  "image": "https://nomadicleaf.com/mainlogosquare.PNG",
+  "telephone": "+1-702-418-1171",
+  "email": "info@nomadicleaf.com",
+  "slogan": "Where the Leaf Takes You",
+  "areaServed": ["Las Vegas, NV"]
+}
+</script>
+
+<!-- WebSite schema (lets Google know your official site name) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Nomadic Leaf",
+  "url": "https://nomadicleaf.com"
+}
+</script>
   
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Brand/UI fonts + hero script -->
@@ -596,6 +649,7 @@ document.getElementById('y').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
+
 
 
 
