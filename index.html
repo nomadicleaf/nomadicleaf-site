@@ -402,15 +402,16 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
 <!-- SAMPLE SCHEDULE -->
 <section id="schedule" class="luxe-schedule section">
   <div class="container" style="padding:0">
-    <h2 class="section-title">Sample Schedule <span class="time-pill">~5h 30m</span></h2>
+    <h2 class="section-title">Sample Schedule <span class="time-pill">~5h</span></h2>
 
     <style>
-      /* Schedule visuals (scoped) */
-      .luxe-schedule .timeline{list-style:none;margin:18px 0 6px;padding:0 0 0 58px;position:relative;}
+      /* Schedule visuals (scoped) — same as before, but gold line removed */
+      .luxe-schedule .timeline{
+        list-style:none;margin:18px 0 6px;padding:0 0 0 58px;position:relative;
+      }
       .luxe-schedule .timeline:before{
-        content:"";position:absolute;left:28px;top:0;bottom:0;width:2px;
-        background:linear-gradient(180deg,rgba(214,179,91,.65),rgba(214,179,91,.15));
-        box-shadow:0 0 12px rgba(214,179,91,.25);
+        /* removed the vertical gold line */
+        content:none !important;
       }
       .luxe-schedule .timeline-item{position:relative;padding:0 0 12px 0;}
       .luxe-schedule .timeline-item:before{
@@ -442,30 +443,34 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
         <div class="ti-head">Check-in &amp; Welcome <span class="pill">Start</span></div>
         <p>Board the bus, meet your twin hosts, quick ice-breaker.</p>
       </li>
+
       <li class="timeline-item">
-        <div class="ti-head">Dispensary + behind-the-scenes + compliant lounge <span class="pill">60m</span></div>
-        <p>Guided shopping plus on-site, compliant consumption.</p>
+        <div class="ti-head">Dispensary + compliant lounge (Sky High Lounge at NuWu) <span class="pill">60m</span></div>
+        <p>Guided shopping plus a compliant lounge session at Sky High Lounge.</p>
       </li>
+
       <li class="timeline-item">
         <div class="ti-head">Hop-Off Photo Stop #1 <span class="pill">10m</span></div>
         <p>Iconic Vegas backdrop + quick swag challenge.</p>
       </li>
+
+      <!-- Glass artistry pop-up removed from schedule; moved to "Coming soon" -->
+
       <li class="timeline-item">
-        <div class="ti-head">Glass artistry pop-up <span class="pill">30m</span></div>
-        <p>Live demo and boutique browsing.</p>
-      </li>
-      <li class="timeline-item">
-        <div class="ti-head">Immersive art + dinner (e.g., AREA15: Wink World + BEAST) <span class="pill">110m</span></div>
+        <div class="ti-head">Immersive art + dinner (AREA15: Wink World + The Beast) <span class="pill">110m</span></div>
         <p>Color-soaked experience followed by a luxe, fun dinner.</p>
       </li>
+
       <li class="timeline-item">
         <div class="ti-head">Hop-Off Photo Stop #2 <span class="pill">10m</span></div>
-        <p>Second landmark moment + timing game to keep things tight.</p>
+        <p>Second landmark moment + crew game or contest for a prize.</p>
       </li>
+
       <li class="timeline-item">
-        <div class="ti-head">Lounge Stop — premium session <span class="pill">90m</span></div>
-        <p>Unwind and enjoy the finale in a 90-minute lounge window.</p>
+        <div class="ti-head">Lounge Stop — premium session (DAZED! Consumption Lounge at Planet 13) <span class="pill">90m</span></div>
+        <p>Unwind and enjoy the finale at DAZED! before heading back.</p>
       </li>
+
       <li class="timeline-item">
         <div class="ti-head">Return &amp; Farewell <span class="pill">15m</span></div>
         <p>Prize call-outs, thank-yous, and next-tour plugs on the ride back.</p>
@@ -473,6 +478,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
     </ol>
 
     <p class="schedule-note"><strong>Note:</strong> Schedule &amp; stops are subject to change based on partner availability, traffic, and special events.</p>
+    <p class="schedule-note"><strong>Coming soon:</strong> Cultivation-center behind-the-scenes visit; Glass artistry pop-up.</p>
   </div>
 </section>
 
@@ -660,6 +666,7 @@ document.getElementById('y').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
+
 
 
 
