@@ -36,11 +36,14 @@
 }
 </script>
 
-<!-- Favicons (Google uses these for the small icon in mobile SERPs) -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="48x48" href="/icons/mainlogosquare.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/icons/mainlogosquare.png">
-
+<!-- Favicons -->
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="/icons/mainlogosquare.png?v=4">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/mainlogosquare.png?v=4">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/mainlogosquare.png?v=4">
+<link rel="apple-touch-icon" href="/icons/mainlogosquare.png?v=4">
+<meta name="theme-color" content="#0d2230">
+  
 <!-- Open Graph / Twitter (controls share cards + often snippet text) -->
 <meta property="og:site_name" content="Nomadic Leaf">
 <meta property="og:title" content="Nomadic Leaf — Curated, luxury cannabis-friendly tours (Las Vegas 21+)">
@@ -71,11 +74,16 @@
   "@type": "LocalBusiness",
   "name": "Nomadic Leaf",
   "url": "https://nomadicleaf.com",
-  "image": "https://nomadicleaf.com/mainlogosquare.PNG",
+  "logo": "https://nomadicleaf.com/icons/mainlogosquare.png",
+  "image": "https://nomadicleaf.com/icons/mainlogosquare.png",
   "telephone": "+1-702-418-1171",
   "email": "info@nomadicleaf.com",
   "slogan": "Where the Leaf Takes You",
-  "areaServed": ["Las Vegas, NV"]
+  "areaServed": ["Las Vegas, NV"],
+  "sameAs": [
+    "https://www.instagram.com/nomadicleaftours/",
+    "https://www.linkedin.com/company/nomadic-leaf/"
+  ]
 }
 </script>
 
@@ -666,6 +674,7 @@ document.getElementById('y').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
+
 
 
 
