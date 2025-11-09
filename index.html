@@ -24,7 +24,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="shortcut icon" href="/favicon.ico">
 
-<!-- Open Graph / Twitter -->
+<!-- Open Graph / Twitter (use your root logo; cache-bust with v=4) -->
 <meta property="og:site_name" content="Nomadic Leaf">
 <meta property="og:title" content="Nomadic Leaf — Curated, luxury cannabis-friendly tours (Las Vegas 21+)">
 <meta property="og:description" content="Visitors + locals, same crew. High-energy, twin-host tours with curated stops, camera-ready moments, and NV-compliant vibes. VIP touches built in.">
@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://nomadicleaf.com/mainlogosquare.png?v=4">
 
-<!-- Schema.org -->
+<!-- Schema.org (one Organization + one LocalBusiness + WebSite) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -98,7 +98,7 @@ a{color:inherit;text-decoration:none}
 
 /* Smooth anchor scrolling + offset for sticky nav */
 html{scroll-behavior:smooth}
-#about,#included,#schedule,#creators,#hosts,#founder,#events{scroll-margin-top:84px}
+#about,#included,#schedule,#pricing,#creators,#vip,#hosts,#founder{scroll-margin-top:84px}
 
 /* NAV */
 .nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.35);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
@@ -108,6 +108,7 @@ html{scroll-behavior:smooth}
 .brand-name{font-family:"Cinzel",serif;font-weight:700;letter-spacing:.4px;color:var(--gold);font-size:26px;line-height:1;white-space:nowrap}
 .nav-links{display:flex;align-items:center;gap:26px;margin-left:auto}
 .nav-links a{font-weight:600;opacity:.95}
+.join-vip{margin-left:8px;background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#0b141b;border:0;border-radius:12px;padding:10px 16px;font-weight:800;box-shadow:0 4px 16px rgba(0,0,0,.35)}
 .menu-toggle{display:none;margin-left:auto;background:transparent;border:0;color:var(--ink);font-size:26px;line-height:1;cursor:pointer}
 
 /* HERO */
@@ -133,7 +134,7 @@ html{scroll-behavior:smooth}
 .hero-card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border-radius:20px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.04)}
 .hero-card img{width:100%;height:auto;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
 
-/* SECTION TITLES */
+/* SECTION TITLES — unified look (matches VIP Waitlist Perks) */
 .section{padding:30px 24px}
 .section-title,
 .section h2{
@@ -165,6 +166,15 @@ html{scroll-behavior:smooth}
 .schedule small{display:block;margin-top:10px;color:#bfcbd4}
 .kicker{font-weight:700;color:var(--gold)}
 
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.price{position:relative;padding:22px 22px 18px}
+.price:before{content:"";position:absolute;inset:0;border-radius:20px;box-shadow:inset 0 0 0 1px rgba(196,162,90,.22)}
+.price h4{margin:0 0 6px 0;color:var(--gold);font-size:19px}
+.price .figure{font-size:18px;color:#e7edf1}
+.price ul{margin:10px 0 0 18px;padding:0}
+.price li{margin:8px 0}
+
 /* CREATOR */
 .creator p{max-width:900px}
 .bullet{display:grid;gap:6px;margin:10px 0 0 18px}
@@ -184,7 +194,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   .hero-title{font-size:58px}
   .section-title,
   .section h2{font-size:36px}
-  .grid-3{grid-template-columns:1fr}
+  .grid-3,.pricing-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -198,15 +208,17 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
       <span class="brand-name">Nomadic Leaf</span>
     </a>
     <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
-    <!-- Updated links -->
+    <!-- Reordered + new links -->
     <div class="nav-links">
-      <a href="#events">Tickets &amp; Events</a>
       <a href="#about">About</a>
       <a href="#included">What’s Included</a>
       <a href="#schedule">Schedule</a>
+      <a href="#pricing">Pricing</a>
       <a href="#creators">Creators</a>
+      <a href="#vip">VIP Waitlist Perks</a>
       <a href="#hosts">Hosts</a>
       <a href="#founder">Founder</a>
+      <a class="join-vip" href="https://forms.gle/U9bik7HfAPtaphPx8" target="_blank" rel="noopener">Join VIP</a>
     </div>
   </div>
 </nav>
@@ -218,8 +230,8 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
     <h1 class="hero-title">Where the Leaf<br/>Takes You</h1>
     <p class="lead">Visitors &amp; locals, same crew. A curated, high-energy, cannabis-friendly journey across Vegas — twin-host led, camera-ready stops, VIP touches built in.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="#events">View Tickets &amp; Events</a>
-      <a class="btn btn-outline" href="#schedule">View Schedule</a>
+      <a class="btn btn-primary" href="https://forms.gle/U9bik7HfAPtaphPx8" target="_blank" rel="noopener">Join VIP Waitlist</a>
+      <a class="btn btn-outline" href="#pricing">View Pricing</a>
     </div>
     <div class="socials">
       <a href="https://www.instagram.com/nomadicleaftours?igsh=cW0zeGRheTVkNnhk&utm_source=qr" target="_blank" aria-label="Instagram">
@@ -237,13 +249,6 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
     <img src="./mainlogosquare.png" alt="Nomadic Leaf emblem">
   </div>
 </header>
-
-<!-- TICKETS & EVENTS (Eventbrite organization feed) -->
-<section id="events" class="section container">
-  <h2 class="section-title">Tickets &amp; Events</h2>
-  <p style="max-width:820px;margin-top:-6px;color:#cdd7de">This feed updates automatically as new Eventbrite events go live. Select a date to view full details and checkout.</p>
-  <div id="eb-organizer-events" class="card" style="padding:0"></div>
-</section>
 
 <!-- ABOUT -->
 <section id="about" class="nl-about section">
@@ -301,7 +306,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
     <p class="nl-about__values">Class • Community • Compliance • Creativity</p>
 
     <div class="nl-about__cta">
-      <a class="nl-about__btn" href="#events">View Tickets &amp; Events</a>
+      <a class="nl-about__btn" href="#vip">Join the VIP Waitlist</a>
       <p class="nl-about__contact">
         Partnerships &amp; media: <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a>
       </p>
@@ -461,6 +466,62 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   </div>
 </section>
 
+<!-- PRICING -->
+<section id="pricing" class="nl-pricing section" aria-labelledby="pricing-title">
+  <style>
+    .nl-pricing{--bg:transparent;--ink:#e7eef2;--muted:#cdd7de;--gold:#d9b362;--gold-deep:#b0852b;--card:#113341;--ring:rgba(0,0,0,.18);--shadow:0 18px 38px rgba(0,0,0,.35),0 3px 10px rgba(0,0,0,.2);padding:0}
+    .nl-pricing *{box-sizing:border-box}
+    .nl-pricing .nl-container{max-width:1100px;margin:0 auto;padding:0 22px}
+    .nl-pricing .nl-grid{display:grid;gap:22px}
+    @media (min-width:640px){.nl-pricing .nl-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (min-width:980px){.nl-pricing .nl-grid{grid-template-columns:repeat(3,1fr)}}
+    .nl-pricing .nl-card{background:linear-gradient(180deg,#143c4b,#0e2f3a);border-radius:18px;padding:24px 22px;border:1px solid rgba(217,179,98,.25);box-shadow:var(--shadow)}
+    .nl-pricing .nl-card-title{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--gold);font-weight:700;margin:0 0 6px}
+    .nl-pricing .nl-big{font-size:28px;font-weight:800;color:var(--ink);margin:0 0 10px}
+    .nl-pricing .nl-big span{font-size:14px;font-weight:600;color:var(--muted)}
+    .nl-pricing .nl-list{margin:12px 0 0 18px;color:var(--ink);line-height:1.55}
+    .nl-pricing .nl-list li{margin:6px 0}
+    .nl-pricing .nl-cta{display:flex;justify-content:center;margin:26px 0 6px}
+    .nl-pricing .nl-button{display:inline-block;padding:12px 22px;border-radius:12px;border:1px solid rgba(217,179,98,.55);
+      background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#1a2730;font-weight:800;text-decoration:none}
+    .nl-pricing .nl-button:hover{filter:saturate(1.08) brightness(1.03)}
+    .nl-pricing .nl-note{color:var(--muted);text-align:center;margin:12px 0 0;font-size:13px}
+  </style>
+
+  <div class="nl-container">
+    <h2 id="pricing-title" class="section-title">Pricing</h2>
+    <p class="nl-sub" style="color:#cdd7de;margin:0 0 26px">Transparent rates. Upgrade to VIP for premium perks.</p>
+
+    <div class="nl-grid">
+      <article class="nl-card" aria-label="Visitors pricing">
+        <h3 class="nl-card-title">Visitors</h3>
+        <p class="nl-big">$229 <span>per guest</span></p>
+      </article>
+
+      <article class="nl-card" aria-label="Locals pricing">
+        <h3 class="nl-card-title">Locals</h3>
+        <p class="nl-big">$189 <span>per guest</span></p>
+      </article>
+
+      <article class="nl-card" aria-label="VIP Premium Seating">
+        <h3 class="nl-card-title">VIP Premium Seating (Add-On)</h3>
+        <p class="nl-big">+$50 <span>per seat</span></p>
+        <ul class="nl-list">
+          <li>Early bus access for preferred seating.</li>
+          <li>Premium VIP seating at Sky High Lounge + one infused beverage.</li>
+          <li>VIP swag bag with partner goodies.</li>
+          <li>Limited availability each tour (exclusive).</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="nl-cta">
+      <a class="nl-button" href="#vip">Join VIP Waitlist</a>
+    </div>
+    <p class="nl-note">Launching with two tours per week (Saturday + one midweek date). Max 20 guests per tour. Taxes/fees may apply. Schedule &amp; stops subject to change. Age 21+.</p>
+  </div>
+</section>
+
 <!-- CREATORS -->
 <section class="section container creator" id="creators">
   <h2 class="section-title">Creators Program</h2>
@@ -495,8 +556,24 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   </div>
 
   <div class="cta-row" style="margin-top:20px">
-    <a class="btn btn-primary" href="#events">View Tickets &amp; Events</a>
+    <a class="btn btn-primary" href="https://forms.gle/U9bik7HfAPtaphPx8" target="_blank" rel="noopener">Apply as Creator</a>
     <a class="btn btn-outline" href="https://www.instagram.com/nomadicleaftours?igsh=cW0zeGRheTVkNnhk&utm_source=qr" target="_blank" rel="noopener">DM on Instagram</a>
+  </div>
+</section>
+
+<!-- VIP WAITLIST PERKS -->
+<section class="section container" id="vip">
+  <h2 class="section-title">VIP Waitlist Perks</h2>
+  <div class="grid-3">
+    <div class="card"><h3>First to Book</h3><p>Early access windows for new dates and special events.</p></div>
+    <div class="card"><h3>Early-Bird Offers</h3><p>Exclusive promo drops for waitlist only.</p></div>
+    <div class="card"><h3>Seat Upgrade Priority</h3><p>First pick on VIP Premium Seating when space is limited.</p></div>
+    <div class="card"><h3>Pilot / Media Nights</h3><p>Occasional invites when we test routes &amp; capture content.</p></div>
+    <div class="card"><h3>Partner Pop-Ups</h3><p>Access to select partner experiences and surprise add-ons.</p></div>
+    <div class="card"><h3>Behind-the-Scenes</h3><p>Sneak peeks, route teasers, and twin-host updates.</p></div>
+  </div>
+  <div class="cta-row" style="margin-top:20px">
+    <a class="btn btn-primary" href="https://forms.gle/U9bik7HfAPtaphPx8" target="_blank" rel="noopener">Join VIP Waitlist</a>
   </div>
 </section>
 
@@ -562,19 +639,8 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   © <span id="y"></span> Nomadic Leaf. Curated luxury cannabis-friendly tours in Las Vegas (21+). Nomadic Leaf does not sell cannabis.
 </footer>
 
-<!-- Eventbrite widget loader + init -->
-<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
 <script>
-  // Auto-updating Eventbrite organization feed
-  window.EBWidgets.createWidget({
-    widgetType: 'eventbrite.organization-events',
-    organizationId: '120288217371', // your org ID
-    iframeContainerId: 'eb-organizer-events'
-  });
-
-  // Footer year
-  document.getElementById('y').textContent = new Date().getFullYear();
+document.getElementById('y').textContent=new Date().getFullYear();
 </script>
-
 </body>
 </html>
