@@ -17,14 +17,14 @@
   gtag('config', 'G-PYBGYKN64N', { send_page_view: true });
 </script>
 
-<!-- Favicon & App Icons (keep your generated set) -->
+<!-- Favicon & App Icons -->
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="shortcut icon" href="/favicon.ico">
 
-<!-- Open Graph / Twitter (use your root logo; cache-bust with v=4) -->
+<!-- Open Graph / Twitter -->
 <meta property="og:site_name" content="Nomadic Leaf">
 <meta property="og:title" content="Nomadic Leaf — Curated, luxury cannabis-friendly tours (Las Vegas 21+)">
 <meta property="og:description" content="Visitors + locals, same crew. High-energy, twin-host tours with curated stops, camera-ready moments, and NV-compliant vibes. VIP touches built in.">
@@ -33,62 +33,24 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://nomadicleaf.com/mainlogosquare.png?v=4">
 
-<!-- Schema.org (one Organization + one LocalBusiness + WebSite) -->
+<!-- Schema.org -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Nomadic Leaf",
-  "url": "https://nomadicleaf.com",
-  "logo": "https://nomadicleaf.com/mainlogosquare.png",
-  "sameAs": [
-    "https://www.instagram.com/nomadicleaftours/",
-    "https://www.linkedin.com/company/nomadic-leaf/"
-  ]
-}
+{"@context":"https://schema.org","@type":"Organization","name":"Nomadic Leaf","url":"https://nomadicleaf.com","logo":"https://nomadicleaf.com/mainlogosquare.png","sameAs":["https://www.instagram.com/nomadicleaftours/","https://www.linkedin.com/company/nomadic-leaf/"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Nomadic Leaf","url":"https://nomadicleaf.com","logo":"https://nomadicleaf.com/mainlogosquare.png","image":"https://nomadicleaf.com/mainlogosquare.png","telephone":"+1-702-418-1171","email":"info@nomadicleaf.com","slogan":"Where the Leaf Takes You","areaServed":["Las Vegas, NV"],"sameAs":["https://www.instagram.com/nomadicleaftours/","https://www.linkedin.com/company/nomadic-leaf/"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Nomadic Leaf","url":"https://nomadicleaf.com"}
 </script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Nomadic Leaf",
-  "url": "https://nomadicleaf.com",
-  "logo": "https://nomadicleaf.com/mainlogosquare.png",
-  "image": "https://nomadicleaf.com/mainlogosquare.png",
-  "telephone": "+1-702-418-1171",
-  "email": "info@nomadicleaf.com",
-  "slogan": "Where the Leaf Takes You",
-  "areaServed": ["Las Vegas, NV"],
-  "sameAs": [
-    "https://www.instagram.com/nomadicleaftours/",
-    "https://www.linkedin.com/company/nomadic-leaf/"
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Nomadic Leaf",
-  "url": "https://nomadicleaf.com"
-}
-</script>
-
-<!-- Brand/UI fonts + hero script (unchanged) -->
+<!-- Brand/UI fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&family=Alex+Brush&family=Cormorant+Garamond:ital,wght@1,700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --gold:#c4a25a;
-  --gold-deep:#a8842a;
-  --bg:#0d2230;
-  --bg-2:#0e2a3a;
-  --panel:#102a3a;
-  --panel-2:#0f3548;
-  --ink:#e8edf1;
-  --muted:#c5d0d8;
+  --gold:#c4a25a; --gold-deep:#a8842a; --bg:#0d2230; --bg-2:#0e2a3a;
+  --panel:#102a3a; --panel-2:#0f3548; --ink:#e8edf1; --muted:#c5d0d8;
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:radial-gradient(1100px 700px at 30% 12%, var(--bg-2) 0%, var(--bg) 55%, #091922 100%);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
@@ -98,7 +60,7 @@ a{color:inherit;text-decoration:none}
 
 /* Smooth anchor scrolling + offset for sticky nav */
 html{scroll-behavior:smooth}
-#about,#included,#schedule,#pricing,#creators,#vip,#hosts,#founder{scroll-margin-top:84px}
+#about,#included,#schedule,#tickets,#influencers,#team,#faq,#terms{scroll-margin-top:84px}
 
 /* NAV */
 .nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.35);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
@@ -108,56 +70,39 @@ html{scroll-behavior:smooth}
 .brand-name{font-family:"Cinzel",serif;font-weight:700;letter-spacing:.4px;color:var(--gold);font-size:26px;line-height:1;white-space:nowrap}
 .nav-links{display:flex;align-items:center;gap:26px;margin-left:auto}
 .nav-links a{font-weight:600;opacity:.95}
-.join-vip{margin-left:8px;background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#0b141b;border:0;border-radius:12px;padding:10px 16px;font-weight:800;box-shadow:0 4px 16px rgba(0,0,0,.35)}
 .menu-toggle{display:none;margin-left:auto;background:transparent;border:0;color:var(--ink);font-size:26px;line-height:1;cursor:pointer}
+
+/* Buttons */
+.btn{border-radius:14px;padding:12px 18px;font-weight:800}
+.btn-primary{background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#0a141b;border:0;box-shadow:0 6px 22px rgba(0,0,0,.45)}
+.btn-outline{border:2px solid rgba(196,162,90,.6);color:var(--gold);background:transparent}
 
 /* HERO */
 .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:58px 24px 28px}
 .eyebrow{color:var(--muted);letter-spacing:.25em;font-size:12px;margin-bottom:8px}
-.hero-title{
-  font-family:"Alex Brush",cursive;
-  color:var(--gold);
-  font-size:76px;
-  line-height:1.02;
-  letter-spacing:.3px;
-  margin:0 0 14px 0;
-  text-shadow:0 1px 0 #000,0 10px 26px rgba(0,0,0,.35),0 0 1px rgba(196,162,90,.45);
-}
+.hero-title{font-family:"Alex Brush",cursive;color:var(--gold);font-size:76px;line-height:1.02;letter-spacing:.3px;margin:0 0 14px;text-shadow:0 1px 0 #000,0 10px 26px rgba(0,0,0,.35),0 0 1px rgba(196,162,90,.45)}
 .lead{max-width:720px;color:#dbe6ec}
 .cta-row{display:flex;gap:16px;margin:22px 0 14px}
-.btn{border-radius:14px;padding:12px 18px;font-weight:800}
-.btn-primary{background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#0a141b;border:0;box-shadow:0 6px 22px rgba(0,0,0,.45)}
-.btn-outline{border:2px solid rgba(196,162,90,.6);color:var(--gold);background:transparent}
 .socials{display:flex;gap:14px;margin-top:10px}
 .socials a{width:40px;height:40px;border:2px solid rgba(196,162,90,.55);border-radius:50%;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.35)}
 .socials svg{width:20px;height:20px;fill:var(--gold)}
 .hero-card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border-radius:20px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.04)}
 .hero-card img{width:100%;height:auto;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
 
-/* SECTION TITLES — unified look (matches VIP Waitlist Perks) */
+/* SECTION TITLES */
 .section{padding:30px 24px}
-.section-title,
-.section h2{
-  font-family:"Cormorant Garamond",serif;
-  font-style:italic;
-  font-weight:700;
-  color:var(--gold);
-  font-size:44px;
-  line-height:1.15;
-  margin:8px 0 18px 0;
-  text-shadow:0 1px 0 #000, 0 8px 22px rgba(0,0,0,.28);
+.section-title,.section h2{
+  font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:700;color:var(--gold);
+  font-size:44px;line-height:1.15;margin:8px 0 18px;text-shadow:0 1px 0 #000,0 8px 22px rgba(0,0,0,.28);
 }
 
 /* Small pill used beside schedule title */
-.time-pill{
-  display:inline-block;margin-left:.5rem;padding:2px 10px;border-radius:999px;font-size:.6em;
-  color:var(--gold);border:1px solid rgba(196,162,90,.55);background:rgba(15,22,30,.6)
-}
+.time-pill{display:inline-block;margin-left:.5rem;padding:2px 10px;border-radius:999px;font-size:.6em;color:var(--gold);border:1px solid rgba(196,162,90,.55);background:rgba(15,22,30,.6)}
 
 /* CARDS */
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border-radius:20px;padding:22px;box-shadow:0 18px 42px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.04)}
-.card h3{color:var(--gold);font-size:20px;margin:0 0 6px 0;font-weight:800}
+.card h3{color:var(--gold);font-size:20px;margin:0 0 6px;font-weight:800}
 .card p{margin:0;color:#d7e3ea}
 
 /* SCHEDULE */
@@ -166,19 +111,33 @@ html{scroll-behavior:smooth}
 .schedule small{display:block;margin-top:10px;color:#bfcbd4}
 .kicker{font-weight:700;color:var(--gold)}
 
-/* PRICING */
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.price{position:relative;padding:22px 22px 18px}
-.price:before{content:"";position:absolute;inset:0;border-radius:20px;box-shadow:inset 0 0 0 1px rgba(196,162,90,.22)}
-.price h4{margin:0 0 6px 0;color:var(--gold);font-size:19px}
-.price .figure{font-size:18px;color:#e7edf1}
-.price ul{margin:10px 0 0 18px;padding:0}
-.price li{margin:8px 0}
+/* Timeline */
+.luxe-schedule .timeline{list-style:none;margin:18px 0 6px;padding:0 0 0 58px;position:relative}
+.luxe-schedule .timeline:before{content:none}
+.luxe-schedule .timeline-item{position:relative;padding:0 0 12px}
+.luxe-schedule .timeline-item:before{
+  content:"";position:absolute;left:-26px;top:.35rem;width:18px;height:18px;border-radius:50%;
+  background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.55),transparent 42%),linear-gradient(180deg,var(--gold),var(--gold-deep));
+  box-shadow:0 0 0 4px rgba(214,179,91,.18),0 8px 14px rgba(0,0,0,.35);
+}
+.luxe-schedule .ti-head{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:700;color:var(--ink);font-size:clamp(18px,1.35vw,22px)}
+.luxe-schedule .timeline-item p{margin:.2rem 0 0;color:#cfd7df;opacity:.95}
+.luxe-schedule .pill{display:inline-block;margin-left:.5rem;padding:2px 10px;border-radius:999px;font-size:.8em;color:var(--gold);background:rgba(15,22,30,.6);border:1px solid rgba(214,179,91,.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.luxe-schedule .schedule-note{margin-top:16px;padding:10px 14px;border-left:3px solid var(--gold);background:linear-gradient(90deg,rgba(214,179,91,.16),rgba(214,179,91,0));color:var(--ink);border-radius:6px}
 
-/* CREATOR */
-.creator p{max-width:900px}
-.bullet{display:grid;gap:6px;margin:10px 0 0 18px}
-.bullet li{margin:4px 0}
+/* Staff & Partners (uniform image tiles) */
+.team-grid{display:grid;gap:22px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.team-card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid rgba(212,178,111,.25);border-radius:16px;overflow:hidden;box-shadow:0 14px 36px rgba(0,0,0,.32)}
+.team-photo{aspect-ratio:4/3;object-fit:cover;width:100%}
+.team-body{padding:14px 16px}
+.team-role{color:var(--gold);font-weight:800;margin:0 0 4px}
+.team-name{margin:0 0 8px}
+.team-bio{margin:0;color:#d9e4eb}
+
+/* FAQ accordion-ish simple */
+.faq-list{display:grid;gap:12px}
+.faq-item{border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px 16px;background:rgba(255,255,255,.03)}
+.faq-item h4{margin:0 0 6px;color:var(--gold)}
 
 /* FOOTER */
 footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
@@ -192,9 +151,8 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   .brand-name{font-size:22px}
   .hero{grid-template-columns:1fr;gap:22px;padding-top:36px}
   .hero-title{font-size:58px}
-  .section-title,
-  .section h2{font-size:36px}
-  .grid-3,.pricing-grid{grid-template-columns:1fr}
+  .section-title,.section h2{font-size:36px}
+  .grid-3,.team-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -208,17 +166,15 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
       <span class="brand-name">Nomadic Leaf</span>
     </a>
     <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
-    <!-- Reordered + new links -->
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#included">What’s Included</a>
       <a href="#schedule">Schedule</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#creators">Creators</a>
-      <a href="#vip">VIP Waitlist Perks</a>
-      <a href="#hosts">Hosts</a>
-      <a href="#founder">Founder</a>
-      <a class="join-vip" href="https://forms.gle/U9bik7HfAPtaphPx8" target="_blank" rel="noopener">Join VIP</a>
+      <a href="#tickets">Tickets &amp; Events</a>
+      <a href="#influencers">Influencers</a>
+      <a href="#team">Staff &amp; Partners</a>
+      <a href="#faq">FAQ</a>
+      <a href="#terms">Terms &amp; Policies</a>
     </div>
   </div>
 </nav>
@@ -228,10 +184,10 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   <div>
     <div class="eyebrow">LAS VEGAS • 21+</div>
     <h1 class="hero-title">Where the Leaf<br/>Takes You</h1>
-    <p class="lead">Visitors &amp; locals, same crew. A curated, high-energy, cannabis-friendly journey across Vegas — twin-host led, camera-ready stops, VIP touches built in.</p>
+    <p class="lead">Visitors &amp; locals, same crew. A curated, high-energy, cannabis-friendly journey across Vegas — twin-host led, camera-ready stops, and VIP touches built in.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://forms.gle/U9bik7HfAPtaphPx8" target="_blank" rel="noopener">Join VIP Waitlist</a>
-      <a class="btn btn-outline" href="#pricing">View Pricing</a>
+      <a class="btn btn-primary" href="#tickets">View Events</a>
+      <a class="btn btn-outline" href="https://www.instagram.com/nomadicleaftours" target="_blank" rel="noopener">Follow on Instagram</a>
     </div>
     <div class="socials">
       <a href="https://www.instagram.com/nomadicleaftours?igsh=cW0zeGRheTVkNnhk&utm_source=qr" target="_blank" aria-label="Instagram">
@@ -254,11 +210,10 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
 <section id="about" class="nl-about section">
   <div class="nl-about__wrap container" style="padding:0">
     <h2 class="section-title">About Nomadic Leaf</h2>
-
     <p class="nl-about__lede">
       We’re a nomad-hearted experience born in Las Vegas—designed to
       <strong>bring people together from everywhere</strong>. Travelers and locals meet as one crew for a
-      <strong>curated, immersive cannabis-friendly journey</strong>: premium dispensary access, compliant lounge moments, and
+      <strong>curated, immersive cannabis-friendly journey</strong>: compliant lounge moments, premium partner access, and
       culture-soaked stops you’ll actually want in your camera roll. We handle the details; you make the memories.
     </p>
 
@@ -266,9 +221,9 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
       <div class="nl-about__card">
         <h4>What We Do</h4>
         <ul>
-          <li>Curated itineraries: behind-the-scenes dispensary access, compliant lounge sessions, glass artistry pop-ups, immersive art (e.g., AREA15).</li>
+          <li>Curated itineraries: compliant lounge sessions, premium stops (e.g., immersive art at AREA15).</li>
           <li>High-touch hosting: friendly on-mic hosts keep timing tight, energy high, and photos rolling.</li>
-          <li>VIP options: priority boarding, premium seating, and a VIP swag experience with partner goodies.</li>
+          <li>VIP options: priority boarding, premium seating, and a <strong>Nomadic Leaf Swag Bag</strong> with partner goodies.</li>
           <li>Content-ready moments: iconic backdrops, quick challenges, and creators’ nights.</li>
         </ul>
       </div>
@@ -306,63 +261,28 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
     <p class="nl-about__values">Class • Community • Compliance • Creativity</p>
 
     <div class="nl-about__cta">
-      <a class="nl-about__btn" href="#vip">Join the VIP Waitlist</a>
-      <p class="nl-about__contact">
-        Partnerships &amp; media: <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a>
-      </p>
+      <a class="nl-about__btn" href="#tickets">View Tickets &amp; Events</a>
+      <p class="nl-about__contact">Partnerships &amp; media: <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a></p>
     </div>
   </div>
 </section>
 
 <style>
-  /* ===== Scoped styles for ABOUT only ===== */
-  .nl-about { background: transparent; color: var(--text, #e8eef2); }
-  .nl-about__wrap { max-width: 1100px; margin: 0 auto; }
-  .nl-about__lede { font-size: clamp(16px, 2vw, 18px); line-height: 1.7; margin: 0 0 28px; opacity: .95; }
-  .nl-about__grid { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  @media (max-width: 880px){ .nl-about__grid { grid-template-columns: 1fr; } }
-  .nl-about__card {
-    background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-    border: 1px solid rgba(212,178,111,.25);
-    border-radius: 16px;
-    padding: 18px 18px 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.25) inset, 0 2px 10px rgba(0,0,0,.16);
-    backdrop-filter: blur(2px);
-  }
-  .nl-about__card h4 {
-    font-family: "Cormorant Garamond", serif;
-    font-style: italic;
-    font-weight: 700;
-    font-size: 22px;
-    margin: 0 0 8px;
-    color: var(--gold, #d4b26f);
-  }
-  .nl-about__card ul { margin: 0; padding-left: 18px; }
-  .nl-about__card li { margin: 6px 0; line-height: 1.6; }
-  .nl-about__values {
-    margin: 26px 0 16px;
-    text-align: center;
-    font-family: "Cormorant Garamond", serif;
-    font-style: italic;
-    font-weight: 700;
-    color: var(--gold, #d4b26f);
-    letter-spacing: .02em;
-  }
-  .nl-about__cta { text-align: center; }
-  .nl-about__btn {
-    display: inline-block;
-    padding: 12px 18px;
-    border-radius: 12px;
-    border: 1px solid var(--gold, #d4b26f);
-    background: linear-gradient(180deg, rgba(212,178,111,.22), rgba(212,178,111,.06));
-    color: var(--text, #e8eef2);
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 6px 18px rgba(0,0,0,.25);
-  }
-  .nl-about__btn:hover { transform: translateY(-1px); }
-  .nl-about__contact { margin: 10px 0 0; font-size: 14px; opacity: .85; }
-  .nl-about__contact a { color: var(--gold, #d4b26f); text-decoration: underline; }
+  /* Scoped ABOUT styles */
+  .nl-about__wrap{max-width:1100px;margin:0 auto}
+  .nl-about__lede{font-size:clamp(16px,2vw,18px);line-height:1.7;margin:0 0 28px;opacity:.95}
+  .nl-about__grid{display:grid;gap:18px;grid-template-columns:repeat(2,minmax(0,1fr))}
+  @media (max-width:880px){.nl-about__grid{grid-template-columns:1fr}}
+  .nl-about__card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(212,178,111,.25);border-radius:16px;padding:18px 18px 16px;box-shadow:0 10px 30px rgba(0,0,0,.25) inset,0 2px 10px rgba(0,0,0,.16);backdrop-filter:blur(2px)}
+  .nl-about__card h4{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:700;font-size:22px;margin:0 0 8px;color:var(--gold)}
+  .nl-about__card ul{margin:0;padding-left:18px}
+  .nl-about__card li{margin:6px 0;line-height:1.6}
+  .nl-about__values{margin:26px 0 16px;text-align:center;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:700;color:var(--gold);letter-spacing:.02em}
+  .nl-about__cta{text-align:center}
+  .nl-about__btn{display:inline-block;padding:12px 18px;border-radius:12px;border:1px solid var(--gold);background:linear-gradient(180deg,rgba(212,178,111,.22),rgba(212,178,111,.06));color:#e8eef2;font-weight:700;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+  .nl-about__btn:hover{transform:translateY(-1px)}
+  .nl-about__contact{margin:10px 0 0;font-size:14px;opacity:.85}
+  .nl-about__contact a{color:var(--gold);text-decoration:underline}
 </style>
 
 <!-- WHAT'S INCLUDED -->
@@ -379,7 +299,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
     </div>
     <div class="card">
       <h3>VIP Options</h3>
-      <p>Upgrade to VIP Premium Seating for priority boarding, premium lounge seating, and a VIP swag experience.</p>
+      <p>Priority boarding, premium lounge seating, and a <strong>Nomadic Leaf Swag Bag</strong> experience.</p>
     </div>
   </div>
 </section>
@@ -389,45 +309,14 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   <div class="container" style="padding:0">
     <h2 class="section-title">Tentative Schedule <span class="time-pill">~4h 45m to 5h 15m</span></h2>
 
-    <style>
-      /* Schedule visuals (scoped) — vertical gold line removed */
-      .luxe-schedule .timeline{
-        list-style:none;margin:18px 0 6px;padding:0 0 0 58px;position:relative;
-      }
-      .luxe-schedule .timeline:before{ content:none !important; }
-      .luxe-schedule .timeline-item{position:relative;padding:0 0 12px 0;}
-      .luxe-schedule .timeline-item:before{
-        content:"";position:absolute;left:-26px;top:.35rem;width:18px;height:18px;border-radius:50%;
-        background:
-          radial-gradient(circle at 32% 30%,rgba(255,255,255,.55),transparent 42%),
-          linear-gradient(180deg,var(--gold),var(--gold-deep));
-        box-shadow:0 0 0 4px rgba(214,179,91,.18),0 8px 14px rgba(0,0,0,.35);
-      }
-      .luxe-schedule .ti-head{
-        font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:700;color:var(--ink);
-        font-size:clamp(18px,1.35vw,22px);
-      }
-      .luxe-schedule .timeline-item p{margin:.2rem 0 0;color:#cfd7df;opacity:.95;}
-      .luxe-schedule .pill{
-        display:inline-block;margin-left:.5rem;padding:2px 10px;border-radius:999px;font-size:.8em;
-        color:var(--gold);background:rgba(15,22,30,.6);border:1px solid rgba(214,179,91,.55);
-        box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
-      }
-      .luxe-schedule .schedule-note{
-        margin-top:16px;padding:10px 14px;border-left:3px solid var(--gold);
-        background:linear-gradient(90deg,rgba(214,179,91,.16),rgba(214,179,91,0));
-        color:var(--ink);border-radius:6px;
-      }
-    </style>
-
     <ol class="timeline">
       <li class="timeline-item">
         <div class="ti-head">Check-in &amp; Welcome <span class="pill">Start 2:00 PM</span></div>
-        <p>Pickup location provided in final tour details.</p>
+        <p>Pickup location provided in final tour details (48h prior).</p>
       </li>
 
       <li class="timeline-item">
-        <div class="ti-head">Fremont Street Experience Walk <span class="pill">20m</span></div>
+        <div class="ti-head">Fremont Street Experience Walk <span class="pill">30m</span></div>
         <p>Photos, light shopping, and a group photo before we roll.</p>
       </li>
 
@@ -437,8 +326,8 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
       </li>
 
       <li class="timeline-item">
-        <div class="ti-head">NuWu Dispensary — Shopping Stop <span class="pill">30m</span></div>
-        <p>Guided shopping time at the on-site dispensary.</p>
+        <div class="ti-head">NuWu Dispensary — Optional Visit <span class="pill">30m</span></div>
+        <p>Optional time at the on-site dispensary or extra lounge time.</p>
       </li>
 
       <li class="timeline-item">
@@ -448,11 +337,11 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
 
       <li class="timeline-item">
         <div class="ti-head">Dinner at The Beast (AREA15) <span class="pill">60m</span></div>
-        <p>Eat, vibe, and recharge ahead of the immersive show.</p>
+        <p>Upscale meal included ahead of the immersive experience.</p>
       </li>
 
       <li class="timeline-item">
-        <div class="ti-head">Immersive Show at AREA15 <span class="pill">60m</span></div>
+        <div class="ti-head">Immersive Show &amp; Activities (AREA15) <span class="pill">~60m</span></div>
         <p>Specific show announced in your final tour email.</p>
       </li>
 
@@ -466,181 +355,217 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   </div>
 </section>
 
-<!-- PRICING -->
-<section id="pricing" class="nl-pricing section" aria-labelledby="pricing-title">
-  <style>
-    .nl-pricing{--bg:transparent;--ink:#e7eef2;--muted:#cdd7de;--gold:#d9b362;--gold-deep:#b0852b;--card:#113341;--ring:rgba(0,0,0,.18);--shadow:0 18px 38px rgba(0,0,0,.35),0 3px 10px rgba(0,0,0,.2);padding:0}
-    .nl-pricing *{box-sizing:border-box}
-    .nl-pricing .nl-container{max-width:1100px;margin:0 auto;padding:0 22px}
-    .nl-pricing .nl-grid{display:grid;gap:22px}
-    @media (min-width:640px){.nl-pricing .nl-grid{grid-template-columns:repeat(2,1fr)}}
-    @media (min-width:980px){.nl-pricing .nl-grid{grid-template-columns:repeat(3,1fr)}}
-    .nl-pricing .nl-card{background:linear-gradient(180deg,#143c4b,#0e2f3a);border-radius:18px;padding:24px 22px;border:1px solid rgba(217,179,98,.25);box-shadow:var(--shadow)}
-    .nl-pricing .nl-card-title{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--gold);font-weight:700;margin:0 0 6px}
-    .nl-pricing .nl-big{font-size:28px;font-weight:800;color:var(--ink);margin:0 0 10px}
-    .nl-pricing .nl-big span{font-size:14px;font-weight:600;color:var(--muted)}
-    .nl-pricing .nl-list{margin:12px 0 0 18px;color:var(--ink);line-height:1.55}
-    .nl-pricing .nl-list li{margin:6px 0}
-    .nl-pricing .nl-cta{display:flex;justify-content:center;margin:26px 0 6px}
-    .nl-pricing .nl-button{display:inline-block;padding:12px 22px;border-radius:12px;border:1px solid rgba(217,179,98,.55);
-      background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#1a2730;font-weight:800;text-decoration:none}
-    .nl-pricing .nl-button:hover{filter:saturate(1.08) brightness(1.03)}
-    .nl-pricing .nl-note{color:var(--muted);text-align:center;margin:12px 0 0;font-size:13px}
-  </style>
+<!-- TICKETS & EVENTS (Option A: simple on-site button + link out) -->
+<section id="tickets" class="section container">
+  <h2 class="section-title">Tickets &amp; Events</h2>
+  <p style="max-width:820px;margin:0 0 14px">Browse upcoming dates and special runs. Checkout opens in a secure Eventbrite modal.</p>
 
-  <div class="nl-container">
-    <h2 id="pricing-title" class="section-title">Pricing</h2>
-    <p class="nl-sub" style="color:#cdd7de;margin:0 0 26px">Transparent rates. Upgrade to VIP for premium perks.</p>
-
-    <div class="nl-grid">
-      <article class="nl-card" aria-label="Visitors pricing">
-        <h3 class="nl-card-title">Visitors</h3>
-        <p class="nl-big">$229 <span>per guest</span></p>
-      </article>
-
-      <article class="nl-card" aria-label="Locals pricing">
-        <h3 class="nl-card-title">Locals</h3>
-        <p class="nl-big">$189 <span>per guest</span></p>
-      </article>
-
-      <article class="nl-card" aria-label="VIP Premium Seating">
-        <h3 class="nl-card-title">VIP Premium Seating (Add-On)</h3>
-        <p class="nl-big">+$50 <span>per seat</span></p>
-        <ul class="nl-list">
-          <li>Early bus access for preferred seating.</li>
-          <li>Premium VIP seating at Sky High Lounge + one infused beverage.</li>
-          <li>VIP swag bag with partner goodies.</li>
-          <li>Limited availability each tour (exclusive).</li>
-        </ul>
-      </article>
-    </div>
-
-    <div class="nl-cta">
-      <a class="nl-button" href="#vip">Join VIP Waitlist</a>
-    </div>
-    <p class="nl-note">Launching with two tours per week (Saturday + one midweek date). Max 20 guests per tour. Taxes/fees may apply. Schedule &amp; stops subject to change. Age 21+.</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin:12px 0 4px">
+    <a id="eventbrite-pilot-button" class="btn btn-primary" href="https://www.eventbrite.com/e/1925086879679" target="_blank" rel="noopener">Get Tickets (Pilot Tour)</a>
+    <a class="btn btn-outline" href="https://www.eventbrite.com/e/1925086879679" target="_blank" rel="noopener">Open on Eventbrite</a>
   </div>
+
+  <!-- Eventbrite checkout widget (modal trigger) -->
+  <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function(){
+      if (window.EBWidgets && document.getElementById('eventbrite-pilot-button')) {
+        EBWidgets.createWidget({
+          widgetType: 'checkout',
+          eventId: '1925086879679',
+          modal: true,
+          modalTriggerElementId: 'eventbrite-pilot-button'
+        });
+      }
+    });
+  </script>
+
+  <p style="margin:10px 0 0;color:#cdd7de;font-size:14px">
+    More dates will be added. You can also find “More events from this organizer” on the Eventbrite page.
+  </p>
 </section>
 
-<!-- CREATORS -->
-<section class="section container creator" id="creators">
-  <h2 class="section-title">Creators Program</h2>
-  <p><strong>Who it’s for:</strong> photo &amp; video creators who love capturing luxury experiences, street-level Vegas energy, and lifestyle content.</p>
-
+<!-- INFLUENCERS -->
+<section class="section container" id="influencers">
+  <h2 class="section-title">Influencers &amp; Creators</h2>
+  <p>We host media nights and creator seats on select dates.</p>
   <div class="grid-3" style="margin-top:12px">
     <div class="card">
       <h3>Perks</h3>
-      <ul class="bullet">
+      <ul class="bullet" style="margin-left:18px">
         <li>Discounted or comped seat on select media nights.</li>
         <li>VIP treatment on board (priority seating, swag).</li>
-        <li>Behind-the-scenes access windows when available.</li>
-        <li>Feature reels &amp; galleries on our socials and site (tagged &amp; credited).</li>
+        <li>Featured posts (tagged/credited) when approved.</li>
       </ul>
     </div>
     <div class="card">
       <h3>What We Need</h3>
-      <ul class="bullet">
+      <ul class="bullet" style="margin-left:18px">
         <li>Short-form clips (vertical) and a small photo set.</li>
-        <li>48–72h turnaround on selects for our launch content bank.</li>
-        <li>Tagging guidelines followed; co-posting when invited.</li>
-        <li>Usage rights: non-exclusive, credited brand use.</li>
+        <li>48–72h turnaround on selects for launch content.</li>
+        <li>Follow tagging &amp; co-post guidelines.</li>
       </ul>
     </div>
     <div class="card">
-      <h3>How to Apply</h3>
-      <ul class="bullet">
-        <li>Tap <em>Apply as Creator</em> below and in the form’s first text field, write <strong>“CREATOR”</strong> + your IG/TikTok handle.</li>
-        <li>Or DM <strong>@nomadicleaftours</strong> on Instagram with “CREATOR” to get the media-night link.</li>
+      <h3>How to Inquire</h3>
+      <ul class="bullet" style="margin-left:18px">
+        <li>Email <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a> with subject “INFLUENCER”.</li>
+        <li>Or DM <strong>@nomadicleaftours</strong> on Instagram.</li>
       </ul>
     </div>
   </div>
-
-  <div class="cta-row" style="margin-top:20px">
-    <a class="btn btn-primary" href="https://forms.gle/U9bik7HfAPtaphPx8" target="_blank" rel="noopener">Apply as Creator</a>
-    <a class="btn btn-outline" href="https://www.instagram.com/nomadicleaftours?igsh=cW0zeGRheTVkNnhk&utm_source=qr" target="_blank" rel="noopener">DM on Instagram</a>
-  </div>
 </section>
 
-<!-- VIP WAITLIST PERKS -->
-<section class="section container" id="vip">
-  <h2 class="section-title">VIP Waitlist Perks</h2>
-  <div class="grid-3">
-    <div class="card"><h3>First to Book</h3><p>Early access windows for new dates and special events.</p></div>
-    <div class="card"><h3>Early-Bird Offers</h3><p>Exclusive promo drops for waitlist only.</p></div>
-    <div class="card"><h3>Seat Upgrade Priority</h3><p>First pick on VIP Premium Seating when space is limited.</p></div>
-    <div class="card"><h3>Pilot / Media Nights</h3><p>Occasional invites when we test routes &amp; capture content.</p></div>
-    <div class="card"><h3>Partner Pop-Ups</h3><p>Access to select partner experiences and surprise add-ons.</p></div>
-    <div class="card"><h3>Behind-the-Scenes</h3><p>Sneak peeks, route teasers, and twin-host updates.</p></div>
-  </div>
-  <div class="cta-row" style="margin-top:20px">
-    <a class="btn btn-primary" href="https://forms.gle/U9bik7HfAPtaphPx8" target="_blank" rel="noopener">Join VIP Waitlist</a>
-  </div>
-</section>
+<!-- STAFF & PARTNERS (Founder merged) -->
+<section id="team" class="section container">
+  <h2 class="section-title">Staff &amp; Partners</h2>
 
-<!-- HOSTS -->
-<section id="hosts" class="section">
-  <div class="container" style="padding:0">
-    <h2 class="section-title">Meet Your Twin Hosts</h2>
-
-    <div style="background:rgba(0,0,0,.45);border:1px solid rgba(215,180,106,.45);border-radius:16px;padding:22px 22px 28px;box-shadow:0 12px 26px rgba(0,0,0,.35);">
-      <img src="twins.jpg" alt="Nandi and Inky — Nomadic Leaf twin hosts"
-           style="display:block;margin:0 auto 16px;width:min(92vw,760px);height:auto;border:6px solid rgba(215,180,106,.55);border-radius:12px;box-shadow:0 8px 18px rgba(0,0,0,.35);" />
-
-      <h3 style="margin:0 0 12px;text-align:center;font-family:'Alex Brush',cursive;font-weight:400;font-size:clamp(28px,3.2vw,40px);color:#d7b46a;">
-        Nandi &amp; Inky
-      </h3>
-
-      <div style="max-width:820px;margin:0 auto;color:#f2f4f6;line-height:1.7;font-size:clamp(16px,1.15vw,18px);font-family:'Inter',system-ui;">
-        <p style="margin:0 0 14px;">Nandi and Inky are identical twins with a magnetic energy that instantly lights up any room — and now, any tour bus. Born in Long Beach, CA and raised between San Francisco and Arizona, they bring West Coast creativity and humor to everything they do.</p>
-        <p style="margin:0 0 14px;">Together, they’ve spent years working as art and print models, often posing as a pair and building a natural chemistry that now translates into on-tour hosting. Known for their quick wit, love of movie quotes, and endless laughter, they’re natural entertainers who keep energy high while making every guest feel welcome.</p>
-        <p style="margin:0 0 10px;"><strong>Both are passionate artists:</strong></p>
-        <ul style="margin:0 0 14px 22px;padding:0;">
-          <li style="margin:0 0 10px;"><strong>Nandi</strong> is a self-taught cake artist and edible creator, founder of <em>The Cake Trap</em>…</li>
-          <li style="margin:0 0 10px;"><strong>Inky</strong> is a professional art model with 10+ years of experience…</li>
-        </ul>
-        <p style="margin:0 0 14px;">As a duo, they’re foodies with a sweet tooth, natural comedians, and lovers of art, travel, and unique experiences. Their favorite way to consume? Edibles. Their favorite way to connect? Laughter.</p>
-        <p style="margin:0;">With degrees in fashion design and fine art, plus years of creative hustle, Nandi and Inky are the perfect ambassadors for Nomadic Leaf. They’re not just hosts — they’re guides, performers, and curators of the journey.</p>
+  <div class="team-grid" style="margin-top:10px">
+    <!-- Hosts -->
+    <article class="team-card">
+      <img class="team-photo" src="twins.jpg" alt="Nandi & Inky — Twin Hosts">
+      <div class="team-body">
+        <p class="team-role">Twin Hosts</p>
+        <h3 class="team-name">Nandi &amp; Inky</h3>
+        <p class="team-bio">Identical twins with magnetic energy and on-tour chemistry. West Coast humor, quick wit, and a natural knack for making every guest feel welcome.</p>
       </div>
+    </article>
+
+    <!-- Founder (merged here) -->
+    <article class="team-card">
+      <img class="team-photo" src="D2823552-.jpg" alt="Jerome Butler">
+      <div class="team-body">
+        <p class="team-role">Founder</p>
+        <h3 class="team-name">Jerome Butler</h3>
+        <p class="team-bio">U.S. Navy veteran and curator of the Nomadic Leaf experience. Quiet luxury, on-time moves, and camera-ready moments that still feel human.</p>
+      </div>
+    </article>
+
+    <!-- Strategic Marketing & Partnerships (placeholder) -->
+    <article class="team-card">
+      <img class="team-photo" src="mainlogosquare.png" alt="Strategic Marketing & Partnerships">
+      <div class="team-body">
+        <p class="team-role">Strategic Marketing &amp; Partnerships</p>
+        <h3 class="team-name">Position Placeholder</h3>
+        <p class="team-bio">Role focuses on partner relations, campaign concepts, and co-branded experiences.</p>
+      </div>
+    </article>
+
+    <!-- Videographer / Photographer (placeholder) -->
+    <article class="team-card">
+      <img class="team-photo" src="mainlogosquare.png" alt="Videographer / Photographer">
+      <div class="team-body">
+        <p class="team-role">Videographer / Photographer</p>
+        <h3 class="team-name">Position Placeholder</h3>
+        <p class="team-bio">Short-form content lead for TikTok/IG Reels/YouTube Shorts; fast turnarounds for social.</p>
+      </div>
+    </article>
+
+    <!-- Social Media Brand Ambassador (placeholder) -->
+    <article class="team-card">
+      <img class="team-photo" src="mainlogosquare.png" alt="Social Media Brand Ambassador">
+      <div class="team-body">
+        <p class="team-role">Social Media Brand Ambassador</p>
+        <h3 class="team-name">Position Placeholder</h3>
+        <p class="team-bio">Community engagement, content boosts, and guest storytelling across platforms.</p>
+      </div>
+    </article>
+
+    <!-- Transportation Partner (placeholder) -->
+    <article class="team-card">
+      <img class="team-photo" src="mainlogosquare.png" alt="Transportation Partner">
+      <div class="team-body">
+        <p class="team-role">Transportation Partner</p>
+        <h3 class="team-name">Partner Placeholder</h3>
+        <p class="team-bio">Professional driver and premium vehicle partner for smooth, on-time routing.</p>
+      </div>
+    </article>
+  </div>
+
+  <!-- Full bios (unchanged copy) -->
+  <div style="margin-top:24px;background:rgba(0,0,0,.45);border:1px solid rgba(215,180,106,.45);border-radius:16px;padding:22px 22px 28px;box-shadow:0 12px 26px rgba(0,0,0,.35);">
+    <img src="twins.jpg" alt="Nandi and Inky — Nomadic Leaf twin hosts"
+         style="display:block;margin:0 auto 16px;width:min(92vw,760px);height:auto;border:6px solid rgba(215,180,106,.55);border-radius:12px;box-shadow:0 8px 18px rgba(0,0,0,.35);" />
+    <h3 style="margin:0 0 12px;text-align:center;font-family:'Alex Brush',cursive;font-weight:400;font-size:clamp(28px,3.2vw,40px);color:#d7b46a;">Nandi &amp; Inky</h3>
+    <div style="max-width:820px;margin:0 auto;color:#f2f4f6;line-height:1.7;font-size:clamp(16px,1.15vw,18px);font-family:'Inter',system-ui;">
+      <p style="margin:0 0 14px;">Nandi and Inky are identical twins with a magnetic energy that instantly lights up any room — and now, any tour bus. Born in Long Beach, CA and raised between San Francisco and Arizona, they bring West Coast creativity and humor to everything they do.</p>
+      <p style="margin:0 0 14px;">Together, they’ve spent years working as art and print models, often posing as a pair and building a natural chemistry that now translates into on-tour hosting. Known for their quick wit, love of movie quotes, and endless laughter, they’re natural entertainers who keep energy high while making every guest feel welcome.</p>
+      <p style="margin:0 0 10px;"><strong>Both are passionate artists:</strong></p>
+      <ul style="margin:0 0 14px 22px;padding:0;">
+        <li style="margin:0 0 10px;"><strong>Nandi</strong> is a self-taught cake artist and edible creator, founder of <em>The Cake Trap</em>…</li>
+        <li style="margin:0 0 10px;"><strong>Inky</strong> is a professional art model with 10+ years of experience…</li>
+      </ul>
+      <p style="margin:0 0 14px;">As a duo, they’re foodies with a sweet tooth, natural comedians, and lovers of art, travel, and unique experiences. Their favorite way to consume? Edibles. Their favorite way to connect? Laughter.</p>
+      <p style="margin:0;">With degrees in fashion design and fine art, plus years of creative hustle, Nandi and Inky are the perfect ambassadors for Nomadic Leaf. They’re not just hosts — they’re guides, performers, and curators of the journey.</p>
+    </div>
+  </div>
+
+  <div style="max-width:1100px;margin:20px auto 0">
+    <h3 style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);margin:0 0 10px">Founder</h3>
+    <article class="card bio-panel" style="padding:0;overflow:hidden">
+      <div style="display:grid;grid-template-columns:320px 1fr;gap:0">
+        <div style="position:relative">
+          <img src="D2823552-.jpg" alt="Jerome Butler" style="display:block;width:100%;height:100%;object-fit:cover">
+        </div>
+        <div style="padding:18px 18px 22px">
+          <h4 style="margin:0 0 6px;color:var(--gold)">Jerome Butler — Founder</h4>
+          <p style="margin:.5rem 0;line-height:1.75">Jerome Butler founded Nomadic Leaf after years of living—and traveling—like a true nomad. A U.S. Navy veteran, he blends discipline with creative curation to make complex logistics feel effortless. In Las Vegas, his vision of luxury is quiet and intentional: great partners, on-time moves, and camera-ready moments that still feel human. He leads a host culture that’s high-energy, welcoming, and guest-first while scouting new stops and relationships. Jerome’s north star is simple: craft experiences that turn strangers into crew.</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section container">
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h4>Where is pickup?</h4>
+      <p>Pickup details are shared in your confirmation email 48 hours prior to the tour for timing and crowd-flow reasons.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Is this 21+?</h4>
+      <p>Yes. All guests must be 21+ with a valid government-issued ID.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can I consume on the bus?</h4>
+      <p>No. There is no public or on-bus consumption. Consumption only at licensed venues when permitted by venue rules.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What’s included?</h4>
+      <p>Compliant lounge time, optional dispensary visit, on-bus games with prizes, and an upscale dinner at The Beast (AREA15), followed by an immersive show &amp; activities. VIP add-on offers priority seating and a Nomadic Leaf Swag Bag.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Refunds &amp; cancellations</h4>
+      <p>Cancellations 72 hours or more before your tour are eligible for a refund (less applicable processing fees). Inside 72 hours, tickets are non-refundable but may be transferable if space allows.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Accessibility &amp; special requests</h4>
+      <p>Email <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a> and we’ll do our best to accommodate.</p>
     </div>
   </div>
 </section>
 
-<!-- FOUNDER (last) -->
-<section id="founder" aria-labelledby="nl-founder-title" class="section">
-  <style>
-    #founder{
-      --gold:#C6A85E;--ink:#E9EDF2;--muted:#BAC6D1;color:var(--ink);background:transparent;padding-top:0
-    }
-    #founder .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-    #founder .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(198,168,94,.35);border-radius:24px;padding:22px 20px 24px;box-shadow:inset 0 10px 30px rgba(0,0,0,.20), 0 18px 40px rgba(0,0,0,.30)}
-    #founder .frame{position:relative;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,rgba(11,27,43,.85),rgba(11,27,43,.92));border:1px solid rgba(198,168,94,.22);box-shadow:0 16px 36px rgba(0,0,0,.35)}
-    #founder .frame::before{content:"";position:absolute;inset:12px;border-radius:12px;border:1px solid rgba(198,168,94,.45);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);pointer-events:none}
-    #founder .frame::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 100% at 50% 0, rgba(0,0,0,0), rgba(0,0,0,.18));pointer-events:none}
-    #founder .frame img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;transform:translateZ(0)}
-    #founder .name{margin:16px 10px 10px;text-align:center;color:var(--gold);font-weight:700;font-style:italic;letter-spacing:.02em;font-size:clamp(20px,3.4vw,28px)}
-    #founder p{margin:.75rem 0;line-height:1.75}
-  </style>
-
-  <div class="wrap">
-    <h2 class="section-title">Founder</h2>
-    <article class="card bio-panel">
-      <div class="frame">
-        <img src="D2823552-.jpg" alt="Jerome Butler">
-      </div>
-
-      <h3 id="nl-founder-title" class="name">Jerome Butler — Founder</h3>
-
-     <p>Jerome Butler founded Nomadic Leaf after years of living—and traveling—like a true nomad. A U.S. Navy veteran, he blends discipline with creative curation to make complex logistics feel effortless. In Las Vegas, his vision of luxury is quiet and intentional: great partners, on-time moves, and camera-ready moments that still feel human. He leads a host culture that’s high-energy, welcoming, and guest-first while scouting new stops and relationships. Jerome’s north star is simple: craft experiences that turn strangers into crew.</p>
-    </article>
-  </div>
+<!-- TERMS & POLICIES -->
+<section id="terms" class="section container">
+  <h2 class="section-title">Terms &amp; Policies</h2>
+  <ul style="margin:0;padding-left:18px;max-width:900px;line-height:1.7">
+    <li>Age 21+ with valid government ID is required for all guests.</li>
+    <li>No public or on-bus consumption. Consumption only at licensed venues when permitted.</li>
+    <li>Nomadic Leaf does not sell cannabis. Purchases, if any, are made directly with licensed partners.</li>
+    <li>Final pickup location and show details provided ~48 hours prior to your tour.</li>
+    <li>Routes, stops, and activities may change due to partner availability and traffic conditions.</li>
+    <li>Standard cancellation window: 72 hours before tour start for refund eligibility (processing fees may apply).</li>
+    <li>By joining, you consent to casual photo/video capture for brand storytelling; tell your host if you prefer not to appear.</li>
+    <li>Be kind. We reserve the right to refuse service for unsafe or disrespectful behavior.</li>
+  </ul>
 </section>
 
 <footer>
   © <span id="y"></span> Nomadic Leaf. Curated luxury cannabis-friendly tours in Las Vegas (21+). Nomadic Leaf does not sell cannabis.
 </footer>
 
-<script>
-document.getElementById('y').textContent=new Date().getFullYear();
-</script>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
