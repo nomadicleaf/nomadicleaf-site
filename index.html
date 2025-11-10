@@ -416,90 +416,155 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   </div>
 </section>
 
-<!-- STAFF & PARTNERS (clean, uniform, full bios first) -->
-<section id="staff" class="section nl-staff">
-  <style>
-    /* Scoped to .nl-staff only */
-    .nl-staff .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-    .nl-staff .person{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-      border:1px solid rgba(198,168,94,.35);border-radius:20px;padding:18px 18px 20px;margin:0 0 18px;
-      box-shadow:0 16px 36px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.04)}
-    .nl-staff .figure{aspect-ratio:4/3;border-radius:14px;overflow:hidden;border:1px solid rgba(198,168,94,.35);
-      box-shadow:0 10px 24px rgba(0,0,0,.28);background:rgba(0,0,0,.25)}
-    .nl-staff .figure img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
-    .nl-staff .role{margin:12px 2px 4px;color:var(--gold);font-weight:800;letter-spacing:.02em}
-    .nl-staff h3{margin:0 2px 8px;color:#fff;font-weight:800;font-size:clamp(20px,2.8vw,26px)}
-    .nl-staff .bio{color:#e9edf2;line-height:1.7}
-    .nl-staff .bio ul{margin:8px 0 0 22px}
-    .nl-staff .grid{display:grid;gap:16px;margin-top:10px}
-    @media (min-width:820px){.nl-staff .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    .nl-staff .mini .figure{aspect-ratio:4/3} /* same size for all cards */
-  </style>
-
-  <div class="wrap">
+<!-- ===== STAFF & PARTNERS ===== -->
+<section id="staff-partners" class="section">
+  <div class="container" style="padding:0">
     <h2 class="section-title">Staff &amp; Partners</h2>
 
-    <!-- FULL HOST BIO (first) -->
-    <article class="person">
-      <figure class="figure">
-        <img src="twins.jpg" alt="Nandi &amp; Inky — Twin Hosts">
-      </figure>
-      <p class="role">Twin Hosts</p>
-      <h3>Nandi &amp; Inky</h3>
-      <div class="bio">
-        <p>Nandi and Inky are identical twins with a magnetic energy that instantly lights up any room — and now, any tour bus. Born in Long Beach, CA and raised between San Francisco and Arizona, they bring West Coast creativity and humor to everything they do.</p>
-        <p>Together, they’ve spent years working as art and print models, often posing as a pair and building a natural chemistry that now translates into on-tour hosting. Known for their quick wit, love of movie quotes, and endless laughter, they’re natural entertainers who keep energy high while making every guest feel welcome.</p>
-        <p><strong>Both are passionate artists:</strong></p>
-        <ul>
-          <li><strong>Nandi</strong> is a self-taught cake artist and edible creator, founder of <em>The Cake Trap</em>…</li>
-          <li><strong>Inky</strong> is a professional art model with 10+ years of experience…</li>
-        </ul>
-        <p>As a duo, they’re foodies with a sweet tooth, natural comedians, and lovers of art, travel, and unique experiences. Their favorite way to consume? Edibles. Their favorite way to connect? Laughter.</p>
-        <p>With degrees in fashion design and fine art, plus years of creative hustle, Nandi and Inky are the perfect ambassadors for Nomadic Leaf. They’re not just hosts — they’re guides, performers, and curators of the journey.</p>
+    <style>
+      /* Scoped styles for Staff & Partners */
+      .sp-wrap{--gold: var(--gold, #d4b26f); --ink: var(--ink, #e8eef2)}
+      .sp-subtitle{
+        margin: 2px 0 12px;
+        font-family:"Cormorant Garamond",serif; font-style:italic; font-weight:700;
+        color: var(--gold); letter-spacing:.02em; font-size:24px;
+      }
+      .sp-grid{display:grid; gap:18px}
+      @media (min-width:700px){ .sp-grid{grid-template-columns:repeat(3, minmax(0,1fr));} }
+      .sp-card{
+        background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+        border:1px solid rgba(212,178,111,.25);
+        border-radius:16px; padding:16px 16px 18px;
+        box-shadow: inset 0 8px 26px rgba(0,0,0,.18), 0 8px 26px rgba(0,0,0,.22);
+      }
+      .sp-photo{
+        background:rgba(0,0,0,.25);
+        border:1px solid rgba(212,178,111,.28);
+        border-radius:12px; overflow:hidden;
+        display:grid; place-items:center;
+        height:190px; /* uniform tile height; full image via contain */
+        margin-bottom:12px;
+      }
+      .sp-photo img{
+        width:100%; height:100%;
+        object-fit:contain; /* show full image/logo without cropping */
+        display:block;
+      }
+      .sp-name{
+        margin:0 0 6px;
+        color:var(--gold);
+        font-weight:800; letter-spacing:.2px; font-size:18px;
+      }
+      .sp-role{
+        margin:0 0 10px; color:#cfd7df; font-size:14px; opacity:.95;
+      }
+      .sp-bio{ margin:0; color:#dfe6ec; line-height:1.65; font-size:15px; }
+      .sp-section{margin-bottom:26px}
+      .sp-divider{
+        height:1px; background:linear-gradient(90deg, rgba(212,178,111,.18), rgba(212,178,111,.05));
+        margin:24px 0 10px; border:0;
+      }
+      .sp-bio ul{margin:8px 0 12px 22px; padding:0}
+      .sp-bio li{margin:6px 0}
+    </style>
+
+    <div class="sp-wrap">
+      <!-- ===== STAFF ===== -->
+      <div class="sp-section">
+        <h3 class="sp-subtitle">Staff</h3>
+
+        <div class="sp-grid">
+          <!-- Founder (FULL APPROVED BIO) -->
+          <article class="sp-card" aria-label="Founder">
+            <div class="sp-photo">
+              <img src="D2823552-.jpg" alt="Jerome Butler">
+            </div>
+            <h4 class="sp-name">Jerome Butler — Founder</h4>
+            <p class="sp-role">Founder</p>
+            <p class="sp-bio">
+              Jerome Butler founded Nomadic Leaf after years of living—and traveling—like a true nomad. A U.S. Navy veteran, he blends discipline with creative curation to make complex logistics feel effortless. In Las Vegas, his vision of luxury is quiet and intentional: great partners, on-time moves, and camera-ready moments that still feel human. He leads a host culture that’s high-energy, welcoming, and guest-first while scouting new stops and relationships. Jerome’s north star is simple: craft experiences that turn strangers into crew.
+            </p>
+          </article>
+
+          <!-- Twin Hosts (FULL APPROVED BIO) -->
+          <article class="sp-card" aria-label="Twin Hosts">
+            <div class="sp-photo">
+              <img src="twins.jpg" alt="Nandi &amp; Inky">
+            </div>
+            <h4 class="sp-name">Nandi &amp; Inky — Twin Hosts</h4>
+            <p class="sp-role">Twin Hosts</p>
+            <div class="sp-bio">
+              <p>Nandi and Inky are identical twins with a magnetic energy that instantly lights up any room—and now, any tour bus. Born in Long Beach, CA and raised between San Francisco and Arizona, they bring West Coast creativity and humor to everything they do.</p>
+              <p>Together, they’ve spent years as art and print models, building natural chemistry that now translates into on-tour hosting. Known for quick wit, movie quotes, and constant laughter, they’re natural entertainers who keep the vibe high while making every guest feel welcome.</p>
+              <p><strong>Passions:</strong></p>
+              <ul>
+                <li><strong>Nandi:</strong> self-taught cake artist and edible creator (founder of <em>The Cake Trap</em>)</li>
+                <li><strong>Inky:</strong> professional art model with 10+ years of experience</li>
+              </ul>
+              <p>They’re foodies with a sweet tooth; favorite way to consume: edibles. Favorite way to connect: laughter.</p>
+            </div>
+          </article>
+
+          <!-- Social Media Brand Ambassador (APPROVED TEXT) -->
+          <article class="sp-card" aria-label="Social Media Brand Ambassador">
+            <div class="sp-photo">
+              <img src="IMG_20251110_150213.jpg" alt="Aleesia Kimble">
+            </div>
+            <h4 class="sp-name">Aleesia Kimble — Social Media Brand Ambassador</h4>
+            <p class="sp-role">Social Media Brand Ambassador</p>
+            <p class="sp-bio">
+              Designer and creative director who helps people and brands optimize growth across executive assistance, real estate, fashion, sales, and entertainment. Aleesia channels multi-industry experience into on-brand social content, hands-on support, and example-driven leadership—empowering communities while elevating our digital presence.
+              <br>LinkedIn: <a href="https://www.linkedin.com/in/aleesia-kimble-ba0589183" target="_blank" rel="noopener">linkedin.com/in/aleesia-kimble-ba0589183</a>
+            </p>
+          </article>
+        </div>
       </div>
-    </article>
 
-    <!-- FULL FOUNDER BIO (second) -->
-    <article class="person">
-      <figure class="figure">
-        <img src="D2823552-.jpg" alt="Jerome Butler — Founder">
-      </figure>
-      <p class="role">Founder</p>
-      <h3>Jerome Butler</h3>
-      <div class="bio">
-        <p>Jerome Butler founded Nomadic Leaf after years of living—and traveling—like a true nomad. A U.S. Navy veteran, he blends discipline with creative curation to make complex logistics feel effortless. In Las Vegas, his vision of luxury is quiet and intentional: great partners, on-time moves, and camera-ready moments that still feel human. He leads a host culture that’s high-energy, welcoming, and guest-first while scouting new stops and relationships. Jerome’s north star is simple: craft experiences that turn strangers into crew.</p>
+      <hr class="sp-divider"/>
+
+      <!-- ===== PARTNERS ===== -->
+      <div class="sp-section">
+        <h3 class="sp-subtitle">Partners</h3>
+
+        <div class="sp-grid">
+          <!-- Strategic Marketing & Partnerships — Cannaluxxe Wellness Experience -->
+          <article class="sp-card" aria-label="Strategic Marketing & Partnerships">
+            <div class="sp-photo">
+              <img src="IMG_20251110_105016.jpg" alt="Cannaluxxe Wellness Experience">
+            </div>
+            <h4 class="sp-name">Cannaluxxe Wellness Experience</h4>
+            <p class="sp-role">Strategic Marketing &amp; Partnerships</p>
+            <p class="sp-bio">
+              A wellness-forward studio that curates elevated, plant-positive hospitality—mindfulness sessions, tea lounge moments, and boutique experiences—during marquee Las Vegas weeks and beyond. Cannaluxxe pairs intention with design to create beautiful, compliant spaces where education and community meet. Our collaboration focuses on co-marketing, event alignment, and audience growth.
+            </p>
+          </article>
+
+          <!-- Collaboration Partner — Front Row Travels® -->
+          <article class="sp-card" aria-label="Collaboration Partner">
+            <div class="sp-photo">
+              <img src="IMG_20251110_145142.avif" alt="Front Row Travels" onerror="this.src='mainlogosquare.png'">
+            </div>
+            <h4 class="sp-name">Front Row Travels® — Be Seen. Be Felt. Be Heard.</h4>
+            <p class="sp-role">Collaboration Partner</p>
+            <p class="sp-bio">
+              Founded by Ayanna Lawson, Front Row Travels® designs inclusive, stigma-free cannabis travel—rooted in wellness, freedom, and real connection—with access to minority-owned gems, luxury stays, and curated events. Featured in Forbes, Condé Nast Traveler, HuffPost, CBS, and more.
+              <br><strong>Why we’re partnering:</strong> co-created, compliance-smart add-ons and reciprocal referrals that extend the Nomadic Leaf journey before and after the tour.
+            </p>
+          </article>
+
+          <!-- Transportation Partner — Premier Transportation -->
+          <article class="sp-card" aria-label="Transportation Partner">
+            <div class="sp-photo">
+              <img src="IMG_20251110_150621.jpg" alt="Premier Transportation">
+            </div>
+            <h4 class="sp-name">Premier Transportation</h4>
+            <p class="sp-role">Transportation Partner</p>
+            <p class="sp-bio">
+              Las Vegas–born operator delivering safe, reliable, and affordable service with modern, well-maintained vehicles—including party buses and Mercedes Sprinters—for groups of all sizes. Led by Adam Schwartz (in the industry since 2010), Premier specializes in everything from luxe SUVs to high-energy party buses—ensuring smooth routing and a true Vegas ride.
+            </p>
+          </article>
+        </div>
       </div>
-    </article>
-
-    <!-- PLACEHOLDER ROLES (uniform image size; logo filler) -->
-    <div class="grid">
-      <article class="person mini">
-        <figure class="figure"><img src="mainlogosquare.png" alt="Strategic Marketing & Partnerships"></figure>
-        <p class="role">Strategic Marketing &amp; Partnerships</p>
-        <h3>Role Placeholder</h3>
-        <div class="bio"><p>Partner strategy, sponsorships, media relationships, and growth collaborations.</p></div>
-      </article>
-
-      <article class="person mini">
-        <figure class="figure"><img src="mainlogosquare.png" alt="Social Media Brand Ambassador"></figure>
-        <p class="role">Social Media Brand Ambassador</p>
-        <h3>Role Placeholder</h3>
-        <div class="bio"><p>Authentic content and community engagement across Instagram, TikTok, and Reels.</p></div>
-      </article>
-
-      <article class="person mini">
-        <figure class="figure"><img src="mainlogosquare.png" alt="Photographer / Videographer"></figure>
-        <p class="role">Photographer / Videographer</p>
-        <h3>Role Placeholder</h3>
-        <div class="bio"><p>On-tour capture, selects, and short-form edits for web and socials.</p></div>
-      </article>
-
-      <article class="person mini">
-        <figure class="figure"><img src="mainlogosquare.png" alt="Transportation Partner"></figure>
-        <p class="role">Transportation Partner</p>
-        <h3>Partner Placeholder</h3>
-        <div class="bio"><p>Professional driver and premium vehicle partner for smooth, on-time routing.</p></div>
-      </article>
     </div>
   </div>
 </section>
