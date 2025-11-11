@@ -1,431 +1,344 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Nomadic Leaf — Curated, Luxury Cannabis-Friendly Tours (Las Vegas 21+)</title>
-<meta name="description" content="Visitors + locals, same crew. Curated, luxury cannabis-friendly tours in Las Vegas (21+). Twin-host energy, camera-ready stops, and VIP touches built in.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nomadic Leaf — Curated Luxury Cannabis-Friendly Tours (21+)</title>
 
-<!-- Google tag (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PYBGYKN64N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-PYBGYKN64N', { send_page_view: true });
-</script>
+  <!-- Fonts (kept to your brand families) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- App Icons -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="shortcut icon" href="/favicon.ico">
+  <!-- Theme colors (unchanged) -->
+  <meta name="theme-color" content="#0b1c24" />
 
-<!-- Open Graph -->
-<meta property="og:site_name" content="Nomadic Leaf">
-<meta property="og:title" content="Nomadic Leaf — Curated, luxury cannabis-friendly tours (Las Vegas 21+)">
-<meta property="og:description" content="Visitors & locals, same crew. High-energy, twin-host tours with curated stops, camera-ready moments, and NV-compliant vibes.">
-<meta property="og:image" content="https://nomadicleaf.com/mainlogosquare.png?v=4">
-<meta property="og:url" content="https://nomadicleaf.com">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://nomadicleaf.com/mainlogosquare.png?v=4">
-
-<!-- Schema.org -->
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Nomadic Leaf","url":"https://nomadicleaf.com","logo":"https://nomadicleaf.com/mainlogosquare.png","sameAs":["https://www.instagram.com/nomadicleaftours/","https://www.linkedin.com/company/nomadic-leaf/"]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"Nomadic Leaf","url":"https://nomadicleaf.com","logo":"https://nomadicleaf.com/mainlogosquare.png","image":"https://nomadicleaf.com/mainlogosquare.png","telephone":"+1-702-418-1171","email":"info@nomadicleaf.com","slogan":"Where the Leaf Takes You","areaServed":["Las Vegas, NV"],"sameAs":["https://www.instagram.com/nomadicleaftours/","https://www.linkedin.com/company/nomadic-leaf/"]}
-</script>
-
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&family=Alex+Brush&family=Cormorant+Garamond:ital,wght@1,700&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --gold:#c4a25a; --gold-deep:#a8842a; --bg:#0d2230; --bg-2:#0e2a3a;
-  --panel:#102a3a; --panel-2:#0f3548; --ink:#e8edf1; --muted:#c5d0d8;
-}
-*{box-sizing:border-box}
-html,body{margin:0;background:radial-gradient(1100px 700px at 30% 12%, var(--bg-2) 0%, var(--bg) 55%, #091922 100%);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-.container{max-width:1200px;margin:0 auto;padding:24px}
-
-/* Smooth anchor offset */
-html{scroll-behavior:smooth}
-section[id]{scroll-margin-top:84px}
-
-/* NAV */
-.nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.35);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
-.nav-inner{display:flex;align-items:center;gap:16px;padding:14px 24px}
-.brand{display:flex;align-items:center;gap:10px}
-.brand img{width:30px;height:30px;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
-.brand-name{font-family:"Cinzel",serif;font-weight:700;letter-spacing:.4px;color:var(--gold);font-size:26px;line-height:1;white-space:nowrap}
-.nav-links{display:flex;align-items:center;gap:26px;margin-left:auto}
-.nav-links a{font-weight:600;opacity:.95}
-.menu-toggle{display:none;margin-left:auto;background:transparent;border:0;color:var(--ink);font-size:26px;line-height:1;cursor:pointer}
-
-/* HERO */
-.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:58px 24px 28px}
-.eyebrow{color:var(--muted);letter-spacing:.25em;font-size:12px;margin-bottom:8px}
-.hero-title{font-family:"Alex Brush",cursive;color:var(--gold);font-size:76px;line-height:1.02;letter-spacing:.3px;margin:0 0 14px;text-shadow:0 1px 0 #000,0 10px 26px rgba(0,0,0,.35),0 0 1px rgba(196,162,90,.45)}
-.lead{max-width:720px;color:#dbe6ec}
-.cta-row{display:flex;gap:16px;margin:22px 0 14px}
-.btn{border-radius:14px;padding:12px 18px;font-weight:800}
-.btn-primary{background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#0a141b;border:0;box-shadow:0 6px 22px rgba(0,0,0,.45)}
-.btn-outline{border:2px solid rgba(196,162,90,.6);color:var(--gold);background:transparent}
-.socials{display:flex;gap:14px;margin-top:10px}
-.socials a{width:40px;height:40px;border:2px solid rgba(196,162,90,.55);border-radius:50%;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.35)}
-.socials svg{width:20px;height:20px;fill:var(--gold)}
-.hero-card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border-radius:20px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.04)}
-.hero-card img{width:100%;height:auto;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
-
-/* SECTIONS */
-.section{padding:30px 24px}
-.section-title,.section h2{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:700;color:var(--gold);font-size:44px;line-height:1.15;margin:8px 0 18px;text-shadow:0 1px 0 #000, 0 8px 22px rgba(0,0,0,.28)}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border-radius:20px;padding:22px;box-shadow:0 18px 42px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.04)}
-.card h3{color:var(--gold);font-size:20px;margin:0 0 6px;font-weight:800}
-.card p{margin:0;color:#d7e3ea}
-
-/* Schedule (shortened here; same visuals you had) */
-.luxe-schedule .timeline{list-style:none;margin:18px 0 6px;padding:0 0 0 58px;position:relative}
-.luxe-schedule .timeline-item{position:relative;padding:0 0 12px}
-.luxe-schedule .timeline-item:before{
-  content:"";position:absolute;left:-26px;top:.35rem;width:18px;height:18px;border-radius:50%;
-  background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.55),transparent 42%),linear-gradient(180deg,var(--gold),var(--gold-deep));
-  box-shadow:0 0 0 4px rgba(214,179,91,.18),0 8px 14px rgba(0,0,0,.35);
-}
-.luxe-schedule .ti-head{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:700;color:var(--ink);font-size:clamp(18px,1.35vw,22px)}
-.luxe-schedule .pill{display:inline-block;margin-left:.5rem;padding:2px 10px;border-radius:999px;font-size:.8em;color:var(--gold);background:rgba(15,22,30,.6);border:1px solid rgba(214,179,91,.55)}
-
-/* Tickets & Events */
-#tickets{padding-top:10px}
-.tix-grid{display:grid;gap:18px}
-.tix-card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid rgba(196,162,90,.25);border-radius:16px;padding:18px;box-shadow:0 12px 28px rgba(0,0,0,.35)}
-.tix-card h3{margin:0 0 6px;color:var(--gold)}
-.tix-note{font-size:13px;color:#cdd6de;opacity:.9;margin-top:8px}
-
-/* Influencers */
-#influencers .bullet{margin:8px 0 0 18px}
-#influencers .bullet li{margin:4px 0}
-
-/* Staff & Partners */
-#staff-partners .sp-wrap{display:grid;gap:24px}
-#staff-partners h3{margin:0 0 6px}
-.sp-label{font-weight:800;color:var(--gold);margin-bottom:8px}
-.sp-row{display:grid;gap:18px}
-@media(min-width:780px){ .sp-row{grid-template-columns:repeat(2,1fr)} }
-.sp-card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid rgba(198,168,94,.28);border-radius:18px;padding:16px;box-shadow:0 12px 28px rgba(0,0,0,.35)}
-.sp-title{font-size:22px;font-weight:800;margin:8px 0}
-.sp-role{color:#cfd7df;margin:0 0 10px}
-
-/* Portrait, no-crop frames */
-.sp-figure{aspect-ratio:4/5;display:grid;place-items:center;background:radial-gradient(120% 100% at 50% 0,#0e2030 0%,#0a1822 60%);border:1px solid rgba(198,168,94,.35);border-radius:16px;overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 10px 24px rgba(0,0,0,.28);padding:8px}
-.sp-figure img{width:100%;height:100%;object-fit:contain;object-position:center}
-
-/* FAQ / Terms */
-.faq-item{border:1px solid rgba(196,162,90,.25);border-radius:12px;padding:14px;margin:10px 0;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01))}
-
-/* Footer */
-footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
-
-/* Mobile */
-@media (max-width:980px){
-  .nav-links{display:none}
-  .menu-toggle{display:block}
-  .nav.open .nav-links{display:flex;flex-direction:column;gap:14px;position:absolute;left:0;right:0;top:64px;padding:16px 24px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px)}
-  .brand img{width:28px;height:28px}
-  .brand-name{font-size:22px}
-  .hero{grid-template-columns:1fr;gap:22px;padding-top:36px}
-  .hero-title{font-size:58px}
-  .section-title{font-size:36px}
-  .grid-3{grid-template-columns:1fr}
-}
-</style>
+  <style>
+    /* Tiny helpers so you don't need to touch your main CSS */
+    :root{
+      --gold:#cfae61;
+      --navy:#0b1c24;
+      --card:#102532;
+      --ink:#e9eef2;
+      --muted:#96a6b1;
+      --radius:18px;
+      --radius-lg:22px;
+      --ring:#213c48;
+    }
+    body{background:#07151c;color:#e7eef2;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;margin:0}
+    a{color:var(--gold);text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px}
+    .brandbar{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(7,21,28,.95),rgba(7,21,28,.85));backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid #0f2a36}
+    .brand{display:flex;align-items:center;gap:14px;padding:14px 18px}
+    .brand img{width:28px;height:28px}
+    .brand-name{
+      font-family:"Cinzel",serif;font-weight:700;letter-spacing:.03em;
+      color:var(--gold);font-size:22px;line-height:1; text-transform:none;
+      text-shadow:0 0 .01em rgba(0,0,0,.2);
+    }
+    h2.section{font-family:"Cormorant Garamond",serif;font-weight:700;font-style:italic;color:var(--gold);font-size:40px;margin:42px 0 18px}
+    h3.label{color:var(--gold);font-weight:700;margin:6px 0 14px}
+    .card{background:var(--card);border-radius:var(--radius-lg);border:1px solid var(--ring);box-shadow:0 10px 40px rgba(0,0,0,.24) inset, 0 8px 28px rgba(0,0,0,.28);padding:18px;margin:18px 0}
+    .card + .card{margin-top:24px}
+    .figure{border-radius:16px;border:1px solid #365160;background:#0f2631;display:block;overflow:hidden}
+    .staff-portrait{
+      width:100%; aspect-ratio:3/4; display:block; object-fit:contain; object-position:center;
+      background:#0b1c24;
+    }
+    .partner-banner{
+      width:100%; height:128px; display:block; object-fit:contain; object-position:center;
+      background:#0b1c24; padding:10px;
+    }
+    .grid{display:grid;gap:16px}
+    @media(min-width:800px){ .grid-2{grid-template-columns:1fr 1fr} }
+    .pill{display:inline-block;background:#173545;border:1px solid #2e5668;color:#d7e5ee;padding:.32rem .7rem;border-radius:999px;font-size:.86rem}
+    .socials{display:flex;gap:10px}
+    .socials a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid #2c4e5f;border-radius:50%;background:#102532}
+    .btn{display:inline-block;background:var(--gold);color:#0a1720;font-weight:700;padding:.85rem 1.1rem;border-radius:12px}
+    .muted{color:var(--muted)}
+    .tight h4{margin:.4rem 0}
+    .kv{border-radius:26px;border:1px solid #213c48;background:#0d2230;padding:10px;overflow:hidden}
+    .kv img{width:100%; display:block; border-radius:18px}
+    .bullets li{margin:.4rem 0}
+    .small{font-size:.92rem}
+    .toc{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0 2px}
+    .toc a{border:1px solid #244656;background:#0c2130;padding:.4rem .7rem;border-radius:999px}
+    .footer{color:#c7d6df;font-size:.9rem;margin:40px 0 60px}
+    /* Anchor spacing for sticky header */
+    .anchor{scroll-margin-top:82px}
+  </style>
 </head>
-<body>
 
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <div class="nav-inner container">
-    <a href="#top" class="brand">
-      <img src="./mainlogosquare.png" alt="Nomadic Leaf logo"><span class="brand-name">Nomadic Leaf</span>
-    </a>
-    <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
-    <div class="nav-links">
+<body>
+<!-- BEGIN SITE -->
+<header class="brandbar">
+  <div class="wrap brand" style="justify-content:space-between;">
+    <div style="display:flex;align-items:center;gap:12px">
+      <img src="favicon-32.png" alt="" loading="lazy" />
+      <div class="brand-name">Nomadic Leaf</div>
+    </div>
+    <nav class="toc small">
       <a href="#about">About</a>
       <a href="#included">What’s Included</a>
-      <a href="#schedule">Schedule</a>
-      <a href="#tickets">Tickets &amp; Events</a>
-      <a href="#influencers">Influencers &amp; Creators</a>
-      <a href="#staff-partners">Staff &amp; Partners</a>
+      <a href="#tickets">Tickets</a>
+      <a href="#team">Staff & Partners</a>
       <a href="#faq">FAQ</a>
-      <a href="#terms">Terms &amp; Policies</a>
-    </div>
+      <a href="#terms">Terms</a>
+    </nav>
   </div>
-</nav>
-
-<!-- HERO -->
-<header class="hero container" id="top">
-  <div>
-    <div class="eyebrow">LAS VEGAS • 21+</div>
-    <h1 class="hero-title">Where the Leaf<br/>Takes You</h1>
-    <p class="lead">Visitors &amp; locals, same crew. A curated, high-energy, cannabis-friendly journey across Vegas—twin-host led, camera-ready stops, VIP touches built in.</p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="#tickets">View Tickets &amp; Events</a>
-      <a class="btn btn-outline" href="#schedule">View Schedule</a>
-    </div>
-    <div class="socials">
-      <a href="https://www.instagram.com/nomadicleaftours/" target="_blank" aria-label="Instagram">
-        <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm6.5-.25a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/company/nomadic-leaf/" target="_blank" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24"><path d="M6.9 7.5A2.4 2.4 0 1 1 7 2.7a2.4 2.4 0 0 1-.1 4.8ZM3.8 21.3h6.1V9.1H3.8v12.2Zm8.4 0h6.1v-6.6c0-3.5-3.7-3.2-4.5-1.5v-4.1h-6v12.2h6v-6.8c0-1.8 2.9-1.9 2.9 0v6.8Z"/></svg>
-      </a>
-    </div>
-  </div>
-  <div class="hero-card"><img src="./mainlogosquare.png" alt="Nomadic Leaf emblem"></div>
 </header>
 
-<!-- ABOUT -->
-<section id="about" class="section container">
-  <h2 class="section-title">About Nomadic Leaf</h2>
-  <p>We bring travelers and locals together for a curated, compliant, luxury-leaning route through Vegas culture. Hosts handle timing, vibe, and photo-ready moments—you just enjoy the ride.</p>
-</section>
+<main class="wrap">
 
-<!-- WHAT'S INCLUDED -->
-<section class="section container" id="included">
-  <h2 class="section-title">What’s Included</h2>
-  <div class="grid-3">
-    <div class="card"><h3>Curated Itinerary</h3><p>Hand-picked partners and photo-ready stops designed for luxury, fun, and compliance.</p></div>
-    <div class="card"><h3>Twin-Host Energy</h3><p>Identical twin hosts keep the vibe high while timing stays tight and classy.</p></div>
-    <div class="card"><h3>VIP Touches</h3><p>Priority moments, premium seating when available, and surprise swag drops.</p></div>
+  <!-- Hero stays your existing artwork -->
+  <div class="kv" style="margin-top:18px">
+    <img src="hero-nomadic-leaf.jpg" alt="Nomadic Leaf — luxury cannabis-friendly tours in Las Vegas" loading="lazy">
   </div>
-</section>
 
-<!-- SCHEDULE -->
-<section id="schedule" class="section container luxe-schedule">
-  <h2 class="section-title">Sample Schedule <span class="pill">~4h 45m–5h 15m</span></h2>
-  <ol class="timeline">
-    <li class="timeline-item"><div class="ti-head">Check-in &amp; Welcome <span class="pill">2:00 PM</span></div><p>Pickup location provided in final details (48h prior).</p></li>
-    <li class="timeline-item"><div class="ti-head">Fremont Street Experience Walk <span class="pill">20m</span></div><p>Photos, light shopping, group pic.</p></li>
-    <li class="timeline-item"><div class="ti-head">Sky High Lounge at NuWu — Consumption Lounge <span class="pill">60m</span></div><p>Compliant lounge session. VIPs enjoy premium seating and one infused beverage.</p></li>
-    <li class="timeline-item"><div class="ti-head">NuWu Dispensary — Shopping Stop <span class="pill">30m</span></div><p>Guided shopping time at the on-site dispensary.</p></li>
-    <li class="timeline-item"><div class="ti-head">On-bus Cannabis Trivia &amp; Prizes <span class="pill">En route</span></div><p>Fun, fast-paced trivia while rolling to AREA15.</p></li>
-    <li class="timeline-item"><div class="ti-head">Dinner at The Beast (AREA15) <span class="pill">60m</span></div><p>Upscale meal included.</p></li>
-    <li class="timeline-item"><div class="ti-head">Immersive Show &amp; Activities (AREA15) <span class="pill">60m</span></div><p>Specific show announced in your final tour email.</p></li>
-    <li class="timeline-item"><div class="ti-head">Return &amp; Farewell <span class="pill">15m</span></div><p>Ride back, prize call-outs, and thank-yous.</p></li>
-  </ol>
-  <p style="color:#cdd6de;opacity:.95">Note: Stops &amp; timing may shift based on partner availability and traffic. Age 21+ with valid ID. Nomadic Leaf does not sell cannabis.</p>
-</section>
+  <!-- About -->
+  <section id="about" class="anchor">
+    <h2 class="section">About Nomadic Leaf</h2>
+    <div class="card">
+      <p>Nomadic Leaf brings travelers and locals together for a curated, compliant, luxury-leaning route through Vegas culture. Think camera-ready stops, smooth timing, and <strong>hosts</strong> who keep the vibe high while the logistics stay invisible.</p>
+      <p>We partner only with licensed venues and trusted operators so the experience feels premium, safe, and intentional. Tours blend lounge moments, creative photo ops, immersive art, and a dinner stop—so guests can relax, connect, and enjoy a night that feels both elevated and effortless.</p>
+      <p>Our hosts keep energy up and the schedule tight, creating micro-moments for reels, group photos, and surprise challenges. VIP upgrades add preferred seating, early bus access, and a little extra “only in Vegas” treatment.</p>
+      <p class="muted small">Nomadic Leaf doesn’t sell cannabis. Purchases happen directly at partner venues when permitted by law. On-bus or public consumption is prohibited. 21+ with valid government ID.</p>
+      <p class="small"><strong>Who it’s for:</strong> couples, friend groups, birthdays, team outings, visitors who want Vegas with taste, and locals who want a hosted night out without the hassle.</p>
+    </div>
+  </section>
 
-<!-- TICKETS & EVENTS -->
-<section id="tickets" class="section container">
-  <h2 class="section-title">Tickets &amp; Events</h2>
-  <div class="tix-grid">
+  <!-- What's Included -->
+  <section id="included" class="anchor">
+    <h2 class="section">What’s Included</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3 class="label">Curated Itinerary</h3>
+        <p>Licensed lounge time (when permitted), iconic photo stops, and an immersive show stop.</p>
+      </div>
+      <div class="card">
+        <h3 class="label">Hosted Experience</h3>
+        <p>Hosts on-mic—timing, games, and light prizes en route—to keep the energy right.</p>
+      </div>
+      <div class="card">
+        <h3 class="label">Dinner Stop</h3>
+        <p>Seated dinner at <strong>The Beast (AREA15)</strong> built into the schedule.</p>
+      </div>
+      <div class="card">
+        <h3 class="label">Transportation</h3>
+        <p>Premium vehicle between listed stops, hosted the whole way.</p>
+      </div>
+      <div class="card">
+        <h3 class="label">VIP Add-On</h3>
+        <p>Early bus access, preferred lounge seating + one infused beverage, and a VIP swag touch (limited availability).</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Eventbrite: auto-updating organizer listing (set your ORGANIZER_ID). Fallback shows your pilot tour so this never renders blank. -->
-    <div class="tix-card">
-      <h3>Eventbrite (Primary)</h3>
-      <div id="eb-listing"></div>
-      <p class="tix-note">Tip: This section auto-updates as you add new Eventbrite events. If you don’t see the full list, the current single-event fallback is displayed.</p>
+  <!-- Tickets -->
+  <section id="tickets" class="anchor">
+    <h2 class="section">Tickets &amp; Events</h2>
+
+    <!-- Primary: Eventbrite -->
+    <div class="card" id="eb-card">
+      <h3 class="label">Eventbrite (Primary)</h3>
+      <div id="eb-widget" class="figure" style="padding:0;background:#fff;border-radius:14px">
+        <!-- If you already have a working Eventbrite embed, paste it below and it will replace the fallback. -->
+        <div id="eb-fallback" style="padding:18px">
+          <p class="small" style="color:#2b2b2b"><strong>Heads up:</strong> If the embedded checkout doesn’t appear here, use the button below.</p>
+          <a class="btn" href="https://www.eventbrite.com/" target="_blank" rel="noopener">Open on Eventbrite</a>
+        </div>
+      </div>
+      <p class="muted small" style="margin-top:10px">Tip: This section auto-updates as you add new Eventbrite events if you replace the fallback with your official embed. If you don’t see a list, the current single-event fallback is displayed.</p>
     </div>
 
-    <!-- EventHi: link-out to your event listing -->
-    <div class="tix-card">
-      <h3>EventHi</h3>
+    <!-- Alternate marketplace: EventHi -->
+    <div class="card">
+      <h3 class="label">EventHi</h3>
       <p>Prefer EventHi? View our public listings and purchase tickets there.</p>
-      <p><a class="btn btn-outline" href="https://eventhi.io/events/nomadic-leaf-curated-luxury-cannabis-friendly-vegas-tour-21-13123" target="_blank" rel="noopener">Open EventHi Listing</a></p>
-      <p class="tix-note">We’ll add additional EventHi dates here as they go live.</p>
+      <a class="btn" href="https://eventhi.io/" target="_blank" rel="noopener">Open EventHi Listing</a>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- Staff & Partners -->
+  <section id="team" class="anchor">
+    <h2 class="section">Staff &amp; Partners</h2>
 
-<!-- INFLUENCERS & CREATORS -->
-<section id="influencers" class="section container">
-  <h2 class="section-title">Influencers &amp; Creators</h2>
-  <p><strong>Who it’s for:</strong> photo/video creators who love capturing luxury experiences, street-level Vegas energy, and lifestyle content.</p>
-  <ul class="bullet">
-    <li>Discounted/comp seats on select media nights.</li>
-    <li>VIP moments, brand tags, and co-posts.</li>
-    <li>48–72h turnaround on select deliverables.</li>
-  </ul>
-  <div class="cta-row" style="margin-top:14px">
-    <a class="btn btn-primary" href="https://www.instagram.com/nomadicleaftours/" target="_blank" rel="noopener">DM @nomadicleaftours</a>
-  </div>
-</section>
+    <h3 class="label">Staff</h3>
 
-<!-- STAFF & PARTNERS -->
-<section id="staff-partners" class="section container">
-  <h2 class="section-title">Staff &amp; Partners</h2>
+    <!-- Founder -->
+    <article class="card tight">
+      <div class="figure"><img class="staff-portrait" src="founder.jpg" alt="Jerome Butler — Founder" loading="lazy"></div>
+      <h3 style="margin:14px 0 4px">Jerome Butler — Founder</h3>
+      <div class="muted" style="margin-bottom:10px">Founder</div>
+      <p>Jerome Butler founded Nomadic Leaf after years of living—and traveling—like a true nomad. A U.S. Navy veteran, he blends discipline with creative curation to make complex logistics feel effortless. In Las Vegas, his vision of luxury is quiet and intentional: great partners, on-time moves, and camera-ready moments that still feel human. He leads a host culture that’s high-energy, welcoming, and guest-first while scouting new stops and relationships. Jerome’s north star is simple: craft experiences that turn strangers into crew.</p>
+    </article>
 
-  <div class="sp-wrap">
+    <!-- Twin Hosts -->
+    <article class="card tight">
+      <div class="figure"><img class="staff-portrait" src="hosts-nandi-inky.jpg" alt="Nandi &amp; Inky — Twin Hosts" loading="lazy"></div>
+      <h3 style="margin:14px 0 4px">Nandi &amp; Inky — Twin Hosts</h3>
+      <div class="muted" style="margin-bottom:10px">Twin Hosts</div>
+      <p>Nandi and Inky are identical twins with a magnetic energy that instantly lights up any room—and now, any tour bus. Born in Long Beach, CA and raised between San Francisco and Arizona, they bring West Coast creativity and humor to everything they do.</p>
+      <p>Together, they’ve spent years as art and print models, building natural chemistry that now translates into on-tour hosting. Known for quick wit, movie quotes, and constant laughter, they’re natural entertainers who keep the vibe high while making every guest feel welcome.</p>
+      <ul class="bullets">
+        <li><strong>Nandi:</strong> self-taught cake artist and edible creator (founder of The Cake Trap)</li>
+        <li><strong>Inky:</strong> professional art model with 10+ years of experience</li>
+      </ul>
+      <p>They’re foodies with a sweet tooth; favorite way to consume: edibles. Favorite way to connect: laughter.</p>
+    </article>
 
-    <!-- STAFF -->
-    <div class="sp-label">Staff</div>
-    <div class="sp-row">
+    <!-- Brand Ambassador -->
+    <article class="card tight">
+      <div class="figure"><img class="staff-portrait" src="IMG_20251110_150213.jpg" alt="Aleesia Kimble — Social Media Brand Ambassador" loading="lazy"></div>
+      <h3 style="margin:14px 0 4px">Aleesia Kimble — Social Media Brand Ambassador</h3>
+      <div class="muted" style="margin-bottom:10px">Social Media Brand Ambassador</div>
+      <p>Designer and creative director helping people and brands optimize growth across executive assistance, real estate, fashion, sales, and entertainment. Aleesia channels multi-industry experience into on-brand social content, hands-on support, and example-driven leadership—empowering communities while elevating our digital presence.</p>
+      <p class="small muted">LinkedIn: <a href="https://www.linkedin.com/in/aleesia-kimble-ba0589183" target="_blank" rel="noopener">linkedin.com/in/aleesia-kimble-ba0589183</a></p>
+    </article>
 
-      <!-- Founder -->
-      <article class="sp-card">
-        <div class="sp-figure">
-          <img src="D2823552-.jpg" alt="Jerome Butler">
-        </div>
-        <h3 class="sp-title">Jerome Butler — Founder</h3>
-        <p class="sp-role">Founder</p>
-        <p>Jerome Butler founded Nomadic Leaf after years of living—and traveling—like a true nomad. A U.S. Navy veteran, he blends discipline with creative curation to make complex logistics feel effortless. In Las Vegas, his vision of luxury is quiet and intentional: great partners, on-time moves, and camera-ready moments that still feel human. He leads a host culture that’s high-energy, welcoming, and guest-first while scouting new stops and relationships. Jerome’s north star is simple: craft experiences that turn strangers into crew.</p>
-      </article>
+    <!-- Videographer / Photographer -->
+    <article class="card tight">
+      <div class="figure"><img class="staff-portrait" src="hud-placeholder.jpg" alt="Ronald “Hud” Hudson — Videographer & Photographer" loading="lazy"></div>
+      <h3 style="margin:14px 0 4px">Ronald “Hud” Hudson — Videographer &amp; Photographer</h3>
+      <div class="muted" style="margin-bottom:10px">Videographer &amp; Photographer</div>
+      <p>Bay Area–born, Inglewood-raised creative who believes it’s all about capturing the moment. Ronald started in music (piano by ear), fell in love with acting, cooking, and photography, and has been shooting professionally since 2016. A faith-driven, people-first storyteller, he brings patience, heart, and a “make everyone look their best” approach to every frame—so guests can relive the night the way it felt.</p>
+    </article>
 
-      <!-- Twin Hosts -->
-      <article class="sp-card">
-        <div class="sp-figure">
-          <img src="twins.jpg" alt="Nandi & Inky — Twin Hosts">
-        </div>
-        <h3 class="sp-title">Nandi &amp; Inky — Twin Hosts</h3>
-        <p class="sp-role">Twin Hosts</p>
-        <p>Nandi and Inky are identical twins with a magnetic energy that instantly lights up any room—and now, any tour bus. Born in Long Beach, CA and raised between San Francisco and Arizona, they bring West Coast creativity and humor to everything they do.</p>
-        <p>Together, they’ve spent years as art and print models, building natural chemistry that now translates into on-tour hosting. Known for quick wit, movie quotes, and constant laughter, they’re natural entertainers who keep the vibe high while making every guest feel welcome.</p>
-        <p><strong>Passions:</strong></p>
-        <ul>
-          <li><strong>Nandi:</strong> self-taught cake artist and edible creator (founder of The Cake Trap)</li>
-          <li><strong>Inky:</strong> professional art model with 10+ years of experience</li>
-        </ul>
-        <p>They’re foodies with a sweet tooth; favorite way to consume: edibles. Favorite way to connect: laughter.</p>
-      </article>
+    <h3 class="section" style="font-size:28px;margin-top:32px">Partners</h3>
 
-      <!-- Social Media Brand Ambassador -->
-      <article class="sp-card">
-        <div class="sp-figure">
-          <img src="IMG_20251110_150213.jpg" alt="Aleesia Kimble">
-        </div>
-        <h3 class="sp-title">Aleesia Kimble — Social Media Brand Ambassador</h3>
-        <p class="sp-role">Social Media Brand Ambassador</p>
-        <p>Designer and creative director helping people and brands optimize growth across executive assistance, real estate, fashion, sales, and entertainment. Aleesia channels multi-industry experience into on-brand social content, hands-on support, and example-driven leadership—empowering communities while elevating our digital presence.</p>
-      </article>
+    <!-- Cannaluxxe -->
+    <article class="card tight">
+      <div class="figure"><img class="partner-banner" src="IMG_20251110_152517.jpg" alt="Cannaluxxe Wellness Experience" loading="lazy"></div>
+      <h3 style="margin:14px 0 4px">Cannaluxxe Wellness Experience</h3>
+      <div class="muted" style="margin-bottom:10px">Strategic Marketing &amp; Partnerships</div>
+      <p>A wellness-forward studio that curates elevated, plant-positive hospitality—mindfulness sessions, tea lounge moments, and boutique experiences—during marquee Las Vegas weeks and beyond. Cannaluxxe pairs intention with design to create beautiful, compliant spaces where education and community meet. Our collaboration focuses on co-marketing, event alignment, and audience growth.</p>
+    </article>
 
+    <!-- Front Row Travels -->
+    <article class="card tight">
+      <div class="figure">
+        <picture>
+          <source srcset="IMG_20251110_145142.avif" type="image/avif">
+          <img class="partner-banner" src="IMG_20251110_145142.avif" alt="Front Row Travels®" loading="lazy">
+        </picture>
+      </div>
+      <h3 style="margin:14px 0 4px">Front Row Travels®</h3>
+      <div class="muted" style="margin-bottom:10px">Collaboration Partner</div>
+      <p>Founded by Ayanna Lawson, Front Row Travels® designs inclusive, stigma-free cannabis travel—rooted in wellness, freedom, and real connection—with access to minority-owned gems, luxury stays, and curated events. <span class="muted small">Featured in Forbes, Condé Nast Traveler, HuffPost, CBS, and more.</span> <strong>Why we’re partnering:</strong> co-created, compliance-smart add-ons and reciprocal referrals that extend the Nomadic Leaf journey before and after the tour.</p>
+    </article>
+
+    <!-- Premier Transportation -->
+    <article class="card tight">
+      <div class="figure"><img class="partner-banner" src="IMG_20251110_150621.jpg" alt="Premier Transportation" loading="lazy"></div>
+      <h3 style="margin:14px 0 4px">Premier Transportation</h3>
+      <div class="muted" style="margin-bottom:10px">Transportation Partner</div>
+      <p>Las Vegas–born operator delivering safe, reliable, and affordable service with modern, well-maintained vehicles—including party buses and Mercedes Sprinters—for groups of all sizes. Led by Adam Schwartz (in the industry since 2010), Premier specializes in everything from luxe SUVs to high-energy party buses—ensuring smooth routing and a true Vegas ride.</p>
+    </article>
+
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="anchor">
+    <h2 class="section">FAQ</h2>
+    <div class="card">
+      <h4>How long is the tour?</h4>
+      <p>About 4h45–5h15 depending on traffic and show timing.</p>
+      <h4>What’s included in the ticket?</h4>
+      <p>All transport between listed stops, hosted experience, dinner at The Beast (AREA15), and curated activities. Purchases at venues are optional and paid directly.</p>
+      <h4>Can I consume on the bus?</h4>
+      <p>No. Consumption occurs only at licensed venues when permitted by venue rules and Nevada law.</p>
+      <h4>Age &amp; ID?</h4>
+      <p>21+ with a valid government ID required for all guests—no exceptions.</p>
+      <h4>Where is pickup?</h4>
+      <p>Final pickup location and show details are sent 48 hours before your tour.</p>
+      <h4>What should I bring?</h4>
+      <p>Government ID, payment method for any optional purchases, and comfortable shoes for short walks/photos.</p>
+      <h4>Accessibility?</h4>
+      <p>Email <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a> with needs—we’ll coordinate reasonable accommodations with venues/transport.</p>
+      <h4>What’s VIP Premium Seating?</h4>
+      <p>Early bus access for preferred seats, premium lounge seating plus one infused beverage, and a small swag touch. Limited availability.</p>
+      <h4>What if I’m late?</h4>
+      <p>We depart on time. Late arrivals may be asked to meet the group at the next stop; no refunds for missed segments.</p>
+      <h4>Group bookings or buyouts?</h4>
+      <p>Yes—reach out for custom dates, corporate groups, or celebrations.</p>
+      <h4>Photos/video?</h4>
+      <p>Our hosts capture group moments. By attending you may appear in recap content. Tell a host if you prefer not to be featured.</p>
+      <h4>Tipping?</h4>
+      <p>Appreciated for drivers/hosts, entirely optional.</p>
+      <h4>Weather/traffic changes?</h4>
+      <p>The route may adjust for safety or partner availability. We’ll always deliver the core experience.</p>
     </div>
+  </section>
 
-<!-- PARTNERS (uniform banner logos; fully visible) -->
-<h3 class="sp-section-title" id="partners" style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#d7b46a;margin:26px 0 14px">Partners</h3>
-
-<div class="sp-grid">
-
-  <!-- Cannaluxxe -->
-  <article class="sp-card" aria-label="Cannaluxxe Wellness Experience">
-    <!-- Banner logo uses background-size:contain to avoid any cropping -->
-    <div role="img" aria-label="Cannaluxxe Wellness Experience logo"
-         style="height:clamp(140px,22vw,220px);aspect-ratio:16/9;width:100%;
-                border-radius:14px;overflow:hidden;
-                border:1px solid rgba(214,179,91,.28);
-                box-shadow:0 6px 18px rgba(0,0,0,.22) inset,0 2px 10px rgba(0,0,0,.16);
-                background:#0b1822 url('IMG_20251110_152517.jpg') center/contain no-repeat;">
+  <!-- Terms -->
+  <section id="terms" class="anchor">
+    <h2 class="section">Terms &amp; Policies</h2>
+    <div class="card">
+      <p><strong>Cancellations:</strong> Refundable up to 72 hours before start time (unless a ticketing platform states otherwise on its checkout page). Within 72 hours, tickets are non-refundable but are transferable to another 21+ guest.</p>
+      <p><strong>Compliance:</strong> Follow all venue rules and Nevada law. Nomadic Leaf does not sell cannabis. Public or on-bus consumption is prohibited.</p>
+      <p><strong>ID &amp; Refusal of Service:</strong> Valid government ID required. Guests who are visibly intoxicated, disruptive, or non-compliant may be denied boarding or removed without refund.</p>
+      <p><strong>Late/No-Show:</strong> We depart on time. Missed segments or no-shows are non-refundable.</p>
+      <p><strong>Route Changes:</strong> Venues, shows, or timing may change due to availability, traffic, or safety. Equivalent value will be provided.</p>
+      <p><strong>Purchases:</strong> All product purchases are made directly with licensed partners and are subject to their policies and taxes.</p>
+      <p><strong>VIP Add-On:</strong> Limited inventory. Perks listed (early access, preferred lounge seating + one infused beverage, swag). No cash equivalent; non-refundable within 72 hours.</p>
+      <p><strong>Accessibility:</strong> Contact us in advance for reasonable accommodations. Some venues may have capacity or layout constraints.</p>
+      <p><strong>Content &amp; Privacy:</strong> Photos/video may be captured for brand recaps. Tell a host on arrival if you prefer not to be featured.</p>
+      <p><strong>Force Majeure:</strong> We aren’t liable for delays or changes caused by events outside our control (weather, traffic, venue incidents, etc.).</p>
+      <p><strong>Peak-Date Surcharge:</strong> A $20 per-guest surcharge may apply on select peak dates (e.g., F1, CES).</p>
+      <p><strong>Contact:</strong> <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a> • <a href="tel:+17024161171">(702) 416-1171</a></p>
     </div>
+  </section>
 
-    <h4 class="sp-name" style="margin:12px 0 4px;font-weight:800;color:#e8edf1">Cannaluxxe Wellness Experience</h4>
-    <div class="sp-role" style="color:#cdd7de;margin:0 0 8px">Strategic Marketing &amp; Partnerships</div>
-    <p style="margin:0;color:#cfd7df">A wellness-forward studio that curates elevated, plant-positive hospitality—mindfulness sessions, tea lounge moments, and boutique experiences—during marquee Las Vegas weeks and beyond. Cannaluxxe pairs intention with design to create beautiful, compliant spaces where education and community meet. Our collaboration focuses on co-marketing, event alignment, and audience growth.</p>
-  </article>
-
-  <!-- Front Row Travels -->
-  <article class="sp-card" aria-label="Front Row Travels">
-    <div role="img" aria-label="Front Row Travels logo"
-         style="height:clamp(140px,22vw,220px);aspect-ratio:16/9;width:100%;
-                border-radius:14px;overflow:hidden;
-                border:1px solid rgba(214,179,91,.28);
-                box-shadow:0 6px 18px rgba(0,0,0,.22) inset,0 2px 10px rgba(0,0,0,.16);
-                background:#0b1822 url('IMG_20251110_145142.avif') center/contain no-repeat;">
+  <!-- Socials -->
+  <section class="anchor">
+    <h2 class="section">Follow Us</h2>
+    <div class="socials">
+      <a href="https://instagram.com/nomadicleaftours" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+      <a href="https://facebook.com/nomadicleaftours" aria-label="Facebook" target="_blank" rel="noopener">FB</a>
+      <a href="https://www.linkedin.com/company/nomadic-leaf" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
     </div>
+  </section>
 
-    <h4 class="sp-name" style="margin:12px 0 4px;font-weight:800;color:#e8edf1">Front Row Travels®</h4>
-    <div class="sp-role" style="color:#cdd7de;margin:0 0 8px">Collaboration Partner</div>
-    <p style="margin:0;color:#cfd7df">Founded by Ayanna Lawson, Front Row Travels® designs inclusive, stigma-free cannabis travel rooted in wellness, freedom, and real connection—with access to minority-owned gems, curated events, and luxury stays. <strong>Why we’re partnering:</strong> compliance-smart add-ons and reciprocal referrals that extend the Nomadic Leaf journey before and after the tour.</p>
-  </article>
+  <p class="footer">© 2025 Nomadic Leaf. Curated luxury cannabis-friendly tours in Las Vegas (21+). Nomadic Leaf does not sell cannabis.</p>
 
-  <!-- Premier Transportation -->
-  <article class="sp-card" aria-label="Premier Transportation">
-    <div role="img" aria-label="Premier Transportation logo"
-         style="height:clamp(140px,22vw,220px);aspect-ratio:16/9;width:100%;
-                border-radius:14px;overflow:hidden;
-                border:1px solid rgba(214,179,91,.28);
-                box-shadow:0 6px 18px rgba(0,0,0,.22) inset,0 2px 10px rgba(0,0,0,.16);
-                background:#0b1822 url('IMG_20251110_150621.jpg') center/contain no-repeat;">
-    </div>
+</main>
 
-    <h4 class="sp-name" style="margin:12px 0 4px;font-weight:800;color:#e8edf1">Premier Transportation</h4>
-    <div class="sp-role" style="color:#cdd7de;margin:0 0 8px">Transportation Partner</div>
-    <p style="margin:0;color:#cfd7df">Las Vegas–born operator delivering safe, reliable, and affordable service with modern, well-maintained vehicles—including party buses and Mercedes Sprinters—for groups of all sizes. Led by Adam Schwartz (in the industry since 2010), Premier specializes in everything from luxe SUVs to high-energy party buses—ensuring smooth routing and a true Vegas ride.</p>
-  </article>
-
-</div>
-<!-- /PARTNERS -->
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="section container">
-  <h2 class="section-title">FAQ</h2>
-  <div class="faq-item">
-    <strong>Is consumption allowed on the bus?</strong>
-    <p>No. Consumption only occurs at licensed venues when permitted by venue rules and Nevada law.</p>
-  </div>
-  <div class="faq-item">
-    <strong>What’s included in the ticket?</strong>
-    <p>All transport between listed stops, hosted experience, dinner at The Beast (AREA15), and curated activities. Shopping and any additional purchases are optional and paid directly to venues.</p>
-  </div>
-  <div class="faq-item">
-    <strong>Age &amp; ID?</strong>
-    <p>21+ with valid government ID required for all guests.</p>
-  </div>
-</section>
-
-<!-- TERMS & POLICIES -->
-<section id="terms" class="section container">
-  <h2 class="section-title">Terms &amp; Policies</h2>
-  <p><strong>Cancellations:</strong> Tickets are refundable up to <strong>72 hours</strong> before the tour start time (unless a specific ticketing platform states otherwise on its checkout page). Within 72 hours, tickets are non-refundable but are transferable to another guest 21+.</p>
-  <p><strong>Compliance:</strong> Follow all venue rules and Nevada law. Nomadic Leaf does not sell cannabis. Public or on-bus consumption is prohibited.</p>
-  <p><strong>Accessibility:</strong> If you have accessibility needs, email <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a> so we can plan suitable accommodations.</p>
-</section>
-
-<footer>
-  © <span id="y"></span> Nomadic Leaf. Curated luxury cannabis-friendly tours in Las Vegas (21+). Nomadic Leaf does not sell cannabis.
-</footer>
-
-<!-- Eventbrite widgets -->
 <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
 <script>
-  // Replace this with your real organizer ID when you have it.
-  const EB_ORGANIZER_ID = 'REPLACE_WITH_ORGANIZER_ID';
-  // Fallback single event (pilot tour) so the block never renders blank:
-  const EB_FALLBACK_EVENT_ID = '1925086879679';
+  (function(){
+    // Put ALL Eventbrite event IDs you want to embed here:
+    const EVENT_IDS = [
+      '1893839287289'
+      // ,'1925086879679'  // ← add more as you publish
+    ];
 
-  function renderEventbrite(){
-    if (EB_ORGANIZER_ID && EB_ORGANIZER_ID !== 'REPLACE_WITH_ORGANIZER_ID') {
-      window.EBWidgets.createWidget({
-        widgetType: 'eventbrite.events',
-        organizerId: EB_ORGANIZER_ID,
-        theme: 'dark',
-        isListing: true,
-        iframeContainerId: 'eb-listing'
+    const container = document.getElementById('eb-widget');
+    const fallback  = document.getElementById('eb-fallback');
+
+    if (EVENT_IDS.length && window.EBWidgets) {
+      // clear fallback UI
+      if (fallback) fallback.remove();
+
+      // create a checkout widget for each event
+      EVENT_IDS.forEach((id, i) => {
+        const holderId = 'eb-holder-' + i;
+        const holder = document.createElement('div');
+        holder.id = holderId;
+        holder.style.marginBottom = '16px';
+        container.appendChild(holder);
+
+        window.EBWidgets.createWidget({
+          widgetType: 'checkout',
+          eventId: id,
+          iframeContainerId: holderId,
+          iframeContainerHeight: 610
+        });
       });
     } else {
-      window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: EB_FALLBACK_EVENT_ID,
-        modal: false,
-        theme: 'dark',
-        iframeContainerId: 'eb-listing'
-      });
+      // leave the fallback button visible
+      console.warn('Using organizer fallback link.');
     }
-  }
-  if (window.EBWidgets) renderEventbrite(); else window.addEventListener('load', renderEventbrite);
 
-  // Year in footer
-  document.getElementById('y').textContent = new Date().getFullYear();
+    // Optional: make the fallback button go to your organizer page
+    const btn = document.querySelector('#eb-fallback .btn');
+    if (btn) btn.href = 'https://www.eventbrite.com/o/nomadic-leaf-120288217371';
+  })();
 </script>
-</body>
-</html>
