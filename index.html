@@ -446,31 +446,21 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
 <!-- Eventbrite widgets -->
 <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
 <script>
-  // Replace this with your real organizer ID when you have it.
-  const EB_ORGANIZER_ID = 'REPLACE_WITH_ORGANIZER_ID';
-  // Fallback single event (pilot tour) so the block never renders blank:
-  const EB_FALLBACK_EVENT_ID = '1968808776048';
-  
-  function renderEventbrite(){
-    if (EB_ORGANIZER_ID && EB_ORGANIZER_ID !== 'REPLACE_WITH_ORGANIZER_ID') {
-      window.EBWidgets.createWidget({
-        widgetType: 'eventbrite.events',
-        organizerId: EB_ORGANIZER_ID,
-        theme: 'dark',
-        isListing: true,
-        iframeContainerId: 'eb-listing'
-      });
-    } else {
-      window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: EB_FALLBACK_EVENT_ID,
-        modal: false,
-        theme: 'dark',
-        iframeContainerId: 'eb-listing'
-      });
-    }
+  // Organizer-based embed (shows all live Nomadic Leaf events)
+  const EB_ORGANIZER_ID = '120288217371';
+
+  function renderEventbrite() {
+    window.EBWidgets.createWidget({
+      widgetType: 'eventbrite.events',
+      organizerId: EB_ORGANIZER_ID,
+      theme: 'dark',
+      isListing: true,
+      iframeContainerId: 'eb-listing'
+    });
   }
-  if (window.EBWidgets) renderEventbrite(); else window.addEventListener('load', renderEventbrite);
+
+  if (window.EBWidgets) renderEventbrite();
+  else window.addEventListener('load', renderEventbrite);
 
   // Year in footer
   document.getElementById('y').textContent = new Date().getFullYear();
