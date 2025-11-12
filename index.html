@@ -123,6 +123,45 @@ section[id]{scroll-margin-top:84px}
 .tix-card h3{margin:0 0 6px;color:var(--gold)}
 .tix-note{font-size:13px;color:#cdd6de;opacity:.9;margin-top:8px}
 
+/* --- EventHi panel tidy --- */
+#eventhi-panel .eh-intro{
+  margin: 6px 0 12px;
+  line-height: 1.5;
+  color: #d7e3ea;
+}
+#eventhi-panel .eh-list{
+  list-style: disc;
+  padding-left: 22px;
+  margin: 0;
+}
+#eventhi-panel .eh-list li{
+  margin: 14px 0 18px;
+  line-height: 1.45;
+  color: #e4edf4;
+  overflow-wrap: anywhere;        /* prevents squished long titles */
+}
+#eventhi-panel .eh-actions{
+  margin-top: 8px;
+}
+#eventhi-panel .btn-eh{
+  display: inline-block;
+  padding: 10px 16px;
+  border: 2px solid rgba(196,162,90,.65);
+  border-radius: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--gold);
+  background: transparent;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+#eventhi-panel .btn-eh:active{ transform: translateY(1px); }
+#eventhi-panel .eh-note{
+  margin-top: 8px;
+  font-size: 13px;
+  color: #cdd6de;
+  opacity: .9;
+}
+  
 /* Influencers */
 #influencers .bullet{margin:8px 0 0 18px}
 #influencers .bullet li{margin:4px 0}
@@ -265,26 +304,34 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
     </div>
 
     <!-- EventHi: cleaned, readable list (kept as links) -->
-    <div class="tix-card">
-      <h3>EventHi</h3>
-      <p><strong>Alternate marketplace:</strong> You can also find our events on EventHi.</p>
+<div class="tix-card" id="eventhi-panel">
+  <h3>EventHi</h3>
+  <p class="eh-intro">
+    <strong>Alternate marketplace:</strong> You can also find our events on EventHi.
+  </p>
 
-      <ul class="eh-list">
-        <li class="eh-item">
-          <div class="eh-title">Nomadic Leaf × Cannaluxxe Wellness Experience</div>
-          <a class="btn btn-outline eh-btn" href="https://eventhi.io/events/nomadic-leaf--cannaluxxe-wellness-experience-13160" target="_blank" rel="noopener">Open EventHi Listing</a>
-        </li>
+  <ul class="eh-list">
+    <li>
+      <div><strong>Nomadic Leaf × Cannaluxxe Wellness Experience</strong></div>
+      <div class="eh-actions">
+        <a class="btn-eh" href="https://eventhi.io/events/nomadic-leaf--cannaluxxe-wellness-experience-13160" target="_blank" rel="noopener">
+          Open EventHi Listing
+        </a>
+      </div>
+    </li>
 
-        <li class="eh-item">
-          <div class="eh-title">Nomadic Leaf: Curated Luxury Cannabis-Friendly Vegas Tour (21+)</div>
-          <a class="btn btn-outline eh-btn" href="https://eventhi.io/events/nomadic-leaf-curated-luxury-cannabis-friendly-vegas-tour-21-13123" target="_blank" rel="noopener">Open EventHi Listing</a>
-        </li>
-      </ul>
+    <li>
+      <div><strong>Nomadic Leaf: Curated Luxury Cannabis-Friendly Vegas Tour (21+)</strong></div>
+      <div class="eh-actions">
+        <a class="btn-eh" href="https://eventhi.io/events/nomadic-leaf-curated-luxury-cannabis-friendly-vegas-tour-21-13123" target="_blank" rel="noopener">
+          Open EventHi Listing
+        </a>
+      </div>
+    </li>
+  </ul>
 
-      <p class="tix-note">Note: Prices/fees may differ by platform.</p>
-    </div>
-
-  </div>
+  <p class="eh-note">Note: Prices/fees may differ by platform.</p>
+</div>
 </section>
 
 <!-- INFLUENCERS & CREATORS (UNCHANGED) -->
