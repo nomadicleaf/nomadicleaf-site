@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://nomadicleaf.com/mainlogosquare.png?v=4">
 
-<!-- Schema.org -->
+<!-- Schema.org --> 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Nomadic Leaf","url":"https://nomadicleaf.com","logo":"https://nomadicleaf.com/mainlogosquare.png","sameAs":["https://www.instagram.com/nomadicleaftours/","https://www.linkedin.com/company/nomadic-leaf/"]}
 </script>
@@ -41,9 +41,22 @@
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"Nomadic Leaf","url":"https://nomadicleaf.com","logo":"https://nomadicleaf.com/mainlogosquare.png","image":"https://nomadicleaf.com/mainlogosquare.png","telephone":"+1-702-418-1171","email":"info@nomadicleaf.com","slogan":"Where the Leaf Takes You","areaServed":["Las Vegas, NV"],"sameAs":["https://www.instagram.com/nomadicleaftours/","https://www.linkedin.com/company/nomadic-leaf/"]}
 </script>
 
-<!-- Fonts -->
+<!-- Fonts -->  
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&family=Alex+Brush&family=Cormorant+Garamond:ital,wght@1,700&display=swap" rel="stylesheet">
+/* Eventbrite boxes: spacing + safe height */
+.eb-box { margin: 14px 0; border-radius: 12px; overflow: hidden; }
+#eb-event-1 iframe, #eb-event-2 iframe { width: 100% !important; min-height: 980px; border: 0; }
 
+/* EventHi cleanup */
+.eh-list { list-style: disc; margin: 10px 0 0 18px; padding: 0; }
+.eh-item { margin: 10px 0 18px; display: grid; gap: 10px; }
+.eh-title { font-weight: 700; color: var(--ink); text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+.eh-btn { width: max-content; white-space: nowrap; }
+
+/* Prevent overlap / “mushed” look on small screens */
+@media (max-width: 520px){
+  .eh-btn { width: 100%; text-align: center; }
+}
 <style>
 :root{
   --gold:#c4a25a; --gold-deep:#a8842a; --bg:#0d2230; --bg-2:#0e2a3a;
@@ -235,42 +248,42 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   <h2 class="section-title">Tickets &amp; Events</h2>
 
   <div class="tix-grid">
-    <!-- Eventbrite (Primary) -->
+
+    <!-- Eventbrite: multiple full ticket boxes (one per event) -->
     <div class="tix-card">
       <h3>Eventbrite (Primary)</h3>
-      <div id="eb-listing"></div>
-      <p class="tix-note"><strong>Primary checkout:</strong> Eventbrite. Capacity updates are managed on Eventbrite first.</p>
-      <p class="tix-note">Note: Prices/fees may differ by platform.</p>
-      <p style="margin-top:10px">
-        <a class="btn btn-outline" target="_blank" rel="noopener"
-           href="https://www.eventbrite.com/e/nomadic-leaf-cannaluxxe-wellness-experience-tickets-1968808776048">
-          Open on Eventbrite
-        </a>
+
+      <!-- One container per Eventbrite event ID -->
+      <div id="eb-event-1" class="eb-box"></div>
+      <div id="eb-event-2" class="eb-box"></div>
+      <!-- Add more as needed: <div id="eb-event-3" class="eb-box"></div> -->
+
+      <p class="tix-note"><strong>Primary checkout:</strong> Eventbrite (embedded). Capacity updates are managed on Eventbrite first.</p>
+      <p class="tix-note">If an embed doesn’t load, open our organizer page:
+        <a class="btn btn-outline" href="https://www.eventbrite.com/o/nomadic-leaf-120288217371" target="_blank" rel="noopener">Open on Eventbrite</a>
       </p>
     </div>
 
-    <!-- EventHi (Alternate marketplace) -->
+    <!-- EventHi: cleaned, readable list (kept as links) -->
     <div class="tix-card">
       <h3>EventHi</h3>
       <p><strong>Alternate marketplace:</strong> You can also find our events on EventHi.</p>
 
-      <ul style="margin:10px 0 12px; padding-left:18px;">
-        <li style="margin:6px 0">
-          <strong>Nomadic Leaf × Cannaluxxe Wellness Experience</strong><br/>
-          <a class="btn btn-outline" style="margin-top:6px" target="_blank" rel="noopener"
-             href="https://eventhi.io/events/nomadic-leaf--cannaluxxe-wellness-experience-13160">
-            Open EventHi Listing
-          </a>
+      <ul class="eh-list">
+        <li class="eh-item">
+          <div class="eh-title">Nomadic Leaf × Cannaluxxe Wellness Experience</div>
+          <a class="btn btn-outline eh-btn" href="https://eventhi.io/events/nomadic-leaf--cannaluxxe-wellness-experience-13160" target="_blank" rel="noopener">Open EventHi Listing</a>
         </li>
-        <li style="margin:12px 0 0">
-          <strong>Nomadic Leaf: Curated Luxury Cannabis-Friendly Vegas Tour (21+)</strong><br/>
-          <a class="btn btn-outline" style="margin-top:6px" target="_blank" rel="noopener"
-             href="https://eventhi.io/events/nomadic-leaf-curated-luxury-cannabis-friendly-vegas-tour-21-13123">
-            Open EventHi Listing
-          </a>
+
+        <li class="eh-item">
+          <div class="eh-title">Nomadic Leaf: Curated Luxury Cannabis-Friendly Vegas Tour (21+)</div>
+          <a class="btn btn-outline eh-btn" href="https://eventhi.io/events/nomadic-leaf-curated-luxury-cannabis-friendly-vegas-tour-21-13123" target="_blank" rel="noopener">Open EventHi Listing</a>
         </li>
       </ul>
+
+      <p class="tix-note">Note: Prices/fees may differ by platform.</p>
     </div>
+
   </div>
 </section>
 
@@ -445,25 +458,35 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
 
 <!-- Eventbrite widgets -->
 <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-<script>
-  // Organizer-based embed (shows all live Nomadic Leaf events)
-  const EB_ORGANIZER_ID = '120288217371';
+  <script>
+  // List every Eventbrite event you want embedded here (full ticket box per ID):
+  // Dec 2 collaboration:
+  const EB_EVENT_IDS = ['1968808776048',
+                        // Nov 29 pilot:
+                        '1925086879679'
+                        // Add more Event IDs here as your schedule grows
+                       ];
 
-  function renderEventbrite() {
-    window.EBWidgets.createWidget({
-      widgetType: 'eventbrite.events',
-      organizerId: EB_ORGANIZER_ID,
-      theme: 'dark',
-      isListing: true,
-      iframeContainerId: 'eb-listing'
+  function mountEventbriteBoxes(){
+    EB_EVENT_IDS.forEach((id, idx) => {
+      const containerId = `eb-event-${idx+1}`;
+      const el = document.getElementById(containerId);
+      if (!el) return;
+      window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: id,
+        modal: false,
+        theme: 'dark',
+        iframeContainerId: containerId
+      });
     });
   }
 
-  if (window.EBWidgets) renderEventbrite();
-  else window.addEventListener('load', renderEventbrite);
+  if (window.EBWidgets) mountEventbriteBoxes();
+  else window.addEventListener('load', mountEventbriteBoxes);
 
-  // Year in footer
+  // Keep your footer year
   document.getElementById('y').textContent = new Date().getFullYear();
-</script>
+  </script>
 </body>
 </html>
