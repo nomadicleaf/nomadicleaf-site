@@ -168,6 +168,59 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   .section-title{font-size:36px}
   .grid-3{grid-template-columns:1fr}
 }
+
+/* ============================
+   VIP POPUP (ADDED)
+   ============================ */
+#nl-vip-overlay{
+  position:fixed; inset:0;
+  background:rgba(0,0,0,.68);
+  display:none;
+  align-items:center; justify-content:center;
+  z-index:9999;
+  padding:18px;
+}
+#nl-vip-modal{
+  width:min(860px, 100%);
+  background:linear-gradient(180deg, rgba(16,42,58,.92), rgba(15,53,72,.92));
+  border:1px solid rgba(196,162,90,.38);
+  border-radius:22px;
+  box-shadow:0 30px 90px rgba(0,0,0,.72), inset 0 1px 0 rgba(255,255,255,.04);
+  overflow:hidden;
+  position:relative;
+}
+#nl-vip-close{
+  position:absolute;
+  top:10px; right:12px;
+  width:40px; height:40px;
+  border-radius:50%;
+  border:1px solid rgba(196,162,90,.45);
+  background:rgba(0,0,0,.35);
+  color:var(--gold);
+  font-size:22px;
+  display:grid; place-items:center;
+  cursor:pointer;
+  box-shadow:0 10px 22px rgba(0,0,0,.35);
+}
+#nl-vip-body{
+  padding:18px;
+}
+#nl-vip-graphic{
+  width:100%;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.06);
+  box-shadow:0 18px 40px rgba(0,0,0,.45);
+}
+#nl-vip-actions{
+  display:flex; gap:12px; justify-content:center;
+  padding:16px 18px 20px;
+}
+#nl-vip-actions a{
+  display:inline-block;
+}
+@media (max-width:520px){
+  #nl-vip-actions{flex-direction:column}
+}
 </style>
 </head>
 <body>
@@ -349,15 +402,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
         <p>Aleesia supports Nomadic Leaf as a social media and brand ambassador, helping translate our in-person energy into on-brand content, engagement, and word-of-mouth. With experience across executive assistance, real estate, fashion, sales, and entertainment, she brings a flexible, people-first touch to how the brand shows up online and in the community.</p>
       </article>
 
-      <!-- Videographer & Photographer -->
-      <article class="sp-card">
-        <div class="sp-figure">
-          <img src="IMG_20251111_154328.jpg" alt="Ronald Hudson — Videographer & Photographer">
-        </div>
-        <h3 class="sp-title">Ronald Hudson</h3>
-        <p class="sp-role">Videographer &amp; Photographer</p>
-        <p>Bay Area–born, Inglewood-raised creative who believes it’s all about capturing the moment. Ronald started in music (piano by ear), fell in love with acting, cooking, and photography, and has been shooting professionally since 2016. A faith-driven, people-first storyteller, he brings patience, heart, and a “make everyone look their best” approach to every frame—so guests can relive the night the way it felt.</p>
-      </article>
+      <!-- (REMOVED) Videographer & Photographer: Ronald Hudson -->
 
     </div>
 
@@ -456,9 +501,78 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   © <span id="y"></span> Nomadic Leaf. Curated luxury cannabis-friendly tours in Las Vegas (21+). Nomadic Leaf does not sell cannabis.
 </footer>
 
+<!-- ============================
+     VIP POPUP (ADDED)
+     ============================ -->
+<div id="nl-vip-overlay" aria-hidden="true">
+  <div id="nl-vip-modal" role="dialog" aria-modal="true" aria-label="Nomadic Leaf VIP Email List">
+    <button id="nl-vip-close" type="button" aria-label="Close">×</button>
+
+    <div id="nl-vip-body">
+      <a href="https://forms.gle/3rJS9EtHYwZuE7468" target="_blank" rel="noopener">
+        <img id="nl-vip-graphic" src="nomadic_leaf_vip_popup_luxury_1200x675.png" alt="Join our VIP Email List">
+      </a>
+    </div>
+
+    <div id="nl-vip-actions">
+      <a class="btn btn-primary" href="https://forms.gle/3rJS9EtHYwZuE7468" target="_blank" rel="noopener">
+        Join the VIP List
+      </a>
+      <a class="btn btn-outline" href="https://forms.gle/3rJS9EtHYwZuE7468" target="_blank" rel="noopener">
+        Open Form
+      </a>
+    </div>
+  </div>
+</div>
+
 <script>
   // footer year
   document.getElementById('y').textContent = new Date().getFullYear();
+
+  // ============================
+  // VIP POPUP LOGIC (ADDED)
+  // ============================
+  (function(){
+    const overlay = document.getElementById('nl-vip-overlay');
+    const modal = document.getElementById('nl-vip-modal');
+    const closeBtn = document.getElementById('nl-vip-close');
+
+    const KEY = 'nl_vip_popup_seen_session';
+
+    function openVip(){
+      overlay.style.display = 'flex';
+      overlay.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVip(){
+      overlay.style.display = 'none';
+      overlay.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+    }
+
+    // show once per session
+    if(!sessionStorage.getItem(KEY)){
+      window.setTimeout(() => {
+        openVip();
+        sessionStorage.setItem(KEY,'1');
+      }, 2400);
+    }
+
+    closeBtn.addEventListener('click', closeVip);
+
+    // click outside closes
+    overlay.addEventListener('click', (e) => {
+      if(e.target === overlay) closeVip();
+    });
+
+    // ESC closes
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape' && overlay.style.display === 'flex'){
+        closeVip();
+      }
+    });
+  })();
 </script>
 </body>
 </html>
