@@ -66,7 +66,13 @@ section[id]{scroll-margin-top:84px}
 .brand{display:flex;align-items:center;gap:10px}
 .brand img{width:30px;height:30px;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
 .brand-name{font-family:"Cinzel",serif;font-weight:700;letter-spacing:.4px;color:var(--gold);font-size:26px;line-height:1;white-space:nowrap}
-.nav-links{display:flex;align-items:center;gap:26px;margin-left:auto}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:26px;
+  margin-left:auto;
+  padding-left:40px; /* 👈 forces space after brand */
+}
 .nav-links a{font-weight:600;opacity:.95}
 .menu-toggle{display:none;margin-left:auto;background:transparent;border:0;color:var(--ink);font-size:26px;line-height:1;cursor:pointer}
 
@@ -150,7 +156,12 @@ section[id]{scroll-margin-top:84px}
 
 /* Portrait, no-crop frames */
 .sp-figure{aspect-ratio:4/5;display:grid;place-items:center;background:radial-gradient(120% 100% at 50% 0,#0e2030 0%,#0a1822 60%);border:1px solid rgba(198,168,94,.35);border-radius:16px;overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 10px 24px rgba(0,0,0,.28);padding:8px}
-.sp-figure img{width:100%;height:100%;object-fit:contain;object-position:center}
+.sp-figure img{
+  width:100%;
+  height:100%;
+  object-fit:cover; /* 👈 key fix */
+  object-position:center;
+}
 
 /* Gallery */
 .gallery-grid{display:grid;gap:16px}
