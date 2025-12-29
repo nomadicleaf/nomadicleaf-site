@@ -155,12 +155,21 @@ section[id]{scroll-margin-top:84px}
 .sp-role{color:#cfd7df;margin:0 0 10px}
 
 /* Portrait, no-crop frames */
-.sp-figure{aspect-ratio:4/5;display:grid;place-items:center;background:radial-gradient(120% 100% at 50% 0,#0e2030 0%,#0a1822 60%);border:1px solid rgba(198,168,94,.35);border-radius:16px;overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 10px 24px rgba(0,0,0,.28);padding:8px}
+.sp-figure{
+  aspect-ratio:1/1;         /* matches your new 1:1 images */
+  padding:0;                /* removes the extra space above/below */
+  border-radius:16px;
+  overflow:hidden;
+  display:block;
+  background:none;          /* optional: keeps it clean */
+}
+
 .sp-figure img{
   width:100%;
   height:100%;
-  object-fit:cover; /* 👈 key fix */
-  object-position:center;
+  display:block;
+  object-fit:cover;         /* fills the frame */
+  object-position:center;   /* keeps faces centered */
 }
 
 /* Gallery */
