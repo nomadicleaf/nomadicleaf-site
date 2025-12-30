@@ -70,20 +70,93 @@ html,body{
   font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
 }
 
+/* ============================
+   LUXURY BACKGROUND OVERLAY
+   (animated smoke + soft gleam)
+   ============================ */
+body{
+  position:relative;
+  isolation:isolate; /* keeps blend effects contained */
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:-20%;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(900px 520px at 20% 20%, rgba(255,255,255,.06), transparent 60%),
+    radial-gradient(820px 520px at 75% 30%, rgba(255,255,255,.05), transparent 62%),
+    radial-gradient(900px 650px at 55% 75%, rgba(255,255,255,.035), transparent 62%),
+    radial-gradient(700px 520px at 35% 85%, rgba(255,255,255,.03), transparent 60%);
+  filter: blur(18px);
+  opacity:.55;
+  transform: translate3d(0,0,0);
+  mix-blend-mode: screen;
+  animation: nlSmokeDrift 22s ease-in-out infinite alternate;
+}
+body::after{
+  content:"";
+  position:fixed;
+  inset:-30%;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(1200px 600px at 70% -10%, rgba(198,168,94,.14), transparent 62%),
+    radial-gradient(900px 520px at 10% 0%, rgba(198,168,94,.08), transparent 60%),
+    linear-gradient(120deg, transparent 35%, rgba(198,168,94,.12) 45%, transparent 58%);
+  opacity:.60;
+  filter: blur(10px);
+  transform: translate3d(0,0,0);
+  mix-blend-mode: screen;
+  animation: nlGleamSweep 14s ease-in-out infinite;
+}
+@keyframes nlSmokeDrift{
+  0%   { transform: translate3d(-1.5%, -1.0%, 0) scale(1.02); }
+  50%  { transform: translate3d( 1.0%,  1.5%, 0) scale(1.05); }
+  100% { transform: translate3d( 2.5%, -1.0%, 0) scale(1.07); }
+}
+@keyframes nlGleamSweep{
+  0%   { transform: translate3d(-2%, -1%, 0) rotate(-2deg); opacity:.45; }
+  50%  { transform: translate3d( 2%,  1%, 0) rotate( 2deg); opacity:.70; }
+  100% { transform: translate3d(-1%,  2%, 0) rotate(-1deg); opacity:.55; }
+}
+@media (prefers-reduced-motion: reduce){
+  body::before, body::after{ animation:none; }
+}
+
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .container{max-width:1200px;margin:0 auto;padding:24px}
 
-/* ✅ Decorative divider (the “long slash” vibe) */
+/* ✅ Decorative divider (upgraded: longer + more elegant) */
 .divider-gold{
-  width:72px;
-  height:2px;
-  background:linear-gradient(90deg, transparent, var(--gold), transparent);
-  margin:14px 0 18px;
-  border-radius:2px;
+  width: min(240px, 72vw);
+  height: 3px;
+  margin: 14px 0 22px;
+  border-radius: 99px;
+  background:
+    linear-gradient(90deg, transparent, rgba(198,168,94,.95), transparent),
+    radial-gradient(circle at 50% 50%, rgba(198,168,94,.75), transparent 65%);
+  box-shadow:
+    0 0 18px rgba(198,168,94,.18),
+    0 6px 18px rgba(0,0,0,.25);
+  position: relative;
+}
+.divider-gold::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.55), rgba(198,168,94,.95) 55%, rgba(168,132,42,.95));
+  box-shadow: 0 0 0 6px rgba(198,168,94,.10), 0 10px 18px rgba(0,0,0,.35);
 }
 
-/* ✅ Luxury bullet list option */
+/* ✅ Luxury bullet list option (kept) */
 ul.luxury-list{
   list-style:none;
   padding-left:0;
@@ -98,6 +171,49 @@ ul.luxury-list li::before{
   content:"•";
   position:absolute;
   left:0;
+  color:var(--gold);
+  font-size:20px;
+  line-height:1;
+}
+
+/* ✅ Make ALL section lists match (fixes “What’s Included” + other white bullets) */
+.section ul:not(.timeline):not(.luxury-list):not(.bullet){
+  list-style:none;
+  padding-left:0;
+  margin:14px 0 0;
+}
+.section ul:not(.timeline):not(.luxury-list):not(.bullet) li{
+  position:relative;
+  padding-left:22px;
+  margin:10px 0;
+  color:#dbe6ec;
+}
+.section ul:not(.timeline):not(.luxury-list):not(.bullet) li::before{
+  content:"•";
+  position:absolute;
+  left:0;
+  top:-1px;
+  color:var(--gold);
+  font-size:20px;
+  line-height:1;
+}
+
+/* ✅ Also fix Influencers list (it uses class="bullet") */
+#influencers .bullet{
+  list-style:none;
+  padding-left:0;
+  margin:10px 0 0;
+}
+#influencers .bullet li{
+  position:relative;
+  padding-left:22px;
+  margin:10px 0;
+}
+#influencers .bullet li::before{
+  content:"•";
+  position:absolute;
+  left:0;
+  top:-1px;
   color:var(--gold);
   font-size:20px;
   line-height:1;
@@ -231,21 +347,21 @@ section[id]{scroll-margin-top:84px}
 .card h3{color:var(--gold);font-size:20px;margin:0 0 6px;font-weight:800}
 .card p{margin:0;color:#d7e3ea}
 
-/* Schedule */
-.luxe-schedule .timeline{list-style:none;margin:18px 0 6px;padding:0 0 0 58px;position:relative}
-.luxe-schedule .timeline-item{position:relative;padding:0 0 12px}
+/* Schedule (tightened + more consistent) */
+.luxe-schedule .timeline{list-style:none;margin:18px 0 6px;padding:0 0 0 44px;position:relative}
+.luxe-schedule .timeline-item{position:relative;padding:0 0 10px}
 .luxe-schedule .timeline-item:before{
   content:"";
-  position:absolute;left:-26px;top:.35rem;
-  width:18px;height:18px;border-radius:50%;
+  position:absolute;left:-22px;top:.35rem;
+  width:16px;height:16px;border-radius:50%;
   background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.55),transparent 42%),linear-gradient(180deg,var(--gold),var(--gold-deep));
-  box-shadow:0 0 0 4px rgba(214,179,91,.18),0 8px 14px rgba(0,0,0,.35);
+  box-shadow:0 0 0 4px rgba(214,179,91,.16),0 8px 14px rgba(0,0,0,.32);
 }
 .luxe-schedule .ti-head{
   font-family:"Cormorant Garamond",serif;
   font-style:italic;font-weight:700;
   color:var(--ink);
-  font-size:clamp(18px,1.35vw,22px)
+  font-size:clamp(17px,1.2vw,20px)
 }
 .luxe-schedule .pill{
   display:inline-block;margin-left:.5rem;
@@ -271,10 +387,6 @@ section[id]{scroll-margin-top:84px}
 #eventhi-panel .eh-intro{margin:6px 0 12px;line-height:1.5;color:#d7e3ea}
 #eventhi-panel .eh-note{margin-top:8px;font-size:13px;color:#cdd6de;opacity:.9}
 
-/* Influencers */
-#influencers .bullet{margin:8px 0 0 18px}
-#influencers .bullet li{margin:4px 0}
-
 /* Staff & Partners */
 #staff-partners .sp-wrap{display:grid;gap:24px}
 #staff-partners h3{margin:0 0 6px}
@@ -290,7 +402,7 @@ section[id]{scroll-margin-top:84px}
 .sp-title{font-size:22px;font-weight:800;margin:8px 0}
 .sp-role{color:#cfd7df;margin:0 0 10px}
 
-/* Portrait frames */
+/* Portrait frames (keep safe, no face crop) */
 .sp-figure{
   aspect-ratio:1/1;
   padding:0;
@@ -303,9 +415,27 @@ section[id]{scroll-margin-top:84px}
   width:100%;
   height:100%;
   display:block;
-  object-fit:contain;        /* ✅ prevents cutting off heads/edges */
+  object-fit:contain;        /* prevents cutting off heads/edges */
   object-position:center;
   background:radial-gradient(120% 100% at 50% 0,#0e2030 0%,#0a1822 60%);
+}
+
+/* Partner logo frame (fixes “too much space” inside border) */
+.partner-logo-frame{
+  height: clamp(150px, 22vw, 210px);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(198,168,94,.35);
+  background: radial-gradient(120% 100% at 50% 0,#0e2030 0%,#0a1822 60%);
+  display: grid;
+  place-items: center;
+  padding: 6px; /* tighter than 12px */
+}
+.partner-logo-frame img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 /* Gallery */
@@ -334,6 +464,12 @@ section[id]{scroll-margin-top:84px}
   margin:10px 0;
   background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01))
 }
+
+/* Contact */
+.contact-grid{display:grid;gap:18px}
+@media(min-width:900px){ .contact-grid{grid-template-columns:1.1fr .9fr} }
+.contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+.contact-card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border-radius:20px;padding:22px;box-shadow:0 18px 42px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.04);border:1px solid rgba(198,168,94,.22)}
 
 /* Footer */
 footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
@@ -404,7 +540,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   padding:16px 18px 20px;
 }
 #nl-vip-actions .btn{
-  min-width:190px; /* ✅ keeps the two buttons visually consistent */
+  min-width:190px; /* keeps the two buttons visually consistent */
 }
 @media (max-width:520px){
   #nl-vip-actions{flex-direction:column}
@@ -460,6 +596,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
       <a href="#staff-partners">Team</a>
       <a href="#faq">FAQ</a>
       <a href="#terms">Policies</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
@@ -633,7 +770,6 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   <div class="divider-gold"></div>
 
   <div class="tix-grid">
-
     <div class="tix-card">
       <h3>Eventbrite (Primary)</h3>
       <p>Our latest events and experiences are managed on Eventbrite. Click below to see all current dates and book your spot.</p>
@@ -662,7 +798,6 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
         Looking for a private date? Email <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a> or call (702) 416-1171.
       </p>
     </div>
-
   </div>
 </section>
 
@@ -734,10 +869,8 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   <div class="divider-gold"></div>
 
   <div class="sp-wrap">
-
     <div class="sp-label">Staff</div>
     <div class="sp-row">
-
       <article class="sp-card">
         <div class="sp-figure">
           <img src="Nomadic Leaf Founder and CEO.JPG" alt="Jerome Butler">
@@ -765,7 +898,6 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
         </ul>
         <p>They’re foodies with a sweet tooth. Favorite way to connect: laughter.</p>
       </article>
-
     </div>
 
     <div class="sp-label" style="margin-top:6px">Team Members</div>
@@ -784,15 +916,9 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
 
     <div class="sp-label" style="margin-top:6px">Partners</div>
     <div class="sp-row">
-
       <article class="sp-card sp--partner">
-        <div class="sp-figure"
-             style="aspect-ratio:auto;height:clamp(160px,24vw,220px);
-                    display:flex;align-items:center;justify-content:center;
-                    padding:12px;background:radial-gradient(120% 100% at 50% 0,#0e2030 0%,#0a1822 60%);
-                    border:1px solid rgba(198,168,94,.35);border-radius:16px;overflow:hidden;">
-          <img src="IMG_20251110_152517.jpg" alt="Cannaluxxe Wellness Experience"
-               style="max-width:100%;max-height:100%;object-fit:contain;display:block;">
+        <div class="partner-logo-frame">
+          <img src="IMG_20251110_152517.jpg" alt="Cannaluxxe Wellness Experience">
         </div>
         <h3 class="sp-title">Cannaluxxe Wellness Experience</h3>
         <p class="sp-role">Strategic Marketing &amp; Partnerships</p>
@@ -802,15 +928,10 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
       </article>
 
       <article class="sp-card sp--partner">
-        <div class="sp-figure"
-             style="aspect-ratio:auto;height:clamp(160px,24vw,220px);
-                    display:flex;align-items:center;justify-content:center;
-                    padding:12px;background:radial-gradient(120% 100% at 50% 0,#0e2030 0%,#0a1822 60%);
-                    border:1px solid rgba(198,168,94,.35);border-radius:16px;overflow:hidden;">
+        <div class="partner-logo-frame">
           <picture style="display:contents;">
             <source srcset="IMG_20251110_145142.avif" type="image/avif">
-            <img src="mainlogosquare.png" alt="Front Row Travels®"
-                 style="max-width:100%;max-height:100%;object-fit:contain;display:block;">
+            <img src="mainlogosquare.png" alt="Front Row Travels®">
           </picture>
         </div>
         <h3 class="sp-title">Front Row Travels®</h3>
@@ -821,13 +942,8 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
       </article>
 
       <article class="sp-card sp--partner">
-        <div class="sp-figure"
-             style="aspect-ratio:auto;height:clamp(160px,24vw,220px);
-                    display:flex;align-items:center;justify-content:center;
-                    padding:12px;background:radial-gradient(120% 100% at 50% 0,#0e2030 0%,#0a1822 60%);
-                    border:1px solid rgba(198,168,94,.35);border-radius:16px;overflow:hidden;">
-          <img src="IMG_20251110_150621.jpg" alt="Premier Transportation"
-               style="max-width:100%;max-height:100%;object-fit:contain;display:block;">
+        <div class="partner-logo-frame">
+          <img src="IMG_20251110_150621.jpg" alt="Premier Transportation">
         </div>
         <h3 class="sp-title">Premier Transportation</h3>
         <p class="sp-role">Transportation Partner</p>
@@ -835,7 +951,6 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
           Las Vegas–born operator delivering safe, reliable service with modern vehicles for groups of all sizes.
         </p>
       </article>
-
     </div>
   </div>
 </section>
@@ -872,6 +987,45 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   <p><strong>Force Majeure:</strong> We aren’t liable for delays or changes caused by events outside our control (weather, traffic, venue incidents, etc.).</p>
   <p><strong>Peak-Date Surcharge:</strong> A $20 per-guest surcharge may apply on select peak dates (e.g., F1, CES).</p>
   <p><strong>Contact:</strong> <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a> • (702) 416-1171.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section container">
+  <h2 class="section-title">Contact</h2>
+  <div class="divider-gold"></div>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3 style="margin:0 0 8px;color:var(--gold);font-weight:800">Inquiries &amp; Bookings</h3>
+      <p style="margin:0;color:#d7e3ea">
+        Have a question, want to collaborate, or looking for a private date? Reach out anytime — we respond as quickly as possible.
+      </p>
+
+      <ul style="margin-top:12px">
+        <li><strong>Email:</strong> <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a></li>
+        <li><strong>Phone:</strong> <a href="tel:+17024161171">(702) 416-1171</a></li>
+        <li><strong>Instagram:</strong> <a href="https://www.instagram.com/nomadicleafevents/" target="_blank" rel="noopener">@nomadicleafevents</a></li>
+      </ul>
+
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:info@nomadicleaf.com?subject=Nomadic%20Leaf%20Inquiry">Email Us</a>
+        <a class="btn btn-outline" href="tel:+17024161171">Call Now</a>
+      </div>
+
+      <p class="note" style="margin-top:12px">
+        <strong>21+ only.</strong> Nomadic Leaf does not sell cannabis. Any purchases occur directly with licensed partners where permitted.
+      </p>
+    </div>
+
+    <div class="contact-card">
+      <h3 style="margin:0 0 8px;color:var(--gold);font-weight:800">Quick Links</h3>
+      <p style="margin:0;color:#d7e3ea">Book events, join VIP, or connect fast:</p>
+      <div class="contact-actions" style="margin-top:14px">
+        <a class="btn btn-primary" href="https://www.eventbrite.com/o/nomadic-leaf-120288217371" target="_blank" rel="noopener">View Eventbrite</a>
+        <a class="btn btn-outline" href="https://forms.gle/3rJS9EtHYwZuE7468" target="_blank" rel="noopener">Join VIP List</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>
