@@ -70,11 +70,11 @@ html{
 
 body{
   margin:0;
-  background: transparent;  /* ✅ important */
+  background: transparent;
   color:var(--ink);
   font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
   position:relative;
-  z-index:1;                /* ✅ keep content above overlays */
+  z-index:1;
 }
 
 /* ============================
@@ -95,7 +95,7 @@ html::before{
     radial-gradient(820px 520px at 62% 78%, rgba(255,255,255,.060), transparent 66%),
     radial-gradient(620px 420px at 12% 86%, rgba(255,255,255,.055), transparent 64%);
   filter: blur(16px) contrast(145%);
-  opacity:.70; /* ✅ visible */
+  opacity:.70;
   transform:translate3d(0,0,0);
   animation:nlSmokeFloat 18s ease-in-out infinite alternate;
 }
@@ -169,7 +169,7 @@ a{color:inherit;text-decoration:none}
   box-shadow: 0 0 0 6px rgba(198,168,94,.10), 0 10px 18px rgba(0,0,0,.35);
 }
 
-/* ✅ Luxury bullet list option (kept) */
+/* ✅ Luxury bullet list option */
 ul.luxury-list{
   list-style:none;
   padding-left:0;
@@ -189,7 +189,7 @@ ul.luxury-list li::before{
   line-height:1;
 }
 
-/* ✅ Make ALL section lists match (fixes “What’s Included” + other white bullets) */
+/* ✅ Make ALL section lists match */
 .section ul:not(.timeline):not(.luxury-list):not(.bullet){
   list-style:none;
   padding-left:0;
@@ -211,7 +211,7 @@ ul.luxury-list li::before{
   line-height:1;
 }
 
-/* ✅ Also fix Influencers list (it uses class="bullet") */
+/* ✅ Influencers list */
 #influencers .bullet{
   list-style:none;
   padding-left:0;
@@ -260,12 +260,11 @@ section[id]{scroll-margin-top:84px}
   align-items:center;
   gap:26px;
   margin-left:auto;
-  padding-left:40px; /* ✅ forces space after brand */
+  padding-left:40px;
 }
 .nav-links a{font-weight:600;opacity:.95}
 .menu-toggle{display:none;margin-left:auto;background:transparent;border:0;color:var(--ink);font-size:26px;line-height:1;cursor:pointer}
 
-/* Slight nav squeeze on desktop so About doesn’t crowd the logo */
 @media (min-width:981px){
   .nav-inner{flex-wrap:nowrap;}
   .nav-links{gap:18px;}
@@ -296,7 +295,7 @@ section[id]{scroll-margin-top:84px}
 .lead{max-width:720px;color:#dbe6ec}
 .cta-row{display:flex;gap:16px;margin:22px 0 14px}
 
-/* ✅ Make buttons uniform (including popup) */
+/* Buttons */
 .btn{
   border-radius:14px;
   padding:12px 18px;
@@ -360,30 +359,6 @@ section[id]{scroll-margin-top:84px}
 .card h3{color:var(--gold);font-size:20px;margin:0 0 6px;font-weight:800}
 .card p{margin:0;color:#d7e3ea}
 
-/* Schedule (tightened + more consistent) */
-.luxe-schedule .timeline{list-style:none;margin:18px 0 6px;padding:0 0 0 44px;position:relative}
-.luxe-schedule .timeline-item{position:relative;padding:0 0 10px}
-.luxe-schedule .timeline-item:before{
-  content:"";
-  position:absolute;left:-22px;top:.35rem;
-  width:16px;height:16px;border-radius:50%;
-  background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.55),transparent 42%),linear-gradient(180deg,var(--gold),var(--gold-deep));
-  box-shadow:0 0 0 4px rgba(214,179,91,.16),0 8px 14px rgba(0,0,0,.32);
-}
-.luxe-schedule .ti-head{
-  font-family:"Cormorant Garamond",serif;
-  font-style:italic;font-weight:700;
-  color:var(--ink);
-  font-size:clamp(17px,1.2vw,20px)
-}
-.luxe-schedule .pill{
-  display:inline-block;margin-left:.5rem;
-  padding:2px 10px;border-radius:999px;
-  font-size:.8em;color:var(--gold);
-  background:rgba(15,22,30,.6);
-  border:1px solid rgba(214,179,91,.55)
-}
-
 /* Tickets & Events */
 #tickets{padding-top:10px}
 .tix-grid{display:grid;gap:18px}
@@ -415,7 +390,7 @@ section[id]{scroll-margin-top:84px}
 .sp-title{font-size:22px;font-weight:800;margin:8px 0}
 .sp-role{color:#cfd7df;margin:0 0 10px}
 
-/* Portrait frames (keep safe, no face crop) */
+/* Portrait frames */
 .sp-figure{
   aspect-ratio:1/1;
   padding:0;
@@ -428,12 +403,12 @@ section[id]{scroll-margin-top:84px}
   width:100%;
   height:100%;
   display:block;
-  object-fit:contain;        /* prevents cutting off heads/edges */
+  object-fit:contain;
   object-position:center;
   background:radial-gradient(120% 100% at 50% 0,#0e2030 0%,#0a1822 60%);
 }
 
-/* Partner logo frame (fixes “too much space” inside border) */
+/* Partner logo frame */
 .partner-logo-frame{
   height: clamp(150px, 22vw, 210px);
   border-radius: 16px;
@@ -442,7 +417,7 @@ section[id]{scroll-margin-top:84px}
   background: radial-gradient(120% 100% at 50% 0,#0e2030 0%,#0a1822 60%);
   display: grid;
   place-items: center;
-  padding: 6px; /* tighter than 12px */
+  padding: 6px;
 }
 .partner-logo-frame img{
   width: 100%;
@@ -553,7 +528,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   padding:16px 18px 20px;
 }
 #nl-vip-actions .btn{
-  min-width:190px; /* keeps the two buttons visually consistent */
+  min-width:190px;
 }
 @media (max-width:520px){
   #nl-vip-actions{flex-direction:column}
@@ -573,7 +548,6 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
 
     <div id="nl-vip-body">
       <a href="https://forms.gle/3rJS9EtHYwZuE7468" target="_blank" rel="noopener">
-        <!-- ✅ Update this filename to your new Canva export when ready -->
         <img id="nl-vip-graphic" src="Nomadic Leaf Popup.PNG" alt="Join our VIP Email List">
       </a>
     </div>
@@ -600,7 +574,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
       <a href="#about">About</a>
       <a href="#experiences">Experiences</a>
       <a href="#included">What’s Included</a>
-      <a href="#schedule">Sample Schedule</a>
+      <a href="#the-experience">The Experience</a>
       <a href="#gallery">Gallery</a>
       <a href="#tickets">Tickets &amp; Events</a>
       <a href="#private">Private Bookings</a>
@@ -622,7 +596,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
     <div class="divider-gold"></div>
 
     <p class="lead">
-      Visitors &amp; locals, same crew. Curated, luxury cannabis-friendly experiences and events across Vegas culture with twin-host energy, camera-ready moments, and VIP touches built in.
+      Visitors and locals, same crew. Nomadic Leaf curates luxury-leaning cannabis-friendly experiences across Vegas culture with intentional pacing, camera-ready moments, and premium energy throughout.
     </p>
 
     <div class="cta-row">
@@ -652,28 +626,27 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   <div class="divider-gold"></div>
 
   <p>
-    Nomadic Leaf brings travelers and locals together for curated, compliant, luxury-leaning experiences in Las Vegas. Think camera-ready moments, smooth timing, and hosts who keep the vibe high while the logistics stay invisible.
+    Nomadic Leaf brings travelers and locals together for curated, compliant, luxury-leaning experiences in Las Vegas. The vibe is premium, the timing is smooth, and the details are handled so the night feels effortless.
   </p>
   <p>
-    We partner only with licensed venues and trusted operators so each experience feels premium, safe, and intentional. From lounge-based smoke sessions to immersive nights out, everything is designed to feel elevated and effortless.
+    We partner with licensed venues and trusted operators to create experiences that feel intentional from the moment you arrive. Our signature style blends hosted energy, elevated pacing, and camera-ready moments that still feel authentic.
   </p>
   <p>
-    We are proud supporters of cannabis history, past, present, and future. Education is part of the fun, which is why select experiences feature cannabis trivia and prizes ranging from Nomadic Leaf items to wellness and accessory drops and partner-supported giveaways.
+    We are proud supporters of cannabis history, past, present, and future. Education is part of the fun, which is why select experiences include trivia, prizes, and partner-supported giveaways that keep the energy high without feeling forced.
   </p>
 
   <ul class="luxury-list">
     <li>Curated, luxury-leaning, compliance-first experiences</li>
     <li>Visitors and locals together, same crew energy</li>
-    <li>Photo-friendly pacing, premium partner venues</li>
+    <li>Photo-friendly pacing and premium partner venues</li>
   </ul>
 
   <p style="margin-top:12px">
-    <strong>Nomadic Leaf doesn’t sell cannabis.</strong>
-    Purchases happen directly at licensed partner venues when permitted by law.
-    On-bus or public consumption is prohibited.
+    <strong>Nomadic Leaf does not sell cannabis.</strong>
+    Any purchases happen directly at licensed partner venues when permitted by law.
+    Public or on-bus consumption is prohibited.
     <strong>21+ with valid government ID.</strong>
   </p>
-  <p><em>Who it’s for:</em> couples, friend groups, birthdays, team outings, visitors who want Vegas with taste, and locals who want a hosted night out without the hassle.</p>
 </section>
 
 <!-- EXPERIENCES -->
@@ -681,33 +654,81 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   <h2 class="section-title">Experiences &amp; Events</h2>
   <div class="divider-gold"></div>
 
-  <div class="grid-3">
+  <p class="note">
+    Each Nomadic Leaf experience is intentionally designed to feel premium, memorable, and easy. Expect hosted energy, curated moments, and a flow that keeps the vibe high while the logistics stay invisible.
+  </p>
+
+  <div class="grid-3" style="margin-top:14px">
+
     <div class="card">
-      <h3>Smoke Session &amp; Networking Night</h3>
+      <h3>Nomadic Smoke Out Session &amp; Networking Night</h3>
       <p>
-        A luxury-leaning, lounge-based experience designed for connection. Reserved seating options on select nights, open RSVP when space allows, and cannabis trivia with prizes.
+        A stand-alone smoke out built for connection, culture, and a premium social vibe. Expect an intimate guest list, a hosted flow that keeps the energy moving, and a night designed to feel exclusive without feeling stiff.
+      </p>
+      <ul style="margin-top:12px">
+        <li><strong>Cannabis provided for the session</strong> as part of the experience when permitted by law and venue rules.</li>
+        <li><strong>Hosted icebreakers</strong>, quick games, and curated conversation prompts so the room actually connects.</li>
+        <li><strong>Cannabis trivia</strong> with prizes ranging from Nomadic Leaf items to partner-supported drops.</li>
+        <li><strong>Premium pacing</strong> so the night feels smooth and intentional, not random or chaotic.</li>
+      </ul>
+      <p class="tix-note" style="margin-top:10px">
+        Dates, run time, venue details, and inclusions are listed on individual event pages.
       </p>
     </div>
+
     <div class="card">
-      <h3>Night Out on the Town</h3>
+      <h3>Nomadic Immersive Night Out Experience</h3>
       <p>
-        A curated evening featuring a licensed lounge stop, premium transportation, and immersive Las Vegas energy. Includes AREA15 experiences with a luxury dinner at The Beast built into the night.
+        The flagship night out. A curated Vegas experience that blends immersive entertainment, iconic moments, and premium hospitality into a single smooth run. Designed for visitors and locals who want more than the typical night out.
+      </p>
+      <ul style="margin-top:12px">
+        <li><strong>Immersive activities</strong> at AREA15 with time for content and discovery.</li>
+        <li><strong>Luxury dinner</strong> at The Beast included on select nights and packages.</li>
+        <li><strong>Licensed lounge stop</strong> with a hosted smoke session vibe and optional VIP touches.</li>
+        <li><strong>Camera-ready stops</strong> with intentional timing so your content looks premium.</li>
+        <li><strong>Trivia, prizes, and sponsor moments</strong> woven in naturally, not interrupting the vibe.</li>
+      </ul>
+      <p class="tix-note" style="margin-top:10px">
+        Pickup and drop-off are provided as an iconic Strip-area location on event listings.
       </p>
     </div>
+
     <div class="card">
-      <h3>Wellness Experience</h3>
+      <h3>Nomadic Wellness Experience</h3>
       <p>
-        Yoga + lunch + a licensed lounge stop, curated with a calm, elevated vibe. Designed for travelers and locals who want Vegas with intention, balance, and community.
+        A calm, elevated reset with the Nomadic Leaf signature. Designed for travelers who love discovering local wellness, and locals who want something intentional, social, and premium without the nightclub energy.
       </p>
+      <ul style="margin-top:12px">
+        <li><strong>Exclusive yoga studio partner session</strong> with a curated, welcoming flow.</li>
+        <li><strong>Lunch included</strong> with a premium, feel-good pace built in.</li>
+        <li><strong>Licensed lounge stop</strong> on select versions of the experience, based on availability and rules.</li>
+        <li><strong>Wellness-forward prizes</strong> and partner-supported giveaways when available.</li>
+        <li><strong>Hosted energy</strong> that stays light, elevated, and community-first.</li>
+      </ul>
     </div>
+
   </div>
 
   <div class="card" style="margin-top:18px">
-    <h3>More Experiences Coming</h3>
+    <h3>Where the Leaf Takes You Experience</h3>
     <p>
-      Expect rotating themes and special nights, including a comedy smoke session hosted by a local comedian. We also plan to work in cannabis education moments and partnerships with cultivation labs, glass artistry, and other trusted industry creators as offerings expand.
+      Our most flexible flagship concept. Built for discovery, exclusivity, and rotating partnerships. This experience can evolve based on the best available partners, iconic stops, and guest demand, while still keeping the same premium Nomadic Leaf feel.
+    </p>
+    <ul style="margin-top:12px">
+      <li><strong>Dispensary partner stop</strong> on select versions with perks like preferred access and exclusive discounts.</li>
+      <li><strong>Fremont experience stop</strong> with time for photos, energy, and iconic Vegas atmosphere.</li>
+      <li><strong>Meal included</strong> with rotating options as partners grow and opportunities expand.</li>
+      <li><strong>Licensed lounge stop</strong> on select versions, aligned with availability and compliance.</li>
+      <li><strong>Hosted games, trivia, and prizes</strong> so the experience feels curated from start to finish.</li>
+    </ul>
+    <p class="note" style="margin-top:10px">
+      Stops and inclusions vary by date. The promise stays the same: premium pacing, memorable moments, and a night you are glad you said yes to.
     </p>
   </div>
+
+  <p style="margin-top:14px;color:#cdd6de;opacity:.95">
+    Note: Nomadic Leaf does not sell cannabis. Any purchases happen directly through licensed partners when permitted. Public or on-bus consumption is prohibited. 21+ with valid ID.
+  </p>
 </section>
 
 <!-- WHAT'S INCLUDED -->
@@ -716,31 +737,48 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   <div class="divider-gold"></div>
 
   <ul>
-    <li><strong>Curated Experience Design</strong> – lounge moments (when permitted), iconic photo stops, immersive entertainment, and elevated pacing.</li>
-    <li><strong>Hosted Energy</strong> – twin-host led nights with timing, icebreakers, and high-vibe connection.</li>
-    <li><strong>Cannabis Trivia &amp; Prizes</strong> – education-forward fun with exclusive prize drops (Nomadic Leaf items, wellness, accessories, and partner-supported giveaways).</li>
-    <li><strong>Dinner Option</strong> – luxury dinner at The Beast (AREA15) built into select experiences.</li>
-    <li><strong>Transportation</strong> – premium transportation between listed stops on nights that require it.</li>
-    <li><strong>VIP Add-On</strong> – preferred seating, early access, and VIP touches (limited availability on select nights).</li>
+    <li><strong>Curated Experience Design</strong> with premium pacing, intentional moments, and a smooth flow that feels effortless.</li>
+    <li><strong>Hosted Energy</strong> that guides the vibe without turning the night into a scripted tour.</li>
+    <li><strong>Cannabis Trivia, Games, and Prizes</strong> with Nomadic Leaf items plus partner-supported drops when available.</li>
+    <li><strong>Premium Stops</strong> chosen for atmosphere, quality, and camera-ready moments.</li>
+    <li><strong>Transportation</strong> included on experiences that require it, with a focus on comfort and timing.</li>
+    <li><strong>VIP Touches</strong> offered on select nights, based on partner availability and package level.</li>
   </ul>
 </section>
 
-<!-- SCHEDULE -->
-<section id="schedule" class="section container luxe-schedule">
-  <h2 class="section-title">Sample Schedule <span class="pill">Varies by Experience</span></h2>
+<!-- THE EXPERIENCE (replaces Sample Schedule) -->
+<section id="the-experience" class="section container">
+  <h2 class="section-title">The Nomadic Leaf Experience</h2>
   <div class="divider-gold"></div>
 
-  <ol class="timeline">
-    <li class="timeline-item"><div class="ti-head">Check-in &amp; Welcome <span class="pill">Time Listed Per Event</span></div><p>Arrival details are provided in your confirmation and any final event updates.</p></li>
-    <li class="timeline-item"><div class="ti-head">Iconic Photo Moment <span class="pill">15–25m</span></div><p>Quick, camera-ready stop for group shots and reels.</p></li>
-    <li class="timeline-item"><div class="ti-head">Licensed Consumption Lounge Stop (Partner Venue) <span class="pill">60m</span></div><p>Compliant lounge session based on venue rules and availability.</p></li>
-    <li class="timeline-item"><div class="ti-head">Cannabis Trivia &amp; Prizes <span class="pill">En route / In-session</span></div><p>Fun, fast-paced trivia with exclusive prizes and a light educational twist.</p></li>
-    <li class="timeline-item"><div class="ti-head">Dinner at The Beast (AREA15) <span class="pill">60m</span></div><p>Included on select “Night Out on the Town” experiences.</p></li>
-    <li class="timeline-item"><div class="ti-head">Immersive Activities (AREA15) <span class="pill">45–75m</span></div><p>Specific experiences announced in your final details.</p></li>
-    <li class="timeline-item"><div class="ti-head">Return &amp; Farewell <span class="pill">15m</span></div><p>Wrap-up, prize call-outs, and thank-yous.</p></li>
-  </ol>
-  <p style="color:#cdd6de;opacity:.95">
-    Note: Stops &amp; timing may shift based on partner availability and traffic. Age 21+ with valid ID. Nomadic Leaf does not sell cannabis.
+  <p>
+    Nomadic Leaf is not built like a standard tour company. We design experiences the way luxury hospitality does it: the guest feels the vibe, the timing feels natural, and the details are handled quietly behind the scenes.
+  </p>
+
+  <div class="split" style="margin-top:14px">
+    <div class="card">
+      <h3>What Guests Feel</h3>
+      <ul style="margin-top:10px">
+        <li><strong>Effortless flow</strong> with intentional pacing and smooth transitions.</li>
+        <li><strong>Premium energy</strong> that feels elevated, social, and memorable.</li>
+        <li><strong>Camera-ready moments</strong> built in without making it a content factory.</li>
+        <li><strong>Community</strong> where strangers can become crew by the end of the night.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>What We Curate</h3>
+      <ul style="margin-top:10px">
+        <li><strong>Partner selection</strong> with a focus on atmosphere, quality, and professionalism.</li>
+        <li><strong>Host-led touchpoints</strong> like trivia, games, and light icebreakers that feel natural.</li>
+        <li><strong>Perks and surprises</strong> including giveaways and sponsor moments when available.</li>
+        <li><strong>Compliance-first structure</strong> so the experience is premium and responsible.</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="margin-top:14px;color:#cdd6de;opacity:.95">
+    Exact timing, stops, and inclusions vary by event and are always listed on individual ticket pages.
   </p>
 </section>
 
@@ -783,6 +821,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   <div class="divider-gold"></div>
 
   <div class="tix-grid">
+
     <div class="tix-card">
       <h3>Eventbrite (Primary)</h3>
       <p>Our latest events and experiences are managed on Eventbrite. Click below to see all current dates and book your spot.</p>
@@ -811,6 +850,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
         Looking for a private date? Email <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a> or call (702) 416-1171.
       </p>
     </div>
+
   </div>
 </section>
 
@@ -823,14 +863,14 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
     <div class="card">
       <h3>Private Experiences</h3>
       <p>
-        Book a private Nomadic Leaf experience for birthdays, celebrations, visiting friends, or intimate group nights. Hosted by our team, curated around your vibe, and aligned with licensed partner availability.
+        Book a private Nomadic Leaf experience for birthdays, celebrations, visiting friends, or intimate group nights. Hosted by our team and curated around your vibe while staying aligned with licensed partner availability.
       </p>
       <p class="note"><strong>To request a private date:</strong> email <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a> or call (702) 416-1171.</p>
     </div>
     <div class="card">
       <h3>Corporate &amp; Team Experiences</h3>
       <p>
-        Looking for a unique, Vegas-forward team night? We can help structure a premium group experience with curated stops and a polished flow for business travelers, conference groups, and team celebrations.
+        Looking for a unique Vegas-forward team night? We structure premium group experiences with curated stops and a polished flow for business travelers, conference groups, and team celebrations.
       </p>
       <p class="note"><strong>Start the conversation:</strong> email <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a>.</p>
     </div>
@@ -846,14 +886,14 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
     <div class="card">
       <h3>Partner With Nomadic Leaf</h3>
       <p>
-        We welcome partnerships with licensed venues, hospitality brands, creators, cannabis-adjacent businesses, and trusted industry operators. If you align with premium service, compliance, and memorable guest experiences, let’s talk.
+        We welcome partnerships with licensed venues, hospitality brands, creators, and cannabis-adjacent operators. If you align with premium service, compliance-first culture, and unforgettable guest experiences, let’s connect.
       </p>
       <p class="note"><strong>Partnership inquiries:</strong> <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a></p>
     </div>
     <div class="card">
       <h3>Community Relations</h3>
       <p>
-        Nomadic Leaf is committed to supporting locals and strengthening community connection. As we grow, we plan to collaborate with organizations that give back and create meaningful opportunities through tourism, events, and responsible culture.
+        Nomadic Leaf is committed to supporting locals and strengthening community connection. As we grow, we collaborate with partners who create meaningful opportunities through tourism, events, and responsible culture.
       </p>
       <p class="note">If you represent a community organization, we’d love to hear from you.</p>
     </div>
@@ -882,8 +922,10 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   <div class="divider-gold"></div>
 
   <div class="sp-wrap">
+
     <div class="sp-label">Staff</div>
     <div class="sp-row">
+
       <article class="sp-card">
         <div class="sp-figure">
           <img src="Nomadic Leaf Founder and CEO.JPG" alt="Jerome Butler">
@@ -911,6 +953,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
         </ul>
         <p>They’re foodies with a sweet tooth. Favorite way to connect: laughter.</p>
       </article>
+
     </div>
 
     <div class="sp-label" style="margin-top:6px">Team Members</div>
@@ -929,6 +972,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
 
     <div class="sp-label" style="margin-top:6px">Partners</div>
     <div class="sp-row">
+
       <article class="sp-card sp--partner">
         <div class="partner-logo-frame">
           <img src="IMG_20251110_152517.jpg" alt="Cannaluxxe Wellness Experience">
@@ -961,9 +1005,10 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
         <h3 class="sp-title">Premier Transportation</h3>
         <p class="sp-role">Transportation Partner</p>
         <p>
-          Las Vegas–born operator delivering safe, reliable service with modern vehicles for groups of all sizes.
+          Las Vegas-born operator delivering safe, reliable service with modern vehicles for groups of all sizes.
         </p>
       </article>
+
     </div>
   </div>
 </section>
@@ -973,12 +1018,12 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   <h2 class="section-title">FAQ</h2>
   <div class="divider-gold"></div>
 
-  <div class="faq-item"><strong>What kinds of experiences do you offer?</strong><p>Smoke sessions and networking nights, nightlife experiences featuring AREA15 + dinner, wellness experiences, and private bookings.</p></div>
+  <div class="faq-item"><strong>What kinds of experiences do you offer?</strong><p>Smoke out sessions and networking nights, immersive nightlife experiences, wellness experiences, rotating “Where the Leaf Takes You” concepts, and private bookings.</p></div>
   <div class="faq-item"><strong>Do you offer private bookings or corporate/team events?</strong><p>Yes. Email <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a> or call (702) 416-1171 to request a private date.</p></div>
   <div class="faq-item"><strong>Do you sell cannabis?</strong><p>No. Any purchases happen directly through licensed partner venues when permitted by law.</p></div>
   <div class="faq-item"><strong>Where can consumption happen?</strong><p>Only at licensed venues when permitted by venue rules and Nevada law. No public or on-bus consumption.</p></div>
   <div class="faq-item"><strong>Age &amp; ID?</strong><p>21+ with a valid government ID required for all guests.</p></div>
-  <div class="faq-item"><strong>What’s included in tickets?</strong><p>Each event listing shows what’s included. Select experiences include dinner, hosted activities, and premium transportation.</p></div>
+  <div class="faq-item"><strong>What’s included in tickets?</strong><p>Each event listing shows what’s included. Inclusions vary by experience and package level.</p></div>
   <div class="faq-item"><strong>Accessibility?</strong><p>Email <a href="mailto:info@nomadicleaf.com">info@nomadicleaf.com</a> with needs. We’ll coordinate reasonable accommodations with partners when possible.</p></div>
   <div class="faq-item"><strong>Photos/video?</strong><p>We may capture recap content. Let a host know if you prefer not to be featured.</p></div>
   <div class="faq-item"><strong>Tipping?</strong><p>Appreciated for hosts/drivers, entirely optional.</p></div>
@@ -1011,7 +1056,7 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
     <div class="contact-card">
       <h3 style="margin:0 0 8px;color:var(--gold);font-weight:800">Inquiries &amp; Bookings</h3>
       <p style="margin:0;color:#d7e3ea">
-        Have a question, want to collaborate, or looking for a private date? Reach out anytime — we respond as quickly as possible.
+        Have a question, want to collaborate, or looking for a private date? Reach out anytime. We respond as quickly as possible.
       </p>
 
       <ul style="margin-top:12px">
