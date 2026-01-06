@@ -77,66 +77,7 @@ body{
   z-index:1;
 }
 
-/* ============================
-   LUXURY BACKGROUND OVERLAY
-   (Smoke + Gold Gleam)
-   ============================ */
-
-html::before{
-  content:"";
-  position:fixed;
-  inset:-18%;
-  pointer-events:none;
-  z-index:0;
-
-  background:
-    radial-gradient(900px 520px at 18% 22%, rgba(255,255,255,.085), transparent 62%),
-    radial-gradient(760px 460px at 78% 12%, rgba(255,255,255,.070), transparent 64%),
-    radial-gradient(820px 520px at 62% 78%, rgba(255,255,255,.060), transparent 66%),
-    radial-gradient(620px 420px at 12% 86%, rgba(255,255,255,.055), transparent 64%);
-  filter: blur(16px) contrast(145%);
-  opacity:.70;
-  transform:translate3d(0,0,0);
-  animation:nlSmokeFloat 18s ease-in-out infinite alternate;
-}
-
-html::after{
-  content:"";
-  position:fixed;
-  inset:-20%;
-  pointer-events:none;
-  z-index:0;
-
-  background:
-    radial-gradient(700px 220px at 30% 30%, rgba(196,162,90,.26), transparent 70%),
-    radial-gradient(520px 180px at 80% 22%, rgba(196,162,90,.18), transparent 72%),
-    radial-gradient(620px 210px at 60% 82%, rgba(196,162,90,.16), transparent 75%),
-    linear-gradient(120deg,
-      transparent 0%,
-      rgba(196,162,90,.12) 28%,
-      transparent 52%,
-      rgba(196,162,90,.10) 74%,
-      transparent 100%);
-  filter: blur(22px) saturate(120%);
-  opacity:.48;
-  transform:translate3d(0,0,0);
-  animation:nlGleamDrift 14s ease-in-out infinite alternate;
-}
-
-@keyframes nlSmokeFloat{
-  0%   { transform:translate3d(-2%, -1%, 0) scale(1.04); }
-  50%  { transform:translate3d( 1%,  1%, 0) scale(1.07); }
-  100% { transform:translate3d( 3%, -1%, 0) scale(1.05); }
-}
-@keyframes nlGleamDrift{
-  0%   { transform:translate3d(-2%,  1%, 0) rotate(-2deg); }
-  50%  { transform:translate3d( 1%, -1%, 0) rotate( 1deg); }
-  100% { transform:translate3d( 3%,  1%, 0) rotate( 3deg); }
-}
-
-@media (prefers-reduced-motion: reduce){
-  html::before, html::after{ animation:none; }
-}
+/* ✅ Removed site-wide gold/smoke overlay (per request) */
 
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
@@ -358,6 +299,21 @@ section[id]{scroll-margin-top:84px}
 }
 .card h3{color:var(--gold);font-size:20px;margin:0 0 6px;font-weight:800}
 .card p{margin:0;color:#d7e3ea}
+
+/* ✅ Experience images */
+.exp-figure{
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid rgba(196,162,90,.22);
+  box-shadow:0 12px 28px rgba(0,0,0,.35);
+  margin-bottom:14px;
+  background:radial-gradient(120% 100% at 50% 0,#0e2030 0%,#0a1822 60%);
+}
+.exp-figure img{
+  width:100%;
+  height:auto;
+  display:block;
+}
 
 /* Tickets & Events */
 #tickets{padding-top:10px}
@@ -661,6 +617,9 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   <div class="grid-3" style="margin-top:14px">
 
     <div class="card">
+      <figure class="exp-figure">
+        <img src="Nomadic Smokeout Session.PNG" alt="Nomadic Smokeout &amp; Networking Night promotional graphic">
+      </figure>
       <h3>Nomadic Smoke Out Session &amp; Networking Night</h3>
       <p>
         A stand-alone smoke out built for connection, culture, and a premium social vibe. Expect an intimate guest list, a hosted flow that keeps the energy moving, and a night designed to feel exclusive without feeling stiff.
@@ -677,6 +636,9 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
     </div>
 
     <div class="card">
+      <figure class="exp-figure">
+        <img src="Nomadic Immersive Experience .PNG" alt="Nomadic Immersive Night Out promotional graphic">
+      </figure>
       <h3>Nomadic Immersive Night Out Experience</h3>
       <p>
         The flagship night out. A curated Vegas experience that blends immersive entertainment, iconic moments, and premium hospitality into a single smooth run. Designed for visitors and locals who want more than the typical night out.
@@ -694,6 +656,9 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
     </div>
 
     <div class="card">
+      <figure class="exp-figure">
+        <img src="Nomadic Wellness Experience.PNG" alt="Nomadic Wellness Experience promotional graphic">
+      </figure>
       <h3>Nomadic Wellness Experience</h3>
       <p>
         A calm, elevated reset with the Nomadic Leaf signature. Designed for travelers who love discovering local wellness, and locals who want something intentional, social, and premium without the nightclub energy.
@@ -710,6 +675,9 @@ footer{padding:30px 24px 60px;color:#aebdc7;text-align:center}
   </div>
 
   <div class="card" style="margin-top:18px">
+    <figure class="exp-figure">
+      <img src="Where the leaf may take you experience .PNG" alt="Where the Leaf May Take You Experience promotional graphic">
+    </figure>
     <h3>Where the Leaf Takes You Experience</h3>
     <p>
       Our most flexible flagship concept. Built for discovery, exclusivity, and rotating partnerships. This experience can evolve based on the best available partners, iconic stops, and guest demand, while still keeping the same premium Nomadic Leaf feel.
